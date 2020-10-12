@@ -2,6 +2,8 @@ class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :rooms
   validates :start_at, :end_at, presence: true
+  validate :start_at_cannot_be_in_the_past
+  validate :end_at_cannot_be_before_start_at
 
   def start_at_cannot_be_in_the_past
     return errors.add(:start_at, "ne peut pas être une date passée") if start_at.present? && start_at < Date.today
