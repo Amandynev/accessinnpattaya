@@ -14,7 +14,7 @@ puts "create categories"
 
   accessinn = Category.create!(
   name: "The Access inn",
-  description: "The Access inn room is available in blue, purple or green.",
+  description: "Discover the fantastic refreshing and unique Access inn room. Located on the 2nd and 3rd floor of the hotel. Panoramic Lift access. Music system in room, special LED design and a spacious room with a sofa corner and a balcony with his PVC sliding window as a basement of your personal relaxation during your stay.",
   price: 800,
   room_size: 29,
   balcony: true,
@@ -23,7 +23,7 @@ puts "create categories"
 
   superior = Category.create!(
   name: "Superior double",
-  description: "The superior room is located on the 3rd floor",
+  description: "Discover the fantastic refreshing superior rooms. Located on the 3 floors of the hotel. Panoramic Lift access and Music system in room as a basement of your personal relaxation during your stay.",
   price: 490,
   room_size: 18,
   balcony: false,
@@ -32,7 +32,7 @@ puts "create categories"
 
   deluxe = Category.create!(
   name: "Deluxe double",
-  description: "The deluxe double room is available in yellow and red.",
+  description: "Discover the fantastic refreshing deluxe rooms. Located on the 3 floors of the hotel. Panoramic Lift access. Music system in room and a private balcony with his PVC sliding window as a basement of your personal relaxation during your stay.",
   price: 550,
   room_size: 19,
   balcony: true,
@@ -41,7 +41,7 @@ puts "create categories"
 
   premium = Category.create!(
   name: "Premium double",
-  description: "The premium double room is available in red, orange and blue.",
+  description: "Discover the fantastic refreshing premium rooms. Located on the 3 floors of the hotel. Panoramic Lift access. Music system in room, special LED design and a private balcony with his PVC sliding window as a basement of your personal relaxation during your stay.",
   price: 650,
   room_size: 25,
   balcony: true,
@@ -50,8 +50,8 @@ puts "create categories"
 
   suite = Category.create!(
   name: "Suite double",
-  description: "The suite double room is available in purple.",
-  price: 650,
+  description: "Discover the fantastic refreshing suite rooms. Located on the 1st floor of the hotel. Panoramic Lift access. Music system in room, special LED design and a spacious room with a sofa corner and a private balcony with his PVC sliding window as a basement of your personal relaxation during your stay.",
+  price: 750,
   room_size: 27,
   balcony: true,
   corner_table: true
