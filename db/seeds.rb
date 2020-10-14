@@ -67,5 +67,21 @@ puts "create rooms..."
   Room.create!(category: accessinn)
 end
 
+1.times do
+  Room.create!(category: superior)
+end
+
+1.times do
+  Room.create!(category: deluxe)
+end
+
+1.times do
+  Room.create!(category: premium)
+end
+
+1.times do
+  Room.create!(category: suite)
+end
+
 
 puts "Finished !"
