@@ -5,10 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-puts"destroy rooms"
-puts"destroy categories"
+puts"destroy data ..."
+
 Room.destroy_all
 Category.destroy_all
+Hotel.destroy_all
+
+puts "create hotel ..."
+
+Hotel.create!(name:"Nom de ton hotel", address: "2 Avenue des Saules, 59160 Lille")
+
 puts "create rooms"
 puts "create categories"
 
@@ -17,8 +23,6 @@ puts "create categories"
   description: "Discover the fantastic refreshing and unique Access inn room. Located on the 2nd and 3rd floor of the hotel. Panoramic Lift access. Music system in room, special LED design and a spacious room with a sofa corner and a balcony with his PVC sliding window as a basement of your personal relaxation during your stay.",
   price: 800,
   room_size: 29,
-  balcony: true,
-  corner_table: true
 )
 
   superior = Category.create!(
@@ -26,8 +30,6 @@ puts "create categories"
   description: "Discover the fantastic refreshing superior rooms. Located on the 3 floors of the hotel. Panoramic Lift access and Music system in room as a basement of your personal relaxation during your stay.",
   price: 490,
   room_size: 18,
-  balcony: false,
-  corner_table: false
 )
 
   deluxe = Category.create!(
@@ -35,8 +37,6 @@ puts "create categories"
   description: "Discover the fantastic refreshing deluxe rooms. Located on the 3 floors of the hotel. Panoramic Lift access. Music system in room and a private balcony with his PVC sliding window as a basement of your personal relaxation during your stay.",
   price: 550,
   room_size: 19,
-  balcony: true,
-  corner_table: false
 )
 
   premium = Category.create!(
@@ -44,8 +44,6 @@ puts "create categories"
   description: "Discover the fantastic refreshing premium rooms. Located on the 3 floors of the hotel. Panoramic Lift access. Music system in room, special LED design and a private balcony with his PVC sliding window as a basement of your personal relaxation during your stay.",
   price: 650,
   room_size: 25,
-  balcony: true,
-  corner_table: true
 )
 
   suite = Category.create!(
@@ -53,8 +51,6 @@ puts "create categories"
   description: "Discover the fantastic refreshing suite rooms. Located on the 1st floor of the hotel. Panoramic Lift access. Music system in room, special LED design and a spacious room with a sofa corner and a private balcony with his PVC sliding window as a basement of your personal relaxation during your stay.",
   price: 750,
   room_size: 27,
-  balcony: true,
-  corner_table: true
 )
 
 
