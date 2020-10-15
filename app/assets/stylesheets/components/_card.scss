@@ -9,6 +9,7 @@
 }
 .card-room span{
   color: $black;
+  font-size: 12px;
 
 }
 .card-room > img {
@@ -42,11 +43,14 @@
 .services{
   padding-left: 15px;
 }
-.icone-css {
-  margin-right: 10px;
+#icone-css {
+  margin-right: 7px;
   height: 20px;
   width:20px;
   }
+.balcony {
+  padding-left: 15px;
+}
 
 // .card-room {
 //   padding: 16px;
