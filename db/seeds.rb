@@ -63,7 +63,7 @@ suite = Category.create!(
   price: 750,
   room_size: 27,
   bed_size: "King size",
-  balcony: true,
+  balcony: false,
   corner_table: true
 )
 

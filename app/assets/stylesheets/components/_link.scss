@@ -1,0 +1,6 @@
+.link-without-style {
+    text-decoration:   none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
