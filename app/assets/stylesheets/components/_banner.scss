@@ -1,5 +1,5 @@
 .banner-home {
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), asset-url("banner-surf.jpg");
+  background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0)), asset-url("theaccessinnblue.JPG");
   background-size: cover;
   background-position: center;
   padding: 150px 0;
@@ -9,8 +9,6 @@
 }
 
 
-.title{
-}
 .name{
   font-size: 60px;
   font-weight: bold;
@@ -32,8 +30,7 @@
   bottom:40%;
   left:40%;
   right: 40%;
-  border: 1px solid white;
-  border-style: inherite;
+
 }
 
 @media(max-width: 620px) {

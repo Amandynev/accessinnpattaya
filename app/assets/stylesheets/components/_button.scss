@@ -11,3 +11,17 @@
   font-weight:bold;
 
 }
+
+.button-access-home{
+  color: $eggshell;
+  padding: 15px 20px;
+  font-size: 15px;
+  background:$red;
+  border: 2px solid $red;
+}
+
+.button-access-home:hover{
+  color: $eggshell;
+  font-weight:bold;
+
+}
