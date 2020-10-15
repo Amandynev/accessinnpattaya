@@ -5,10 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-puts"destroy rooms"
-puts"destroy categories"
+puts"destroy data ..."
+
 Room.destroy_all
 Category.destroy_all
+Hotel.destroy_all
+
+puts "create hotel ..."
+
+Hotel.create!(name:"Nom de ton hotel", address: "2 Avenue des Saules, 59160 Lille")
+
 puts "create categories..."
 
 accessinn = Category.create!(
