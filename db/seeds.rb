@@ -29,7 +29,7 @@ accessinn = Category.create!(
 
 superior = Category.create!(
   name: "Superior double",
-  description: "Discover the fantastic refreshing superior rooms. Located on the 3 floors of the hotel. Panoramic Lift access and Music system in room as a basement of your personal relaxation during your stay.",
+  description: "Discover the fantastic refreshing superior rooms. Located on the 3rd floors of the hotel. Panoramic Lift access and Music system in room as a basement of your personal relaxation during your stay.",
   price: 490,
   room_size: 18,
   bed_size: "Queen size",
@@ -39,7 +39,7 @@ superior = Category.create!(
 
 deluxe = Category.create!(
   name: "Deluxe double",
-  description: "Discover the fantastic refreshing deluxe rooms. Located on the 3 floors of the hotel. Panoramic Lift access. Music system in room and a private balcony with his PVC sliding window as a basement of your personal relaxation during your stay.",
+  description: "Discover the fantastic refreshing deluxe rooms. Located on the 3rd floors of the hotel. Panoramic Lift access. Music system in room and a private balcony with his PVC sliding window as a basement of your personal relaxation during your stay.",
   price: 550,
   room_size: 19,
   bed_size: "King size",
@@ -49,7 +49,7 @@ deluxe = Category.create!(
 
 premium = Category.create!(
   name: "Premium double",
-  description: "Discover the fantastic refreshing premium rooms. Located on the 3 floors of the hotel. Panoramic Lift access. Music system in room, special LED design and a private balcony with his PVC sliding window as a basement of your personal relaxation during your stay.",
+  description: "Discover the fantastic premium rooms. Located on the 3rd floors of the hotel. Panoramic Lift access. Music system in room, special LED design and a private balcony with his PVC sliding window as a basement of your personal relaxation during your stay.",
   price: 650,
   room_size: 25,
   bed_size: "King size",
