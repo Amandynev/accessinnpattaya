@@ -1,3 +1,20 @@
-<% @rooms.each do |room| %>
-  <%= room.category.name %>
-<% end %>
+
+<div class="container-index">
+  <% @rooms.each do |room| %>
+    <div class="card-room">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <div class="card-room-infos">
+        <div>
+          <div class="room-name">
+            <h2><%= room.category.name %></h2>
+          </div>
+          <div class="room-description">
+          <p><%= room.category.description[0..108]%>...</p>
+          </div>
+        </div>
+        <h2 class="card-room-pricing"><%= room.category.price %> bath</h2>
+
+      </div>
+    </div>
+  <% end %>
+</div>
