@@ -2,7 +2,7 @@ class RoomsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ]
 
   def index
-    @rooms = Category.all
+    @categories = Category.all
   end
 
   def show
