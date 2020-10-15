@@ -10,36 +10,44 @@ body{
 }
 
 .photo-reception{
-  width: 380px;
+  width: 350px;
   height: 250px;
   position:absolute;
-  top: 20px;
-  right: 250px;
+  top: 30px;
+  right: 180px;
+
 }
 
 .photo-buddha{
   position:absolute;
   top: 280px;
-  right: 150px;
-  width: 380px;
+  right: 120px;
+  width: 350px;
   height: 250px;
+
 }
 
 .photo-buddha-white{
   position:absolute;
   top: 70px;
-  right: 20px;
-  height: 380px;
+  right: 0px;
+  height: 350px;
+
 }
 
 .hotel-home{
   display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
   position:relative;
-  justify-content:center;
-  align-items:center;
+}
+.hotel-text{
+  margin-top: 100px;
+}
+
+.big-title-hotel h2{
+  font-size: 50px;
 }
 
 
