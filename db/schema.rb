@@ -34,6 +34,15 @@ ActiveRecord::Schema.define(version: 2020_10_15_085035) do
     t.boolean "corner_table"
   end
 
+  create_table "hotels", force: :cascade do |t|
+    t.string "name"
+    t.float "latitude"
+    t.float "longitude"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "address"
+  end
+
   create_table "rooms", force: :cascade do |t|
     t.bigint "category_id", null: false
     t.index ["category_id"], name: "index_rooms_on_category_id"
