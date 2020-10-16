@@ -1,6 +1,6 @@
 class Booking < ApplicationRecord
   belongs_to :user
-  belongs_to :rooms
+  has_many :room_bookings
   validates :start_at, :end_at, presence: true
   validate :start_at_cannot_be_in_the_past
   validate :end_at_cannot_be_before_start_at
