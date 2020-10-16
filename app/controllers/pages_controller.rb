@@ -7,5 +7,9 @@ class PagesController < ApplicationController
         lat: Hotel.first.latitude,
         lng: Hotel.first.longitude
       }
+
+      @categories = Category.all
+
   end
+
 end
