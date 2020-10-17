@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home ]
+  skip_before_action :authenticate_user!, only: [:home]
 
   def home
     @markers =
@@ -8,8 +8,6 @@ class PagesController < ApplicationController
         lng: Hotel.first.longitude
       }
 
-      @categories = Category.all
-
+    @categories = Category.all
   end
-
 end
