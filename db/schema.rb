@@ -22,11 +22,6 @@ ActiveRecord::Schema.define(version: 2020_10_15_115514) do
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
-  create_table "bookings_rooms", id: false, force: :cascade do |t|
-    t.bigint "room_id", null: false
-    t.bigint "booking_id", null: false
-  end
-
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.string "description"
