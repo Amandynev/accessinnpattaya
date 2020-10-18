@@ -1,0 +1,68 @@
+.card-room {
+  height: 520px ;
+  width: 370px;
+  overflow: hidden;
+  background: white;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: 1px solid $gray;
+  margin-bottom: 25px;
+}
+.card-room span{
+  color: $black;
+  font-size: 12px;
+
+}
+.card-room > img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-room h2 {
+  padding: 15px;
+  font-size: 30px;
+  font-weight: lighter;
+  margin: 0;
+  letter-spacing: .2rem;
+  color: $black;
+}
+
+.card-room p {
+  padding: 15px;
+  font-size: 14px;
+  opacity: .7;
+  margin: 0;
+  color: $black;
+
+}
+
+.button-price{
+  padding: 20px 15px;
+
+}
+.services{
+  padding-left: 15px;
+}
+#icone-css {
+  margin-right: 7px;
+  height: 20px;
+  width:20px;
+  }
+.balcony {
+  padding-left: 15px;
+}
+
+// .card-room {
+//   padding: 16px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: flex-end;
+//   position: relative;
+// }
+
+// .card-room-infos {
+//   position: absolute;
+//   right: 16px;
+//   top: -20px;
+//   width: 40px;
+// }

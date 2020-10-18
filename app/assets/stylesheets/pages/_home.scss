@@ -1,1 +1,58 @@
 // Specific CSS for your home-page
+body{
+  background-color:white;
+}
+
+.container-hotel{
+  margin: auto;
+  width: 90vw;
+  color:$black;
+}
+
+.photo-reception{
+  width: 350px;
+  height: 250px;
+  position:absolute;
+  top: 30px;
+  right: 180px;
+
+}
+
+.photo-buddha{
+  position:absolute;
+  top: 280px;
+  right: 120px;
+  width: 350px;
+  height: 250px;
+
+}
+
+.photo-buddha-white{
+  position:absolute;
+  top: 70px;
+  right: 0px;
+  height: 350px;
+
+}
+
+.hotel-home{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  position:relative;
+}
+.hotel-text{
+  margin-top: 100px;
+}
+
+.big-title-hotel h2{
+  font-size: 50px;
+}
+
+
+@media(max-width: 620px) {
+  .hotel-home {
+    grid-template-columns: 1fr;
+    }
+  }
