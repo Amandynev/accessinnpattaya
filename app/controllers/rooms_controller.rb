@@ -13,7 +13,6 @@ class RoomsController < ApplicationController
   private
 
   def set_room
-    category = Category.find(params[:id])
-    @room = Room.where(category: category).first
+    @room = Room.find(params[:id])
   end
 end

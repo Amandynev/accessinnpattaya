@@ -32,7 +32,7 @@
 
               <div class="button-price">
                 <div>
-                 <%= link_to "Book now from #{category.price}฿/night", room_path(category), class: "button-access link-without-style"%>
+                 <%= link_to "Book now from #{category.price}฿/night", room_path(category.rooms.first), class: "button-access link-without-style"%>
                 </div>
               </div>
             </div>
