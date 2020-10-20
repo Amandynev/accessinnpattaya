@@ -10,7 +10,6 @@
 .card-room span{
   color: $black;
   font-size: 12px;
-
 }
 
 .card-room:hover h2{
@@ -54,6 +53,34 @@
   }
 .balcony {
   padding-left: 15px;
+}
+
+.card-room-list{
+  width: 600px;
+  height: 540px;
+  overflow: hidden;
+  background: white;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: 1px solid $gray;
+  margin-bottom: 25px;
+}
+
+.card-room-list h2 {
+  padding: 15px;
+  font-size: 30px;
+  font-weight: lighter;
+  margin: 0;
+  letter-spacing: .2rem;
+  color: $black;
+}
+
+.card-room-list p {
+  padding: 15px;
+  font-size: 14px;
+  opacity: .7;
+  margin: 0;
+  color: $black;
+
 }
 
 // .card-room {
