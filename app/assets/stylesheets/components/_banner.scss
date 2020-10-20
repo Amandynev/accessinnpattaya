@@ -8,6 +8,15 @@
   position: relative;
 }
 
+.banner-show {
+  background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0)), asset-url("theaccessinnblue.JPG");
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 60vh;
+  width: 100vw;
+  position: relative;
+}
 
 .name{
   font-size: 60px;

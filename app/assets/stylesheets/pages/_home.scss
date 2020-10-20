@@ -20,8 +20,8 @@ body{
 
 .photo-buddha{
   position:absolute;
-  top: 280px;
-  right: 120px;
+  bottom: 40px;
+  right: 140px;
   width: 350px;
   height: 250px;
 
@@ -50,9 +50,33 @@ body{
   font-size: 50px;
 }
 
+.card-home {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.card-square-list{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
 
 @media(max-width: 620px) {
   .hotel-home {
     grid-template-columns: 1fr;
     }
+  .photo-buddha{
+    height: 250px;
+    right: auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+  .photo-buddha-white{
+    display:none;
+  }
+  .photo-reception{
+    display:none;
+  }
   }
