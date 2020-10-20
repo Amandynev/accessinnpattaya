@@ -51,13 +51,19 @@
 
 <div class="container-list">
 
+<div>
+  <p class="text-center pt-4 line">_______</p>
+<h1 class="text-center pt-1 title-home">The rooms</h1>
+</div>
+<br>
 
-  <div class="card-home d-flex">
+  <div class="card-home justify-content-center">
     <div class="">
        <% @categories.first(1).each do |category| %>
 
         <div class="card-room-list">
-          <%= image_tag 'buddha.JPG', class: 'card-room-image' %>
+          <%= image_tag 'theaccessinn-room.jpg', class: 'card-room-image' %>
+
           <div class="card-room-infos">
             <div>
 
@@ -98,10 +104,13 @@
 
 
     <div class="card-square-list">
-      <% @categories.first(4).each do |category| %>
+      <% @categories.last(4).each do |category| %>
+      <%= link_to room_path(category) do %>
             <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-              <%= category.name %>
+              <p class="card-title-square"><%= category.name.upcase %></p>
+              <p class="card-title-square-price"><%= category.price %> ฿</p>
             </div>
+      <%end%>
       <%end%>
     </div>
 
