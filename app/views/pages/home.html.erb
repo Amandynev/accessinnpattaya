@@ -106,6 +106,7 @@
     <div class="card-square-list">
       <% @categories.last(4).each do |category| %>
       <%= link_to room_path(category), class:"link-without-style" do %>
+
             <div class="card-category" style="background-image: url(<%= asset_path 'premiumdeluxeblue2-room.jpg' %>)">
               <p class="card-title-square"><%= category.name.upcase %></p>
               <p class="card-title-square-price">From <%= category.price %> ฿</p>
