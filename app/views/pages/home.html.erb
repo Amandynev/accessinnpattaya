@@ -33,16 +33,16 @@
     </div>
 
     <div class="hotel-photo">
-      <%= image_tag "buddha.JPG", alt: "photo buddha", class: "photo-buddha"%>
+      <%= image_tag "buddha-2.jpg", alt: "photo buddha", class: "photo-buddha"%>
     </div>
 
 
     <div class="hotel-photo">
-      <%= image_tag "buddha2.JPG", alt: "photo buddha 2", class: "photo-buddha-white"%>
+      <%= image_tag "buddha2-2.jpg", alt: "photo buddha 2", class: "photo-buddha-white"%>
     </div>
 
     <div class="hotel-photo">
-      <%= image_tag "reception.jpg", alt: "photo reception", class: "photo-reception"%>
+      <%= image_tag "reception-2.jpg", alt: "photo reception", class: "photo-reception"%>
     </div>
   </div>
 </div>
@@ -51,11 +51,19 @@
 
 <div class="container-list">
 
- <div class="row">
-    <% @categories.each do |category| %>
-      <div class="col-sm-12 col-md-6 col-lg-4">
-        <div class="card-room">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+<div>
+  <p class="text-center pt-4 line">_______</p>
+<h1 class="text-center pt-1 title-home">The rooms</h1>
+</div>
+<br>
+
+  <div class="card-home justify-content-center">
+    <div class="">
+       <% @categories.first(1).each do |category| %>
+
+        <div class="card-room-list">
+          <%= image_tag 'theaccessinn-room.jpg', class: 'card-room-image' %>
+
           <div class="card-room-infos">
             <div>
 
@@ -90,23 +98,27 @@
             </div>
           </div>
         </div>
-      </div>
-    <% end %>
+
+      <%end%>
+    </div>
+
+
+    <div class="card-square-list">
+      <% @categories.last(4).each do |category| %>
+      <%= link_to room_path(category), class:"link-without-style" do %>
+            <div class="card-category" style="background-image: url(<%= asset_path 'premiumdeluxeblue2-room.jpg' %>)">
+              <p class="card-title-square"><%= category.name.upcase %></p>
+              <p class="card-title-square-price">From <%= category.price %> ฿</p>
+            </div>
+      <%end%>
+      <%end%>
+    </div>
+
   </div>
 
 
 
-
 </div>
-
-
-
-
-
-
-
-
-
 
 
 
