@@ -33,16 +33,16 @@
     </div>
 
     <div class="hotel-photo">
-      <%= image_tag "buddha.JPG", alt: "photo buddha", class: "photo-buddha"%>
+      <%= image_tag "buddha-2.jpg", alt: "photo buddha", class: "photo-buddha"%>
     </div>
 
 
     <div class="hotel-photo">
-      <%= image_tag "buddha2.JPG", alt: "photo buddha 2", class: "photo-buddha-white"%>
+      <%= image_tag "buddha2-2.jpg", alt: "photo buddha 2", class: "photo-buddha-white"%>
     </div>
 
     <div class="hotel-photo">
-      <%= image_tag "reception.jpg", alt: "photo reception", class: "photo-reception"%>
+      <%= image_tag "reception-2.jpg", alt: "photo reception", class: "photo-reception"%>
     </div>
   </div>
 </div>
@@ -105,10 +105,10 @@
 
     <div class="card-square-list">
       <% @categories.last(4).each do |category| %>
-      <%= link_to room_path(category) do %>
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <%= link_to room_path(category), class:"link-without-style" do %>
+            <div class="card-category" style="background-image: url(<%= asset_path 'premiumdeluxeblue2-room.jpg' %>)">
               <p class="card-title-square"><%= category.name.upcase %></p>
-              <p class="card-title-square-price"><%= category.price %> ฿</p>
+              <p class="card-title-square-price">From <%= category.price %> ฿</p>
             </div>
       <%end%>
       <%end%>
