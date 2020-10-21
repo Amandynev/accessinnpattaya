@@ -1,8 +1,5 @@
 <div class="banner-home">
-  <h1 id="banner-typed-text"class="name"></h1>
-    <p>
-      <span id="banner-typed-text"></span>
-    </p>
+
 </div>
 
 <!-------------------->
@@ -66,11 +63,11 @@
 
           <div class="card-room-infos">
             <div>
-<%= link_to room_path(room), class:"link-without-style" do %>
-              <div class="room-name">
-                <h2><%= room.category.name %></h2>
-              </div>
-<% end %>
+              <%= link_to room_path(room), class:"link-without-style" do %>
+                <div class="room-name">
+                  <h2><%= room.category.name %></h2>
+                </div>
+              <% end %>
               <div class="services d-flex">
                 <div class="bed-size">
                 <span><img id="icone-css" src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgaGVpZ2h0PSI1MTIiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGRhdGEtbmFtZT0iTGF5ZXIgMSI+PHBhdGggZD0ibTQ3MS4yNDIgMjA0LjE2M2gtNTAuNDU3di0xMTAuODY5YTI2LjAyOSAyNi4wMjkgMCAwIDAgLTI2LTI2aC0yNzcuNTdhMjYuMDI5IDI2LjAyOSAwIDAgMCAtMjYgMjZ2MTEwLjg2OWgtNTAuNDU3YTMwLjc5MiAzMC43OTIgMCAwIDAgLTMwLjc1OCAzMC43NTd2MjAzLjc4NmE2IDYgMCAwIDAgMTIgMHYtODIuNjZoNDY4djgyLjY2YTYgNiAwIDAgMCAxMiAwdi0yMDMuNzg2YTMwLjc5MiAzMC43OTIgMCAwIDAgLTMwLjc1OC0zMC43NTd6bS0zNjguMDI3LTExMC44NjlhMTQuMDE2IDE0LjAxNiAwIDAgMSAxNC0xNGgyNzcuNTdhMTQuMDE2IDE0LjAxNiAwIDAgMSAxNCAxNHYxMTAuODY5aC0yMC42NTN2LTMxYTMwLjc5MyAzMC43OTMgMCAwIDAgLTMwLjc1OC0zMC43NjNoLTYwLjI3NGEzMC43OTMgMzAuNzkzIDAgMCAwIC0zMC43NTggMzAuNzU4djMxaC0yMC42ODZ2LTMxYTMwLjc5MyAzMC43OTMgMCAwIDAgLTMwLjc1Ni0zMC43NThoLTYwLjI3NGEzMC43OTMgMzAuNzkzIDAgMCAwIC0zMC43NTggMzAuNzU4djMxaC0yMC42NTN6bTE3NS4xMjkgMTEwLjg2OXYtMzFhMTguNzc5IDE4Ljc3OSAwIDAgMSAxOC43NTYtMTguNzYzaDYwLjI3MmExOC43NzkgMTguNzc5IDAgMCAxIDE4Ljc1OCAxOC43NTh2MzF6bS0xNDIuNDc2IDB2LTMxYTE4Ljc3OSAxOC43NzkgMCAwIDEgMTguNzU4LTE4Ljc2M2g2MC4yNzRhMTguNzc5IDE4Ljc3OSAwIDAgMSAxOC43NTggMTguNzU4djMxem0tOTUuMTEgMTJoNDMwLjQ4NGExOC43NzkgMTguNzc5IDAgMCAxIDE4Ljc1OCAxOC43NTd2NzEuMTM1aC00Njh2LTcxLjEzNWExOC43NzkgMTguNzc5IDAgMCAxIDE4Ljc1OC0xOC43NTd6bS0xOC43NTggMTI3Ljg4M3YtMjUuOTkxaDQ2OHYyNS45OTF6Ii8+PC9zdmc+" /><%= room.category.bed_size %></span>
@@ -98,26 +95,21 @@
             </div>
           </div>
         </div>
-
       <%end%>
     </div>
 
-
     <div class="card-square-list">
       <% @categories.last(4).map { |cat| cat.rooms.first }.each do |room| %>
-      <%= link_to room_path(room), class:"link-without-style" do %>
-
-            <div class="card-category" style="background-image: url(<%= asset_path 'rooms/' + room.photo %>)">
-              <p class="card-title-square"><%= room.category.name.upcase %></p>
-              <p class="card-title-square-price">From <%= room.category.price %> ฿</p>
-            </div>
-      <%end%>
+        <%= link_to room_path(room), class:"link-without-style" do %>
+        <div class="card-category" style="background-image: url(<%= asset_path 'rooms/' + room.photo %>)">
+          <p class="card-title-square"><%= room.category.name.upcase %></p>
+          <p class="card-title-square-price">From <%= room.category.price %> ฿</p>
+        </div>
+        <%end%>
       <%end%>
     </div>
 
   </div>
-
-
 
 </div>
 

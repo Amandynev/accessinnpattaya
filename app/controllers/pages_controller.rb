@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :restaurant, :event, :contact_us]
+  skip_before_action :authenticate_user!, only: [ :home, :restaurant, :event, :contact]
 
   def home
       @categories = Category.all
@@ -13,11 +13,12 @@ class PagesController < ApplicationController
   end
 
   def contact
-    @markers =
+     @markers =
       {
         lat: Hotel.first.latitude,
         lng: Hotel.first.longitude
       }
+
   end
 
 end

@@ -13,7 +13,8 @@ Hotel.destroy_all
 
 puts "create hotel ..."
 
-Hotel.create!(name:"Nom de ton hotel", address: "2 Avenue des Saules, 59160 Lille")
+Hotel.create!(name:"Access inn Pattaya", address: "หมู่ที่ 9 315/29 อำเภอบางละมุง ชลบุรี 20150
+")
 
 puts "create categories..."
 
