@@ -70,23 +70,38 @@ suite = Category.create!(
 puts "create rooms..."
 
 5.times do
-  Room.create!(category: accessinn)
+  Room.create!(
+    category: accessinn,
+    photo: "accessinn"
+    )
 end
 
 3.times do
-  Room.create!(category: superior)
+  Room.create!(
+    category: superior,
+    photo: "superior"
+    )
 end
 
 6.times do
-  Room.create!(category: deluxe)
+  Room.create!(
+    category: deluxe,
+    photo: "deluxe"
+    )
 end
 
 11.times do
-  Room.create!(category: premium)
+  Room.create!(
+    category: premium,
+    photo: "premium"
+    )
 end
 
 2.times do
-  Room.create!(category: suite)
+  Room.create!(
+    category: suite,
+    photo: "suite"
+    )
 end
 
 

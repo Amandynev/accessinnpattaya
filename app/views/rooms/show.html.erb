@@ -5,12 +5,12 @@
 <div class="container-index">
 
   <div class="title-room-show">
-    <h2 class="title-room-show"> <%= @category.name %> </h2>
+    <h2 class="title-room-show"> <%= @room.category.name %> </h2>
   </div>
 
   <div class="photo-room-calendar">
     <div class="photo-room">
-      <%= image_tag 'premiumdeluxeblue2-room.jpg', class: 'photo-show-size' %>
+      <%= image_tag 'rooms/' + @room.photo, class: 'photo-show-size' %>
     </div>
 
     <div class="calendar-booking">

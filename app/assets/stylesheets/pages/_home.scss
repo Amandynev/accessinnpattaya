@@ -60,9 +60,11 @@ body{
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
+
 }
 .card-square-list{
   display:grid;
+  justify-content:space-between;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
