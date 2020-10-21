@@ -5,7 +5,7 @@
 <div class="container-index">
 
   <div class="title-room-show">
-    <h2 class="title-room-show"> <%= @category.name %> </h2>
+    <h2 class="title-room-show"> <%= @room.category.name %> </h2>
   </div>
 
   <div class="photo-room-calendar">
@@ -18,6 +18,8 @@
     </div>
 
   </div>
+  <%= render '/bookings/form', booking: @booking %>
+
 
 
 
@@ -50,3 +52,4 @@
 
 
 </div>
+>>>>>>> 66df5b07b1e0220c208bd69d5088ef0f386b065b

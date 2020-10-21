@@ -10,6 +10,11 @@ puts"destroy data ..."
 Room.destroy_all
 Category.destroy_all
 Hotel.destroy_all
+User.destroy_all
+
+puts "create users ..."
+
+maxence = User.create!(email: "maxence@lewagon.org", password: "azerty")
 
 puts "create hotel ..."
 
