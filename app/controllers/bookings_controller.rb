@@ -2,7 +2,6 @@ class BookingsController < ApplicationController
   def create
     @room = Room.find(params[:room_id])
     room_available
-    binding.pry
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     if @booking.save
