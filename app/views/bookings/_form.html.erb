@@ -1,0 +1,5 @@
+<%= simple_form_for [ @room, @booking ] do |f| %>
+  <%= f.input :start_at, label: 'Pick a check-in date' %>
+  <%= f.input :end_at, label: 'Pick a check-out date'  %>
+  <%= f.submit "Book", class: "button-access" %>
+<% end %>

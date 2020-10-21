@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home, :restaurant, :event, :contact]
 
   def home
-      @categories = Category.all
+    @categories = Category.all
 
   end
 
@@ -20,5 +20,4 @@ class PagesController < ApplicationController
       }
 
   end
-
 end

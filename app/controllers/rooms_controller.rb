@@ -1,5 +1,6 @@
 class RoomsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index, :show ]
+  skip_before_action :authenticate_user!, only: %i[index show]
+  before_action :set_room, only: %i[show]
 
   def index
     @categories = Category.all
@@ -7,11 +8,12 @@ class RoomsController < ApplicationController
 
   def show
     @room = Room.find(params[:id])
+    @booking = Booking.new
   end
 
   private
 
-  def category_params
-    params.require(:category).permit(:name, :description, :price, :room_size, :bed_size, :balcony, :corner_table)
+  def set_room
+    @room = Room.find(params[:id])
   end
 end
