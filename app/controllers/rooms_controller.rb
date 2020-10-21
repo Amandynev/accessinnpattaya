@@ -8,6 +8,7 @@ class RoomsController < ApplicationController
 
   def show
     @booking = Booking.new
+    @category = Category.find(params[:id])
   end
 
   private

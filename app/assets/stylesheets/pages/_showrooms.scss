@@ -1,0 +1,23 @@
+
+
+.title-room-show{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 30px;
+  font-weight: lighter;
+  margin: 0;
+  letter-spacing: .2rem;
+  color: $black;
+}
+
+.photo-room-calendar{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.photo-show-size{
+width: 60vw;
+height: 380px;
+}
