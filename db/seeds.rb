@@ -78,35 +78,35 @@ puts "create rooms..."
 5.times do
   Room.create!(
     category: accessinn,
-    photo: "accessinn"
+    photo: "accessinn.jpg"
     )
 end
 
 3.times do
   Room.create!(
     category: superior,
-    photo: "superior"
+    photo: "superior.jpg"
     )
 end
 
 6.times do
   Room.create!(
     category: deluxe,
-    photo: "deluxe"
+    photo: "deluxe.jpg"
     )
 end
 
 11.times do
   Room.create!(
     category: premium,
-    photo: "premium"
+    photo: "premium.jpg"
     )
 end
 
 2.times do
   Room.create!(
     category: suite,
-    photo: "suite"
+    photo: "suite.jpg"
     )
 end
 
