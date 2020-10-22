@@ -1,8 +1,10 @@
 class BookingsController < ApplicationController
   def create
     @room = Room.find(params[:room_id])
-    @booking = Booking.new(booking_params)
+    @booking = Booking.new()
     if room_available
+      @room = room_available
+      @booking = Booking.new(booking_params)
       @booking.user = current_user
       if @booking.save
         RoomBooking.create(booking: @booking, room: @room)
@@ -27,14 +29,15 @@ class BookingsController < ApplicationController
     room_booking = RoomBooking.where(room: rooms)
     @bookings = Booking.where(room_bookings: room_booking)
     rooms.each do |room|
-      @room = room
+      availabilty = true 
       room.room_bookings.each do |room_booking_e|
         date_range = room_booking_e.booking.start_at..room_booking_e.booking.end_at
         start_date = Date.new(params[:booking]["start_at(1i)"].to_i, params[:booking]["start_at(2i)"].to_i, params[:booking]["start_at(3i)"].to_i)
         end_date = Date.new(params[:booking]["end_at(1i)"].to_i, params[:booking]["end_at(2i)"].to_i, params[:booking]["end_at(3i)"].to_i)
-        return false if date_range.include?(start_date) || date_range.include?(end_date)
+        availabilty = false if date_range.include?(start_date) || date_range.include?(end_date)
       end
+      return room if availabilty
     end
-    true
+    false
   end
 end
