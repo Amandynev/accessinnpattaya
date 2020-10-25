@@ -1,4 +1,14 @@
 <div class="banner-home">
+  <!-- <p> Boutique Hotel</p> -->
+  <p class="text-center line-red">_______</p>
+
+    <p>
+      <span id="banner-typed-text" class="name"></span>
+    </p>
+
+    <div>
+      <%= link_to "Book now", rooms_path, class: "button-access-home link-without-style"%>
+    </div>
 
 </div>
 
@@ -24,7 +34,7 @@
       </div>
 
       <div class="pt-3">
-          <%= link_to "About us", rooms_path, class: "button-access-home link-without-style" %>
+          <%= link_to "About us", rooms_path, class: "button-access link-without-style" %>
       </div>
 
     </div>
@@ -91,7 +101,7 @@
 
               <div class="button-price">
                 <div>
-                 <%= link_to "Book now from #{room.category.price}฿/night", rooms_path, class: "button-access link-without-style"%>
+                 <%= link_to "Book now from #{room.category.price}฿/night", rooms_path, class: "button-access-home link-without-style"%>
                 </div>
               </div>
             </div>
@@ -116,6 +126,51 @@
 
 </div>
 
+
+<!------------------------>
+<div class="container-text m-5">
+
+<h2 class="color-title">What about <span class="title-separate"> dining and drinking </span> ? </h2>
+</div>
+
+<!------------------------>
+<div class="container-restau text-center">
+
+    <div class="restaurant-text">
+      <div class="title-food">
+        <h2 class="">Food</h2>
+        <p class="text-center line">_______</p>
+      </div>
+        <p class="paragraphe-color">Dine on an international or thai meal at our restaurant with special courses really ofter...
+      </p>
+      <div class="pt-3">
+        <%= link_to "More infos", restaurant_path, class: "button-access link-without-style" %>
+      </div>
+    </div>
+
+    <div class="image-size-home margin-top">
+      <%= image_tag "restaurant.jpg", class: 'image-size-home' %>
+    </div>
+
+
+
+    <div class="bar-photo pt-4 pb-4">
+      <%= image_tag "billard.jpg", class: 'image-size-home' %>
+    </div>
+
+    <div class="restaurant-text">
+      <div class="title-food">
+        <h2>Bar</h2>
+        <p class="text-center line">_______</p>
+      </div>
+      <p class="paragraphe-color"> Or relax by playing pool or dart games at Access inn bar while drinking wines or specials cocktails.
+</p>
+    <div class="pt-3">
+      <%= link_to "More infos", restaurant_path, class: "button-access link-without-style" %>
+    </div>
+    </div>
+
+</div>
 
 
 

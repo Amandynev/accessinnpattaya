@@ -18,8 +18,7 @@ maxence = User.create!(email: "maxence@lewagon.org", password: "azerty")
 
 puts "create hotel ..."
 
-Hotel.create!(name:"Access inn Pattaya", address: "หมู่ที่ 9 315/29 อำเภอบางละมุง ชลบุรี 20150
-")
+Hotel.create!(name:"Access inn Pattaya", address: "soi lengkee, Chon Buri 20150, pattaya, thailand")
 
 puts "create categories..."
 
