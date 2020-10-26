@@ -12,10 +12,12 @@
 }
 
 .banner-show {
-  background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0)), asset-url("rooms/theaccessinnblue.JPG");
-  background-size: cover;
   background-position: center;
   position: relative;
+}
+
+.photo-show-banner{
+  background:linear-gradient(rgba(28, 28, 28, 0.2) 0%, rgba(28, 28, 28, 0.7) 100%);
 }
 .typed-cursor{
   display:none;
