@@ -14,10 +14,10 @@
 
 .button-access-calendar{
   color: $eggshell;
-  padding: 15px 30px;
+  padding: 15px 150px;
   font-size: 15px;
-  background:none;
-  border: 2px solid $eggshell;
+  background:$red;
+  border: 2px solid $red;
 }
 
 .button-access-calendar:hover{
@@ -25,6 +25,7 @@
   font-weight:bold;
   border: 3px solid $eggshell;
 }
+
 .button-access-book{
   color: $eggshell;
   padding: 15px 20px;

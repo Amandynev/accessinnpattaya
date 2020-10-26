@@ -1,8 +1,20 @@
 
-<div class="calendar-booking">
+<div class="calendar-booking" id="calendarscroll">
+
   <%= simple_form_for [ @room, @booking ] do |f| %>
-    <%= f.input :start_at, label: 'Pick a check-in date' %>
-    <%= f.input :end_at, label: 'Pick a check-out date'  %>
-    <%= f.submit "Book", class: "button-access-calendar" %>
+
+    <div class="checkinout">
+      <div class="checkin">
+        <%= f.input :start_at, label: 'CHECK IN' %>
+      </div>
+      <div class="checkout">
+        <%= f.input :end_at, label: 'CHECK OUT'  %>
+      </div>
+    </div>
+    <div class="buttonbookcalendar">
+      <%= f.submit "Book", class: "button-access-calendar" %>
+    </div>
+
   <% end %>
+
 </div>

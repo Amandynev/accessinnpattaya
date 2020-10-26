@@ -26,3 +26,9 @@ height: 380px;
   width: 100vw;
   height: 550px;
 }
+@media(max-width: 620px) {
+  .photo-room-calendar{
+  display:grid;
+  grid-template-columns: 1fr;
+  }
+}

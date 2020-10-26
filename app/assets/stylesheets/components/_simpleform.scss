@@ -1,0 +1,62 @@
+.calendar-booking{
+  background-color: $black;
+  display:grid;
+  justify-items:center;
+  position:sticky;
+}
+
+#booking_start_at_1i{
+  background-color: black;
+  color: $red;
+  border: none;
+
+}
+
+#booking_start_at_2i{
+  background-color: black;
+  color: $red;
+  border: none;
+}
+
+#booking_start_at_3i{
+  background-color: black;
+  color: $red;
+  border: none;
+
+}
+
+#booking_end_at_1i{
+   background-color: black;
+  color: $red;
+  border: none;
+}
+
+#booking_end_at_2i{
+   background-color: black;
+  color: $red;
+  border: none;
+}
+
+#booking_end_at_3i{
+   background-color: black;
+  color: $red;
+  border: none;
+}
+
+label {
+  color: $white;
+  padding: 15px 20px;
+  font-size: 15px;
+  align-self:center;
+}
+
+select{
+  display:block !important;
+
+}
+
+@media(max-width: 620px) {
+
+
+
+}
