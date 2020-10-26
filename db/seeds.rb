@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts"destroy data ..."
 
-Room_bookings.destroy_all
-Bookings.destroy_all
+RoomBooking.destroy_all
+Booking.destroy_all
 Room.destroy_all
 Category.destroy_all
 Hotel.destroy_all
