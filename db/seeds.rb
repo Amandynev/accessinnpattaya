@@ -60,6 +60,7 @@ deluxe = Category.create!(
   balcony: true,
   corner_table: false
 )
+
 superior = Category.create!(
   name: "Superior double",
   description: "Discover the fantastic refreshing superior rooms. Located on the 3rd floors of the hotel. Panoramic Lift access and Music system in room as a basement of your personal relaxation during your stay.",
