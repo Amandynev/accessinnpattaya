@@ -1,5 +1,5 @@
 .banner-home {
-  background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0)), asset-url("rooms/premiumblue.jpg");
+  background-image: linear-gradient(rgba(28, 28, 28, 0.2) 0%, rgba(28, 28, 28, 0.7) 100%), asset-url("rooms/premiumblue.jpg");
   background-size: cover;
   background-position: center;
   padding: 150px 0;
@@ -15,9 +15,7 @@
   background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0)), asset-url("rooms/theaccessinnblue.JPG");
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
-  height: 60vh;
-  width: 100vw;
+
   position: relative;
 }
 .typed-cursor{
@@ -27,7 +25,7 @@
 .name{
   font-size: 70px;
   font-weight: bold;
-  color: $black;
+  color: $white;
   font-family: $headers-font;
 
 }
