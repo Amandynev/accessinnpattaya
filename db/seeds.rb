@@ -18,8 +18,7 @@ maxence = User.create!(email: "maxence@lewagon.org", password: "azerty")
 
 puts "create hotel ..."
 
-Hotel.create!(name:"Access inn Pattaya", address: "หมู่ที่ 9 315/29 อำเภอบางละมุง ชลบุรี 20150
-")
+Hotel.create!(name:"Access inn Pattaya", address: "soi lengkee, Chon Buri 20150, pattaya, thailand")
 
 puts "create categories..."
 
@@ -32,25 +31,14 @@ accessinn = Category.create!(
   balcony: true,
   corner_table: true
 )
-
-superior = Category.create!(
-  name: "Superior double",
-  description: "Discover the fantastic refreshing superior rooms. Located on the 3rd floors of the hotel. Panoramic Lift access and Music system in room as a basement of your personal relaxation during your stay.",
-  price: 490,
-  room_size: 18,
-  bed_size: "Queen size",
-  balcony: false,
-  corner_table: false
-)
-
-deluxe = Category.create!(
-  name: "Deluxe double",
-  description: "Discover the fantastic refreshing deluxe rooms. Located on the 3rd floors of the hotel. Panoramic Lift access. Music system in room and a private balcony with his PVC sliding window as a basement of your personal relaxation during your stay.",
-  price: 550,
-  room_size: 19,
+suite = Category.create!(
+  name: "Suite double",
+  description: "Discover the fantastic refreshing suite rooms. Located on the 1st floor of the hotel. Panoramic Lift access. Music system in room, special LED design and a spacious room with a sofa corner and a private balcony with his PVC sliding window as a basement of your personal relaxation during your stay.",
+  price: 750,
+  room_size: 27,
   bed_size: "King size",
-  balcony: true,
-  corner_table: false
+  balcony: false,
+  corner_table: true
 )
 
 premium = Category.create!(
@@ -63,15 +51,27 @@ premium = Category.create!(
   corner_table: true
 )
 
-suite = Category.create!(
-  name: "Suite double",
-  description: "Discover the fantastic refreshing suite rooms. Located on the 1st floor of the hotel. Panoramic Lift access. Music system in room, special LED design and a spacious room with a sofa corner and a private balcony with his PVC sliding window as a basement of your personal relaxation during your stay.",
-  price: 750,
-  room_size: 27,
+deluxe = Category.create!(
+  name: "Deluxe double",
+  description: "Discover the fantastic refreshing deluxe rooms. Located on the 3rd floors of the hotel. Panoramic Lift access. Music system in room and a private balcony with his PVC sliding window as a basement of your personal relaxation during your stay.",
+  price: 550,
+  room_size: 19,
   bed_size: "King size",
-  balcony: false,
-  corner_table: true
+  balcony: true,
+  corner_table: false
 )
+
+superior = Category.create!(
+  name: "Superior double",
+  description: "Discover the fantastic refreshing superior rooms. Located on the 3rd floors of the hotel. Panoramic Lift access and Music system in room as a basement of your personal relaxation during your stay.",
+  price: 490,
+  room_size: 18,
+  bed_size: "Queen size",
+  balcony: false,
+  corner_table: false
+)
+
+
 
 puts "create rooms..."
 
