@@ -33,7 +33,11 @@
 
               <div class="button-price">
                 <div>
+<<<<<<< HEAD
+                 <%= link_to "Book now from #{humanized_money_with_symbol(category.price)}/night", room_path(category.rooms.first), class: "button-access link-without-style"%>
+=======
                  <%= link_to "Book now from #{room.category.price}฿/night", room_path(room.category.rooms.first), class: "button-access link-without-style"%>
+>>>>>>> 54ca7cda2ff812f30bf142c0220a59174e102aac
                 </div>
               </div>
             </div>

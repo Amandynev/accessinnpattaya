@@ -10,26 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_21_084441) do
+ActiveRecord::Schema.define(version: 2020_10_22_184708) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
     t.bigint "user_id", null: false
+    t.bigint "room_id", null: false
     t.date "start_at"
     t.date "end_at"
+    t.string "state", default: "pending"
+    t.index ["room_id"], name: "index_bookings_on_room_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.integer "price"
     t.integer "room_size"
     t.string "bed_size"
     t.boolean "balcony"
     t.boolean "corner_table"
+    t.integer "price_cents", default: 0, null: false
   end
 
   create_table "hotels", force: :cascade do |t|
@@ -41,13 +44,14 @@ ActiveRecord::Schema.define(version: 2020_10_21_084441) do
     t.string "address"
   end
 
-  create_table "room_bookings", force: :cascade do |t|
-    t.bigint "booking_id", null: false
-    t.bigint "room_id", null: false
+  create_table "orders", force: :cascade do |t|
+    t.string "state"
+    t.integer "amount_cents", default: 0, null: false
+    t.string "checkout_session_id"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["booking_id"], name: "index_room_bookings_on_booking_id"
-    t.index ["room_id"], name: "index_room_bookings_on_room_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "rooms", force: :cascade do |t|
@@ -68,8 +72,8 @@ ActiveRecord::Schema.define(version: 2020_10_21_084441) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "rooms"
   add_foreign_key "bookings", "users"
-  add_foreign_key "room_bookings", "bookings"
-  add_foreign_key "room_bookings", "rooms"
+  add_foreign_key "orders", "users"
   add_foreign_key "rooms", "categories"
 end

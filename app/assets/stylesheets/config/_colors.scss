@@ -10,3 +10,9 @@ $gray: #e9ecef;
 $light-gray: #F4F4F4;
 $eggshell: #F2E8CF;
 $black: #111111;
+
+.text-red {
+  color: $red;
+  background-color: $black;
+  font-size: 45px;
+}

@@ -1,7 +1,6 @@
 class Booking < ApplicationRecord
   belongs_to :user
-  has_many :room_bookings
-  has_many :rooms, through: :room_bookings
+  belongs_to :room
   validates :start_at, :end_at, presence: true
   validate :start_at_cannot_be_in_the_past
   validate :end_at_cannot_be_before_start_at
@@ -21,4 +20,9 @@ class Booking < ApplicationRecord
     end
     price
   end
+
+  def price
+    (end_at - start_at).to_i * room.category.price_cents
+  end
+
 end
