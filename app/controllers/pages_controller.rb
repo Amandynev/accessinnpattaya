@@ -3,6 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @categories = Category.all
+    @booking = Booking.new
 
   end
 
@@ -20,4 +21,6 @@ class PagesController < ApplicationController
       }
 
   end
+
+
 end
