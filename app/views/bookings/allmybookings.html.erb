@@ -1,0 +1,10 @@
+
+<% @bookings.each do |booking| %>
+  <div class="text-red">
+    <%= booking.start_at %> - <%= booking.end_at %> - <%= booking.room.category.name %> - <%= booking.room.id %>
+  </div>
+<% end %>
+
+<%= form_tag orders_path do %>
+  <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+<% end %>

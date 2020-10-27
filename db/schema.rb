@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2020_10_22_184708) do
     t.bigint "room_id", null: false
     t.date "start_at"
     t.date "end_at"
-    t.string "state"
+    t.string "state", default: "pending"
     t.index ["room_id"], name: "index_bookings_on_room_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
@@ -46,14 +46,11 @@ ActiveRecord::Schema.define(version: 2020_10_22_184708) do
 
   create_table "orders", force: :cascade do |t|
     t.string "state"
-    t.string "booking_sku"
     t.integer "amount_cents", default: 0, null: false
     t.string "checkout_session_id"
     t.bigint "user_id", null: false
-    t.bigint "booking_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["booking_id"], name: "index_orders_on_booking_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
@@ -77,7 +74,6 @@ ActiveRecord::Schema.define(version: 2020_10_22_184708) do
 
   add_foreign_key "bookings", "rooms"
   add_foreign_key "bookings", "users"
-  add_foreign_key "orders", "bookings"
   add_foreign_key "orders", "users"
   add_foreign_key "rooms", "categories"
 end

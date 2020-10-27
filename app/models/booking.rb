@@ -12,4 +12,9 @@ class Booking < ApplicationRecord
   def end_at_cannot_be_before_start_at
     return errors.add(:end_at, "ne peut pas être avant la date de début") if start_at.present? && end_at.present? && end_at < start_at
   end
+
+  def price
+    (end_at - start_at).to_i * room.category.price_cents
+  end
+
 end
