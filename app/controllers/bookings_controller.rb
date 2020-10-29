@@ -7,6 +7,7 @@ class BookingsController < ApplicationController
       @booking.room = room
       @booking.user = current_user
       if @booking.save
+        ReservationJob.set(wait: 30.minutes).perform_later(@booking.id)
         redirect_to rooms_path
       else
         render "rooms/show"
