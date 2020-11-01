@@ -1,1 +1,16 @@
+<%= simple_form_for @room do |f| %>
+
+  <%= f.input :firstname %>
+  <%= f.input :lastname %>
+
+  <%= f.input :email, input_html: { autocomplete: 'email' } %>
+  <%= f.input :phone %>
+  <%= f.input :adress %>
+  <%= f.input :pastcode %>
+  <%= f.input :country %>
+
+  <%= f.button :submit, class: "button-access" %>
+
+  <% end %>
+
 <%= render 'shared/map' %>
