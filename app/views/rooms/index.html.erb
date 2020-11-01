@@ -1,9 +1,9 @@
 
 <div class="container-index">
 
-
+  <div class="row">
     <% @categories.map { |cat| cat.rooms.first }.each do |room| %>
-
+      <div class="col-sm-12 col-xs-12 col-md-6 col-lg-4">
         <div class="card-room">
           <%= image_tag "rooms/"+ room.photo, class: 'card-room-image' %>
           <div class="card-room-infos">
@@ -41,6 +41,7 @@
             </div>
           </div>
         </div>
+      </div>
     <% end %>
-
+  </div>
 </div>
