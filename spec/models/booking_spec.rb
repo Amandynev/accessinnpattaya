@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Booking, type: :model do
   it 'Booking valid with data' do
-    booking = create(:booking)
+    booking = build(:booking)
     expect(booking).to be_valid
   end
 

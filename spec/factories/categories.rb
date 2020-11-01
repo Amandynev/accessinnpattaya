@@ -1,11 +1,11 @@
-FactoryBot.define do
-  factory :category do
-    name { "Deluxe double" }
-    description { "Discover the fantastic refreshing deluxe rooms. Located on the 3rd floors of the hotel. Panoramic Lift access. Music system in room and a private balcony with his PVC sliding window as a basement of your personal relaxation during your stay." }
-    price { 550 }
-    room_size { 19 }
-    bed_size { "King size" }
-    balcony { true }
-    corner_table { false }
-  end
-end
+# FactoryBot.define do
+#   factory :category do
+#     name  { Faker::FunnyName.three_word_name }
+#     description { Faker::Lorem.paragraph }
+#     price { Faker::Number.number(digits: 3) }
+#     room_size { Faker::Number.number(digits: 2) }
+#     bed_size { Faker::Food.dish }
+#     balcony { Faker::Boolean.boolean }
+#     corner_table { Faker::Boolean.boolean }
+#   end
+# end
