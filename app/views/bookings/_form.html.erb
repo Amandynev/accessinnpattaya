@@ -10,6 +10,9 @@
       <div class="checkout">
         <%= f.input :end_at, label: 'CHECK OUT'  %>
       </div>
+      <div>
+        <%= f.number_field :number, label: 'Number', value: 1, min: 1, max: 11 %>
+      </div>
     </div>
     <div class="buttonbookcalendar">
       <%= f.submit "Book", class: "button-access-calendar" %>
