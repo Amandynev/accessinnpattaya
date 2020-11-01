@@ -6,6 +6,8 @@ class CreateBookings < ActiveRecord::Migration[6.0]
       t.date :start_at
       t.date :end_at
       t.string :state, default: "pending"
+
+      t.timestamps
     end
   end
 end

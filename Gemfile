@@ -24,6 +24,8 @@ gem 'redis', '~> 4.0'
 gem 'money-rails'
 gem 'stripe'
 gem 'stripe_event'
+gem 'sidekiq'
+gem 'sidekiq-failures', '~> 1.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
