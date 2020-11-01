@@ -1,0 +1,9 @@
+<%= form_tag searchedrooms_path, method: :get do %>
+  <div class="checkinout">
+    <%= date_field :start_at, params[:start_at] %>
+    <%= date_field :end_at, params[:start_at] %>
+  </div>
+  <div class="buttonbookcalendar">
+    <%= submit_tag "Looking for rooms", class: "button-access-calendar" %>
+  </div>
+<% end %>
