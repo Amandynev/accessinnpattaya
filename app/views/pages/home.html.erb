@@ -10,15 +10,15 @@
 
     <div class="hotel-text text-center">
 
-      <div class="title-hotel">
+      <div class="title-hotel"data-aos="zoom-in-up" data-aos-duration="3000">
         <p>OYO GROUP</p>
       </div>
 
-      <div class="big-title-hotel">
+      <div class="big-title-hotel"data-aos="zoom-in-up" data-aos-duration="3000">
         <h2> Access Inn Pattaya</h2>
       </div>
 
-      <div class="description-hotel">
+      <div class="description-hotel" data-aos="zoom-in-up" data-aos-duration="3000">
         <p>Access Inn Pattaya is a modern and design Hotel with a panoramic lift in the center of the vibrant city of Pattaya. The Hotel features a bar lounge and a restaurant.
         Dine on an international or thai meal at our restaurant,
         or relax by playing pool or dart games at Access inn bar while drinking wines or specials cocktails.</p>
@@ -59,7 +59,7 @@
     <div class="">
        <% @categories.first(1).map { |cat| cat.rooms.first }.each do |room| %>
 
-        <div class="card-room-list">
+        <div class="card-room-list"data-aos="slide-right"data-aos-duration="1000">
           <%= image_tag "rooms/"+ room.photo, class: 'card-room-image' %>
 
           <div class="card-room-infos">
@@ -101,7 +101,7 @@
       <%end%>
     </div>
 
-    <div class="card-square-list">
+    <div class="card-square-list" data-aos="slide-left" data-aos-duration="1000">
 
       <% @categories.last(4).map { |cat| cat.rooms.first }.each do |room| %>
         <%= link_to room_path(room), class:"link-without-style" do %>
