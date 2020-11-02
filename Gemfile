@@ -33,8 +33,10 @@ gem 'sidekiq-failures', '~> 1.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
+gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'devise'
-
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'

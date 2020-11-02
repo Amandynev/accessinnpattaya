@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact'
   get 'restaurant', to: 'pages#restaurant'
   get 'event', to: 'pages#event'
+  resources :home, only: [:new, :create]
   get 'allmybookings', to: 'bookings#allmybookings'
   get 'searchedrooms', to: 'rooms#searchedrooms'
   resources :rooms, only: [:index, :show] do
@@ -12,9 +13,9 @@ Rails.application.routes.draw do
   resources :orders, only: [:show, :create] do
     resources :payments, only: :new
   end
-  
+
   mount StripeEvent::Engine, at: '/stripe-webhooks'
-  
+
   require "sidekiq/web"
 
   authenticate :user, ->(user) { user.admin? } do

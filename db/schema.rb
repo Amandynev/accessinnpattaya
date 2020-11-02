@@ -21,8 +21,6 @@ ActiveRecord::Schema.define(version: 2020_10_22_184708) do
     t.date "start_at"
     t.date "end_at"
     t.string "state", default: "pending"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
     t.index ["room_id"], name: "index_bookings_on_room_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
