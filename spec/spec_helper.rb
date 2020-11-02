@@ -17,7 +17,7 @@ RSpec.configure do |config|
 
   # Factory Bot Lint
   config.before(:suite) do
-    Rails.application.load_seed 
+    Rails.application.load_seed
     FactoryBot.lint
   end
 
