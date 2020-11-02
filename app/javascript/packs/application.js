@@ -33,14 +33,10 @@ require("channels")
 import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { loadDynamicBannerText } from '../components/banner';
-<<<<<<< HEAD
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-=======
 import "jquery";
 
-
->>>>>>> f8d4385ded30e9dfa5224a3034fc4577e947d865
 
 
 // Internal imports, e.g:

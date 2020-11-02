@@ -59,7 +59,7 @@
     <div class="">
        <% @categories.first(1).map { |cat| cat.rooms.first }.each do |room| %>
 
-        <div class="card-room-list"data-aos="slide-right">
+        <div class="card-room-list"data-aos="slide-right"data-aos-duration="1000">
           <%= image_tag "rooms/"+ room.photo, class: 'card-room-image' %>
 
           <div class="card-room-infos">
