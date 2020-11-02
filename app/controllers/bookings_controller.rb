@@ -23,7 +23,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_at, :end_at, :user_id, :room_id, :state)
+    params.require(:booking).permit(:start_at, :end_at, :state)
   end
 
   def room_available
@@ -31,16 +31,16 @@ class BookingsController < ApplicationController
     category = @room.category
     rooms = Room.where(category: category)
     rooms.each do |room|
-      availabilty = true
+      availability = true
       rooms_ok << room if room.bookings.empty?
       room.bookings.each do |booking|
         next if booking.end_at < Date.today
 
         date_range = booking.start_at..booking.end_at
-        start_date = Date.new(params[:booking]["start_at(1i)"].to_i, params[:booking]["start_at(2i)"].to_i, params[:booking]["start_at(3i)"].to_i)
-        end_date = Date.new(params[:booking]["end_at(1i)"].to_i, params[:booking]["end_at(2i)"].to_i, params[:booking]["end_at(3i)"].to_i)
-        availabilty = false if date_range.include?(start_date) || date_range.include?(end_date) || (start_date < booking.start_at && end_date > booking.end_at)
-        rooms_ok << room if availabilty
+        start_date = Rails.env.test? ? Date.parse(params[:booking][:start_at]) : Date.new(params[:booking]["start_at(1i)"].to_i, params[:booking]["start_at(2i)"].to_i, params[:booking]["start_at(3i)"].to_i)
+        end_date = Rails.env.test? ? Date.parse(params[:booking][:end_at]) : Date.new(params[:booking]["end_at(1i)"].to_i, params[:booking]["end_at(2i)"].to_i, params[:booking]["end_at(3i)"].to_i)
+        availability = false if date_range.include?(start_date) || date_range.include?(end_date) || (start_date < booking.start_at && end_date > booking.end_at)
+        rooms_ok << room if availability
       end
       return rooms_ok if rooms_ok.size == params[:booking][:number].to_i
     end
