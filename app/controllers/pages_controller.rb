@@ -1,10 +1,9 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :restaurant, :event, :contact]
+  skip_before_action :authenticate_user!, only: [ :home, :restaurant, :event, :contact, :new, :create]
 
   def home
     @categories = Category.all
     @booking = Booking.new
-
   end
 
   def restaurant
@@ -19,8 +18,6 @@ class PagesController < ApplicationController
         lat: Hotel.first.latitude,
         lng: Hotel.first.longitude
       }
-
   end
-
 
 end
