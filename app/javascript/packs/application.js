@@ -26,6 +26,9 @@ require("channels")
 import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { loadDynamicBannerText } from '../components/banner';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import "jquery";
 import {} from 'jquery-ujs'
 
 // Internal imports, e.g:
@@ -36,5 +39,6 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   loadDynamicBannerText();
+  AOS.init();
 
 });
