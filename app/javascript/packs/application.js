@@ -30,6 +30,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { loadDynamicBannerText } from '../components/banner';
 import { initMapbox } from '../plugins/init_mapbox';
+import { calendar_pat } from '../plugins/calendar'
 import "../plugins/flatpickr";
 
 // Internal imports, e.g:
@@ -37,6 +38,7 @@ import "../plugins/flatpickr";
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
+  calendar_pat();
   // Call your functions here, e.g:
   // initSelect2();
   loadDynamicBannerText();

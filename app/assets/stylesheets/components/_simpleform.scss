@@ -5,16 +5,6 @@
   position:sticky;
 }
 
-input#range_start{
-  background-color: $black;
-  color: $red
-}
-
-input#range_end{
-  background-color: $black;
-  color: $red
-}
-
 #booking_start_at_1i{
   background-color: black;
   color: $red;
@@ -68,7 +58,5 @@ select{
 @media(max-width: 620px) {
 .calendar-booking{
   width: 90vw;
-}
-
-
+  }
 }
