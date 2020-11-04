@@ -1,4 +1,4 @@
-const calendar_pat = () => {
+const calendarPat = () => {
   const calendarBox = document.querySelector('.calendar-box');
   if (calendarBox) {
     const startInput = document.querySelector('#range_start');
@@ -22,4 +22,4 @@ const calendar_pat = () => {
   }
 }
 
-export { calendar_pat };
+export { calendarPat };
