@@ -51,6 +51,13 @@
   background: $black-gray;
   margin-bottom: 25px;
   position: relative;
+  i {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: $red;
+    font-size: 16px;
+  }
   .card-booking-image{
     height: 250px;
     width: 100%;

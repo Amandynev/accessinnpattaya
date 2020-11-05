@@ -10,6 +10,9 @@
     <% @hash_bookings.each do |key, value| %>
       <div class="col-sm-12 col-xs-12 col-md-6 col-lg-4">
         <div class="card-booking">
+        <%= link_to destroy_bookings_path(value[:room].category), method: :delete do %>
+          <i class="far fa-times-circle"></i>
+        <% end %>
           <%= image_tag "rooms/"+ value[:room].photo, class: 'card-booking-image' %>
           <div class="room-tag">
             <div class="tag-room-name">

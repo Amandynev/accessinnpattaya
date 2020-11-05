@@ -1,6 +1,7 @@
 class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :room
+  has_one :category, through: :room
   validates :start_at, :end_at, presence: true
   validate :start_at_cannot_be_in_the_past
   validate :end_at_cannot_be_before_start_at
@@ -8,7 +9,10 @@ class Booking < ApplicationRecord
   scope :user_bookings, lambda { |user|
     where(user_id: user.id, state: "pending")
   }
-  # Ex:- scope :active, lambda {where(:active => true)} { |user| where("user_id = ? and state = ?", user.id, "pending") }
+
+  scope :user_bookings_category, lambda { |user, category|
+  where(user_id: user.id, category: category, state: "pending")
+}
 
   def start_at_cannot_be_in_the_past
     return errors.add(:start_at, "ne peut pas être une date passée") if start_at.present? && start_at < Date.today
