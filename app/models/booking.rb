@@ -5,6 +5,11 @@ class Booking < ApplicationRecord
   validate :start_at_cannot_be_in_the_past
   validate :end_at_cannot_be_before_start_at
 
+  scope :user_bookings, lambda { |user|
+    where(user_id: user.id, state: "pending")
+  }
+  # Ex:- scope :active, lambda {where(:active => true)} { |user| where("user_id = ? and state = ?", user.id, "pending") }
+
   def start_at_cannot_be_in_the_past
     return errors.add(:start_at, "ne peut pas être une date passée") if start_at.present? && start_at < Date.today
   end
