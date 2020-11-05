@@ -1,5 +1,5 @@
 class RoomsController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[index show]
+  skip_before_action :authenticate_user!, only: %i[index show searchedrooms]
   before_action :set_room, only: %i[show]
 
   HASH_AVAILABILITY = {
@@ -21,6 +21,7 @@ class RoomsController < ApplicationController
   end
 
   def searchedrooms
+    @categories = Category.all
     unless params[:start_at] == [""] || params[:end_at] == [""]
       hash_unavailability = Hash.new(0)
       bookings = Booking.where("end_at >= ?", Date.today)

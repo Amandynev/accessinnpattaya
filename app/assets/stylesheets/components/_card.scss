@@ -6,38 +6,52 @@
 //   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border: 1px solid $gray;
   margin-bottom: 25px;
+  span{
+    color: $black;
+    font-size: 12px;
+  }
+  .room-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .available{
+      display: flex;
+      justify-content: center;
+      color: $red;
+      margin-right: 15px;;
+      border-radius: 50%;
+      font-size: 24px;
+      font-weight: 700;
+      width: 50px;
+      height: 50%;
+      border: 2px solid $red;
+    }
+  }
+  h2 {
+    padding: 15px;
+    font-size: 30px;
+    font-weight: lighter;
+    margin: 0;
+    letter-spacing: .2rem;
+    color: $black;
+  }
+  p {
+    padding: 15px;
+    font-size: 14px;
+    opacity: .7;
+    margin: 0;
+    color: $black;
+  
+  }
+  &:hover h2{
+    font-weight: bold;
+  }
 }
 
-.card-room span{
-  color: $black;
-  font-size: 12px;
-}
-
-.card-room:hover h2{
-  font-weight: bold;
-}
 .card-room-image {
   height: 250px;
   width: 100%;
   object-fit: cover;
-}
-
-.card-room h2 {
-  padding: 15px;
-  font-size: 30px;
-  font-weight: lighter;
-  margin: 0;
-  letter-spacing: .2rem;
-  color: $black;
-}
-
-.card-room p {
-  padding: 15px;
-  font-size: 14px;
-  opacity: .7;
-  margin: 0;
-  color: $black;
-
 }
 
 .button-price{
@@ -64,24 +78,22 @@
 //   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border: 1px solid $gray;
   margin-bottom: 25px;
-}
-
-.card-room-list h2 {
-  padding: 15px;
-  font-size: 30px;
-  font-weight: lighter;
-  margin: 0;
-  letter-spacing: .2rem;
-  color: $black;
-}
-
-.card-room-list p {
-  padding: 15px;
-  font-size: 14px;
-  opacity: .7;
-  margin: 0;
-  color: $black;
-
+  h2 {
+    padding: 15px;
+    font-size: 30px;
+    font-weight: lighter;
+    margin: 0;
+    letter-spacing: .2rem;
+    color: $black;
+  }
+  p {
+    padding: 15px;
+    font-size: 14px;
+    opacity: .7;
+    margin: 0;
+    color: $black;
+  
+  }
 }
 
 @media(max-width: 620px) {
