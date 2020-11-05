@@ -48,9 +48,7 @@
 
 .card-booking {
   width: 370px;
-  background: $black;
-  color: $red;
-  border: 1px solid $gray;
+  background: $black-gray;
   margin-bottom: 25px;
   position: relative;
   .card-booking-image{
@@ -66,9 +64,9 @@
   }
   .card-booking-description {
     .card-booking-description-title {
-      font-size: 48px;
+      font-size: 16px;
       text-align: center;
-      margin: 10px 0;
+      margin: 20px 0;
     }
     .card-booking-description-rooms{
       display: flex;
@@ -76,19 +74,38 @@
     }
     .card-booking-description-price{
       width: 100%;
-      font-size: 50px;
+      font-size: 42px;
       text-align: center;
+      background-color: $black;
+      display: inline-flex;
+      justify-content: center;
+      padding: 15px 0;
+      .detail {
+        margin-left: 20px;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        font-size: 21px;
+      }
     }
   }
 }
 
 .card-box {
-  font-size: 48px;
+  font-size: 42px;
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 10px;
+  margin: 20px;
   padding: 5px;
+  min-width: 100px;
+  border-radius: 4px;
+  background-color: $black;
+  .text {
+    font-size: 16px;
+    font-style: italic;
+    color: $eggshell;
+  }
 }
 
 .card-room-image {
@@ -118,7 +135,6 @@
   height: 540px;
   overflow: hidden;
   background: white;
-//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border: 1px solid $gray;
   margin-bottom: 25px;
   h2 {
