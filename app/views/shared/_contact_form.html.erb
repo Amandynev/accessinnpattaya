@@ -1,24 +1,51 @@
+    <div class="f">
 <%= form_for @contact, url: pages_path, remote: true do |f| %>
-    <div class="col-md-6">
+      <div class="form-control-access">
+        <i class="fas fa-check-circle "></i>
+        <i class="fas fa-exclamation-circle"></i>
+        <small>Please give me your full name</small>
         <%= f.label :name %></br>
-        <%= f.text_field  :name, required: true, class: "contact-form-text-area" %></br>
-
-        <%= f.label :email %></br>
-        <%= f.text_field :email, required: true, class: "contact-form-text-area" %></br>
-
-      <%= f.label :message %></br>
-      <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-text-area",
-                        placeholder: "Send me a message"%></br>
-
-      <div class= "hidden">
-        <%= f.label :nickname %>
-        <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
+        <%= f.text_field  :name, required: true, class: "contact-form-name" %></br>
       </div>
 
-      <%= f.submit 'Send Message', class: 'btn btn-primary' %>
-    </div>
-  <% end %>
+      <div class="form-control-access">
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Email adress is required</small>
+              <%= f.label :email %></br>
+              <%= f.text_field :email, required: true, class: "contact-form-email" %></br>
+      </div>
 
+      <div class="form-control-access">
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small></small>
+              <%= f.label :phone %></br>
+              <%= f.text_field :phone, class: "contact-form-phone" %></br>
+      </div>
+
+      <div class="form-control-access">
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Please tell us more</small>
+            <%= f.label :message %></br>
+            <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-message",
+                              placeholder: "Can I help you ?"%></br>
+      </div>
+
+      <div class="captcha">
+            <div class= "hidden">
+              <%= f.label :nickname %>
+              <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
+            </div>
+      </div>
+
+          <div>
+            <%= f.submit 'Send Message', class: 'button-access' %>
+          </div>
+
+  <% end %>
+    </div>
   <div class="col-md-6" id="flash-message">
-    <%= render 'flash' %>
+
   </div>

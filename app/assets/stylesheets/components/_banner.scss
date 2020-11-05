@@ -20,6 +20,14 @@
   background:linear-gradient(rgba(28, 28, 28, 0.2) 0%, rgba(28, 28, 28, 0.7) 100%);
 }
 
+.banner-pages{
+  background-image: linear-gradient(rgba(28, 28, 28, 0.2) 0%, rgba(28, 28, 28, 0.7) 100%), asset-url("rooms/premiumblue.jpg");
+  background-size: cover;
+  background-position: center;
+  width:100vw;
+  height: 60vh;
+}
+
 .typed-cursor{
   display:none;
 }
@@ -29,10 +37,6 @@
   font-weight: bold;
   color: $white;
   font-family: $headers-font;
-}
-
-footer{
-  background-color: $black;
 }
 
 // .banner-home p {

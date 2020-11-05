@@ -1,0 +1,33 @@
+.container-contact{
+  margin:auto;
+  width:95vw;
+}
+.contactus{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+
+  label {
+  color: $red;
+  padding: 15px 20px;
+  font-size: 15px;
+  align-self:center;
+  }
+
+}
+
+.map-contact{
+  height:200px;
+}
+
+.informations{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  font-size: 13px;
+
+}
+
+

@@ -41,7 +41,7 @@
     opacity: .7;
     margin: 0;
     color: $black;
-  
+
   }
   &:hover h2{
     font-weight: bold;
@@ -92,7 +92,7 @@
     opacity: .7;
     margin: 0;
     color: $black;
-  
+
   }
 }
 
@@ -106,6 +106,12 @@
   font-weight: bold;
 }
  }
+
+ .card-home{
+    display:grid;
+    grid-template-columns: 1fr;
+    justify-items:center;
+  }
 // .card-room {
 //   padding: 16px;
 //   display: flex;
