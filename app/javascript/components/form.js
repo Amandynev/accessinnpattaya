@@ -1,3 +1,4 @@
+import swal from 'sweetalert';
 const functionValidation = () => {
 
   const form = document.querySelector('.new_page')
@@ -27,6 +28,7 @@ message.addEventListener('blur', (event) => {
   event.preventDefault();
   checkInputsMessage();
   });
+
 };
 
   const checkInputsName = () => {

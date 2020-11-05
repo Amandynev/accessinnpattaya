@@ -34,6 +34,7 @@ import { calendarPat } from '../plugins/calendar'
 import { flatpickrDisplay } from  "../plugins/flatpickr";
 import { sweetAlertNOK } from '../plugins/init_sweetalert';
 import { functionValidation } from '../components/form';
+import { sweetAlertSuccess } from '../components/sweetalert_success';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -48,5 +49,6 @@ document.addEventListener('turbolinks:load', () => {
   AOS.init();
   sweetAlertNOK();
   functionValidation();
+  sweetAlertSuccess();
 
 });

@@ -30,7 +30,7 @@
               <small>Please tell us more</small>
             <%= f.label :message %></br>
             <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-message",
-                              placeholder: "Can I help you ?"%></br>
+                             placeholder: "Can I help you ?"%></br>
       </div>
 
       <div class="captcha">
@@ -41,7 +41,7 @@
       </div>
 
           <div>
-            <%= f.submit 'Send Message', class: 'button-access' %>
+            <%= f.submit 'Send Message', class: 'button-access', id:'sweet-alert-message' %>
           </div>
 
   <% end %>
