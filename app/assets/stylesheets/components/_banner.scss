@@ -4,11 +4,11 @@
   background-position: center;
   padding: 150px 0;
   height: 100vh;
+  min-height: 786px;
   width: 100vw;
   position: relative;
   display:grid;
   justify-items:center;
-
 }
 
 .banner-show {
@@ -19,16 +19,16 @@
 .photo-show-banner{
   background:linear-gradient(rgba(28, 28, 28, 0.2) 0%, rgba(28, 28, 28, 0.7) 100%);
 }
+
 .typed-cursor{
   display:none;
-  }
+}
 
 .name{
   font-size: 70px;
   font-weight: bold;
   color: $white;
   font-family: $headers-font;
-
 }
 
 footer{
@@ -50,5 +50,5 @@ footer{
 @media(max-width: 620px) {
   .name {
     font-size:30px;
-    }
   }
+}

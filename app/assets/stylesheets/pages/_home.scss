@@ -125,10 +125,9 @@ body{
   }
 }
 
-@media(max-width: 620px) {
+@media(max-width: 650px) {
   .hotel-home {
     grid-template-columns: 1fr;
-    grid-templace-rows: 1fr;
     }
   .photo-buddha{
     height: 250px;
@@ -158,6 +157,14 @@ body{
     display:grid;
     grid-template-columns: 1fr;
     justify-items:center;
-
   }
+  .image-size-home{
+    width:100%;
+    height:400px;
   }
+  .restaurant-text{
+    background-color:white;
+    width:100%;
+    height:400px;
+  }
+}
