@@ -3,7 +3,6 @@
   width: 370px;
   overflow: hidden;
   background: white;
-//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border: 1px solid $gray;
   margin-bottom: 25px;
   span{
@@ -24,7 +23,6 @@
     opacity: .7;
     margin: 0;
     color: $black;
-  
   }
   .room-name {
     display: flex;
@@ -43,21 +41,54 @@
       border: 2px solid $red;
     }
   }
-  .booking{
-    margin-top: 10px;
-    font-weight: 700;
-    padding: 5px 50px;
-    display: flex;
-    justify-content: space-between;
-    color:$red;
-    .booking-number{
-      color: inherit;
-      font-size: 24px;
-    }
-  }
   &:hover h2{
     font-weight: bold;
   }
+}
+
+.card-booking {
+  width: 370px;
+  background: $black;
+  color: $red;
+  border: 1px solid $gray;
+  margin-bottom: 25px;
+  position: relative;
+  .card-booking-image{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .room-tag {
+    position: absolute;
+    width: fit-content;
+    top: 15px;
+    left: 15px;
+  }
+  .card-booking-description {
+    .card-booking-description-title {
+      font-size: 48px;
+      text-align: center;
+      margin: 10px 0;
+    }
+    .card-booking-description-rooms{
+      display: flex;
+      justify-content: space-around;
+    }
+    .card-booking-description-price{
+      width: 100%;
+      font-size: 50px;
+      text-align: center;
+    }
+  }
+}
+
+.card-box {
+  font-size: 48px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px;
+  padding: 5px;
 }
 
 .card-room-image {

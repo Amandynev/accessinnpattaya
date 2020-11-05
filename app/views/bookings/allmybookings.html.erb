@@ -1,25 +1,35 @@
+<br>
+<br>
+<br>
+
+
 <div class="container-index">
 
   <div class="row">
 
     <% @hash_bookings.each do |key, value| %>
-      <div class="card-room">
-        <%= image_tag "rooms/"+ value[:room].photo, class: 'card-room-image' %>
-        <div class="card-room-infos">
-          <%= link_to room_path(value[:room]), class:"link-without-style" do %>
-            <div class="room-name">
-              <h2><%= key %></h2>
-            </div>
-          <%end%>
-          <div class="booking">
-            <div class="booking-number">
+      <div class="card-booking">
+        <%= image_tag "rooms/"+ value[:room].photo, class: 'card-booking-image' %>
+        <div class="room-tag">
+          <div class="tag-room-name">
+            <%= key.upcase %>
+          </div>
+        </div>
+        <div class="card-booking-description">
+          <div class="card-booking-description-title">
+            My Reservation
+          </div>
+          <div class="card-booking-description-rooms">
+            <div class="card-box">
               <i class="fas fa-bed"></i>
               <%= value[:number] %>
             </div>
-            <div class="booking-number">
-              
-              <%= humanized_money_with_symbol @amount / 1_000 %>
+            <div class="card-box">
+              3
             </div>
+          </div>
+          <div class="card-booking-description-price">
+              <%= humanized_money_with_symbol @amount %>
           </div>
         </div>
       </div>
