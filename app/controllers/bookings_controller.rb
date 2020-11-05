@@ -7,11 +7,16 @@ class BookingsController < ApplicationController
         @booking = Booking.new(booking_params)
         @booking.room = room
         @booking.user = current_user
-        @booking.save
+        if @booking.save
         # ReservationJob.set(wait: 30.minutes).perform_later(@booking.id)
+        else
+          render "rooms/show"
+          return false
+        end
       end
       redirect_to rooms_path
     else
+      @modal = true
       render "rooms/show"
     end
   end
@@ -43,8 +48,8 @@ class BookingsController < ApplicationController
         next if booking.end_at < Date.today
 
         date_range = booking.start_at..booking.end_at
-        start_date = Rails.env.test? ? Date.parse(params[:booking][:start_at]) : Date.new(params[:booking]["start_at(1i)"].to_i, params[:booking]["start_at(2i)"].to_i, params[:booking]["start_at(3i)"].to_i)
-        end_date = Rails.env.test? ? Date.parse(params[:booking][:end_at]) : Date.new(params[:booking]["end_at(1i)"].to_i, params[:booking]["end_at(2i)"].to_i, params[:booking]["end_at(3i)"].to_i)
+        start_date = params[:booking][:start_at] == "" ? Date.today : Date.parse(params[:booking][:start_at])
+        end_date = params[:booking][:end_at] == "" ? Date.today : Date.parse(params[:booking][:end_at])
         availability = false if date_range.include?(start_date) || date_range.include?(end_date) || (start_date < booking.start_at && end_date > booking.end_at)
         rooms_ok << room if availability
       end
