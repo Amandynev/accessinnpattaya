@@ -15,6 +15,7 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
+  width: 100%;
 }
 
 .photo-show-size{
@@ -26,7 +27,7 @@ height: 380px;
   width: 100vw;
   height: 550px;
 }
-@media(max-width: 620px) {
+@media(max-width: 1080px) {
   .photo-room-calendar{
   display:grid;
   grid-template-columns: 1fr;
