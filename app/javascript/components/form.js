@@ -5,35 +5,37 @@ const functionValidation = () => {
   const email = document.querySelector('.contact-form-email')
   const phone = document.querySelector('.contact-form-phone')
   const message = document.querySelector('.contact-form-message')
-  name.addEventListener('blur', (event) => {
-    event.preventDefault();
-    checkInputsName();
-  });
-
-  email.addEventListener('blur', (event) => {
-    event.preventDefault();
-    checkInputsEmail();
-  });
-  phone.addEventListener('blur', (event) => {
-    event.preventDefault();
-    checkInputsPhone();
-  });
-  message.addEventListener('blur', (event) => {
-    event.preventDefault();
-    checkInputsMessage();
-  });
-
-  const form = document.querySelector('.new_page')
-  form.addEventListener('submit',(event) => {
-    const success = document.querySelectorAll('.success')
-    if(success.length === 3){
-      initSweetalert('#sweet-alert-message', {
-      title: "Message sent",
-      text: "We will get back to you shortly.",
-      icon: "success"
-      });
-    };
-  });
+  if (name) {
+    name.addEventListener('blur', (event) => {
+      event.preventDefault();
+      checkInputsName();
+    });
+  
+    email.addEventListener('blur', (event) => {
+      event.preventDefault();
+      checkInputsEmail();
+    });
+    phone.addEventListener('blur', (event) => {
+      event.preventDefault();
+      checkInputsPhone();
+    });
+    message.addEventListener('blur', (event) => {
+      event.preventDefault();
+      checkInputsMessage();
+    });
+  
+    const form = document.querySelector('.new_page')
+    form.addEventListener('submit',(event) => {
+      const success = document.querySelectorAll('.success')
+      if(success.length === 3){
+        initSweetalert('#sweet-alert-message', {
+        title: "Message sent",
+        text: "We will get back to you shortly.",
+        icon: "success"
+        });
+      };
+    });
+  }
 };
 
 const initSweetalert = (selector, options = {}) => {
