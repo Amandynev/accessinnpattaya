@@ -1,37 +1,73 @@
-    <div class="f">
 <%= form_for @contact, url: pages_path, remote: true do |f| %>
-      <div class="form-control-access">
-        <i class="fas fa-check-circle "></i>
-        <i class="fas fa-exclamation-circle"></i>
+  <div class="form-contact">
+
+    <div class="form-control-access">
+      <%= f.label :name %>
+      <div class="display-icone d-flex">
+
+          <%= f.text_field  :name, required: true, class: "contact-form-name" %>
+
+          <i class="fas fa-check-circle "></i>
+          <i class="fas fa-exclamation-circle"></i>
+
+      </div>
+
+
         <small>Please give me your full name</small>
-        <%= f.label :name %></br>
-        <%= f.text_field  :name, required: true, class: "contact-form-name" %></br>
+
+    </div>
+
+     <div class="form-control-access">
+      <%= f.label :email %>
+      <div class="display-icone d-flex">
+
+          <%= f.text_field  :email, required: true, class: "contact-form-email" %>
+
+
+          <i class="fas fa-check-circle "></i>
+          <i class="fas fa-exclamation-circle"></i>
+
       </div>
 
-      <div class="form-control-access">
-              <i class="fas fa-check-circle"></i>
-              <i class="fas fa-exclamation-circle"></i>
-              <small>Email adress is required</small>
-              <%= f.label :email %></br>
-              <%= f.text_field :email, required: true, class: "contact-form-email" %></br>
+      <div class="text-error-email">
+        <small>Email adress is required</small>
+      </div>
+    </div>
+
+    <div class="form-control-access">
+      <%= f.label :phone %>
+      <div class="display-icone d-flex">
+
+          <%= f.text_field  :phone, class: "contact-form-phone input-width" %>
+
+
+          <i class="fas fa-check-circle "></i>
+          <i class="fas fa-exclamation-circle"></i>
+
       </div>
 
-      <div class="form-control-access">
-              <i class="fas fa-check-circle"></i>
-              <i class="fas fa-exclamation-circle"></i>
-              <small></small>
-              <%= f.label :phone %></br>
-              <%= f.text_field :phone, class: "contact-form-phone" %></br>
+      <div class="text-error-phone">
+        <small></small>
+      </div>
+    </div>
+
+    <div class="form-control-access">
+      <%= f.label :message %>
+      <div class="display-icone d-flex">
+
+          <%= f.text_field  :message, class: "contact-form-message" %>
+
+
+          <i class="fas fa-check-circle "></i>
+          <i class="fas fa-exclamation-circle"></i>
+
       </div>
 
-      <div class="form-control-access">
-              <i class="fas fa-check-circle"></i>
-              <i class="fas fa-exclamation-circle"></i>
-              <small>Please tell us more</small>
-            <%= f.label :message %></br>
-            <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-message",
-                             placeholder: "Can I help you ?"%></br>
+      <div class="text-error-message">
+        <small>Please tell us more</small>
       </div>
+    </div>
+
 
       <div class="captcha">
             <div class= "hidden">
@@ -44,8 +80,8 @@
             <%= f.submit 'Send Message', class: 'button-access', id:'sweet-alert-message' %>
           </div>
 
-  <% end %>
     </div>
+  <% end %>
   <div class="col-md-6" id="flash-message">
 
   </div>

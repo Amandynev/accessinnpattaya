@@ -1,6 +1,7 @@
 .container-contact{
   margin:auto;
   width:95vw;
+  padding:30px;
 }
 .contactus{
   display:grid;
@@ -10,7 +11,6 @@
 
   label {
   color: $red;
-  padding: 15px 20px;
   font-size: 15px;
   align-self:center;
   }

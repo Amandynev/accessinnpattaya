@@ -77,10 +77,7 @@ message.addEventListener('blur', (event) => {
     const setFailedFor = (input, message) => {
       const formControl = input.parentElement // la class parente
       const small = formControl.querySelectorAll('small');
-
       formControl.className = 'form-control-access failed';
-
-
       small.value = message;
 
     };
