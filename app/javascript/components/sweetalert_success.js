@@ -6,11 +6,20 @@ const initSweetalert = (selector, options = {}) => {
       swal(options);
   }
 };
+const functionValidationForm = () => {
+const form = document.querySelector('.new_page')
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  checkInputs();
+  });
+
+};
 
 const sweetAlertSuccess = () => {
-  const buttonSubmit = document.getElementById('sweet-alert-message')
-   if (buttonSubmit) {
-    buttonSubmit.addEventListener('click',(event) => {
+  const sweetAlert = document.getElementById('success-form')
+  const form = document.querySelector('.new_page')
+   if (sweetAlert) {
+    form.addEventListener('submit',(event) => {
       initSweetalert('#sweet-alert-message', {
       title: "Message sent",
       text: "We will get back to you shortly.",
@@ -18,6 +27,11 @@ const sweetAlertSuccess = () => {
       });
     });
   }
+
+};
+
+
+const checkInputs = () => {
 
 };
 

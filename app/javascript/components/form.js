@@ -1,33 +1,49 @@
 import swal from 'sweetalert';
-const functionValidation = () => {
 
-  const form = document.querySelector('.new_page')
+const functionValidation = () => {
   const name = document.querySelector('.contact-form-name')
   const email = document.querySelector('.contact-form-email')
   const phone = document.querySelector('.contact-form-phone')
   const message = document.querySelector('.contact-form-message')
+    name.addEventListener('blur', (event) => {
+      event.preventDefault();
+      checkInputsName();
+      });
+
+    email.addEventListener('blur', (event) => {
+      event.preventDefault();
+      checkInputsEmail();
+      });
+    phone.addEventListener('blur', (event) => {
+      event.preventDefault();
+      checkInputsPhone();
+      });
+    message.addEventListener('blur', (event) => {
+      event.preventDefault();
+      checkInputsMessage();
+      });
+
+    sweetAlertFunction();
+
+};
 
 
-name.addEventListener('blur', (event) => {
-  console.log(event);
-  event.preventDefault();
-  checkInputsName();
-  });
-email.addEventListener('blur', (event) => {
-  console.log(event);
-  event.preventDefault();
-  checkInputsEmail();
-  });
-phone.addEventListener('blur', (event) => {
-  console.log(event);
-  event.preventDefault();
-  checkInputsPhone();
-  });
-message.addEventListener('blur', (event) => {
-  console.log(event);
-  event.preventDefault();
-  checkInputsMessage();
-  });
+const sweetAlertFunction = () => {
+  const initSweetalert = (selector, options = {}) => {
+    const swalButton = document.querySelector(selector);
+    if (swalButton) { // protect other pages
+      swal(options);
+    }
+};
+    const form = document.querySelector('.new_page')
+      form.addEventListener('submit',(event) => {
+        initSweetalert('#sweet-alert-message', {
+        title: "Message sent",
+        text: "We will get back to you shortly.",
+        icon: "success"
+        });
+      });
+
 
 };
 
@@ -48,6 +64,8 @@ message.addEventListener('blur', (event) => {
     const emailValue = email.value ;
       if(emailValue === '') {
         setFailedFor(email, 'Email cannot be blank');
+      } else if(!isEmail(emailValue)) {
+        setFailedFor(email, 'Email is not valid');
       } else {
         setSuccessFor(email);
       }
@@ -68,25 +86,33 @@ message.addEventListener('blur', (event) => {
     const message = document.querySelector('.contact-form-message');
     const messageValue = message.value ;
       if(messageValue === ''){
-        setFailedFor(message, 'Name cannot be blank');
+        setFailedFor(message, 'Message cannot be blank');
       } else {
         setSuccessFor(message);
       };
   }
 
     const setFailedFor = (input, message) => {
-      const formControl = input.parentElement // la class parente
-      const small = formControl.querySelectorAll('small');
-      formControl.className = 'form-control-access failed';
-      small.value = message;
+      const formControl = input.parentElement.parentElement; // la class parente
+      const small = formControl.querySelector('small');
+      formControl.classList.remove("success");
+      formControl.classList.add("failed");
+      console.log(formControl);
+      console.log(small);
+      small.innerText = message;
 
     };
 
    const setSuccessFor = (input) => {
-    const formControl = input.parentElement ;
-    formControl.className = 'form-control-access success';
-
+    const formControl = input.parentElement.parentElement ;
+    formControl.classList.remove("failed");
+    formControl.classList.add("success");
    };
 
+   const isEmail = (email) => {
+    const regex = /^([\w\d._\-#])+@([\w\d._\-#]+[.][\w\d._\-#]+)+$/.test(email);
+     console.log(regex);
+    return regex
+   };
 
 export { functionValidation };

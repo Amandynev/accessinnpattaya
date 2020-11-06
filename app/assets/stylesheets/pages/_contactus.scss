@@ -30,4 +30,26 @@
 
 }
 
+.size{
+  font-size:30px;
+}
+
+@media(max-width: 620px) {
+  .contactus{
+    display:grid;
+    grid-template-columns: 1fr;
+  }
+
+  .right{
+    h2{
+      font-size:20px;
+    }
+  .size{
+    font-size:20px;
+    }
+  .fa-envelope{
+    visibility:hidden;
+  }
+  }
+}
 

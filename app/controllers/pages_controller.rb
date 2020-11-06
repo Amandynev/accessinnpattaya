@@ -13,13 +13,13 @@ class PagesController < ApplicationController
   end
 
   def contact
-     @markers =
+    @markers =
       {
         lat: Hotel.first.latitude,
         lng: Hotel.first.longitude
       }
 
-      @contact = Page.new(params[:page])
+    @contact = Page.new(params[:page])
   end
 
   def create
@@ -29,13 +29,11 @@ class PagesController < ApplicationController
       if @contact.deliver
         # re-initialize Home object for cleared form
         @contact = Page.new
-        format.html { render 'index' }
-        format.js   { flash.now[:success] = @message = "Thank you for your message. I'll get back to you soon!" }
+        @modalsuccess = true
+        format.html { render 'contact' }
       else
-        format.html { render 'index' }
-        format.js   { flash.now[:error] = @message = "Message did not send." }
+        format.html { render 'contact' }
       end
     end
   end
-
 end
