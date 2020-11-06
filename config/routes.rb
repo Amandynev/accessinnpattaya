@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'restaurant', to: 'pages#restaurant'
   get 'event', to: 'pages#event'
   resources :contacts, only: [:index,:new, :create]
-  get 'allmybookings', to: 'bookings#allmybookings'
+  get 'allmybookings', to: 'bookings#allmybookings', as: 'allmybookings'
   get 'searchedrooms', to: 'rooms#searchedrooms'
   resources :rooms, only: [:index, :show] do
     resources :bookings, only: [:index, :create]

@@ -1,11 +1,34 @@
 require 'rails_helper'
 
 RSpec.describe "Bookings", type: :request do
-  before do
+  before(:all) do
     @user = create(:user)
     @suite = Category.where(name: "Suite double")
     @room_not_available = Room.where(category: @suite).sample
     @room_available = Room.first
+  end
+
+  describe 'As a Visitor' do
+    it 'Should access the home page' do
+      get root_path
+      expect(response).to have_http_status '200'
+    end
+
+    it 'Should access the rooms index' do
+      get rooms_path
+      expect(response).to have_http_status '200'
+    end
+
+    it 'Should not have access to the allmybookings page' do
+      get allmybookings_path
+      expect(response).to have_http_status '302'
+    end
+
+    it 'Should not be able to create a booking' do
+      booking_params = attributes_for(:booking, number: 1)
+      expect { post room_bookings_path(booking_params[:room].id), params: { booking: booking_params } }.not_to change(Booking, :count)
+      expect(response).to have_http_status '302'
+    end
   end
 
   describe 'As a Logged User' do

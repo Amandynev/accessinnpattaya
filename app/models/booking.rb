@@ -24,5 +24,4 @@ class Booking < ApplicationRecord
   def price
     (end_at - start_at).to_i * room.category.price_cents
   end
-
 end
