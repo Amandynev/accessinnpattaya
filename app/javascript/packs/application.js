@@ -50,5 +50,4 @@ document.addEventListener('turbolinks:load', () => {
   sweetAlertNOK();
   functionValidation();
   sweetAlertSuccess();
-
 });

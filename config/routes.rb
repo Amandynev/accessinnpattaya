@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :rooms, only: [:index, :show] do
     resources :bookings, only: [:index, :create]
   end
+  delete 'destroy_bookings/:category_id', to: 'bookings#destroy_bookings', as: "destroy_bookings"
   resources :orders, only: [:show, :create] do
     resources :payments, only: :new
   end
