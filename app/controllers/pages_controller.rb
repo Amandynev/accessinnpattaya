@@ -25,15 +25,14 @@ class PagesController < ApplicationController
   def create
     @contact = Page.new(params[:page])
     @contact.request = request
-    respond_to do |format|
+
       if @contact.deliver
         # re-initialize Home object for cleared form
         @contact = Page.new
         @modalsuccess = true
-        format.html { render 'contact' }
+        redirect_to contact_path
       else
-        format.html { render 'contact' }
+        render 'contact'
       end
-    end
   end
 end
