@@ -3,12 +3,26 @@
   width: 370px;
   overflow: hidden;
   background: white;
-//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border: 1px solid $gray;
   margin-bottom: 25px;
   span{
     color: $black;
     font-size: 12px;
+  }
+  h2 {
+    padding: 15px;
+    font-size: 30px;
+    font-weight: lighter;
+    margin: 0;
+    letter-spacing: .2rem;
+    color: $black;
+  }
+  p {
+    padding: 15px;
+    font-size: 14px;
+    opacity: .7;
+    margin: 0;
+    color: $black;
   }
   .room-name {
     display: flex;
@@ -27,24 +41,78 @@
       border: 2px solid $red;
     }
   }
-  h2 {
-    padding: 15px;
-    font-size: 30px;
-    font-weight: lighter;
-    margin: 0;
-    letter-spacing: .2rem;
-    color: $black;
-  }
-  p {
-    padding: 15px;
-    font-size: 14px;
-    opacity: .7;
-    margin: 0;
-    color: $black;
-  
-  }
   &:hover h2{
     font-weight: bold;
+  }
+}
+
+.card-booking {
+  width: 370px;
+  background: $black-gray;
+  margin-bottom: 25px;
+  position: relative;
+  i {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: $red;
+    font-size: 16px;
+  }
+  .card-booking-image{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .room-tag {
+    position: absolute;
+    width: fit-content;
+    top: 15px;
+    left: 15px;
+  }
+  .card-booking-description {
+    .card-booking-description-title {
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+      margin: 20px 0;
+    }
+    .card-booking-description-rooms{
+      display: flex;
+      justify-content: space-around;
+    }
+    .card-booking-description-price{
+      width: 100%;
+      font-size: 42px;
+      text-align: center;
+      background-color: $black;
+      display: inline-flex;
+      justify-content: center;
+      padding: 15px 0;
+      .detail {
+        margin-left: 20px;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        font-size: 21px;
+      }
+    }
+  }
+}
+
+.card-box {
+  font-size: 42px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px;
+  padding: 5px;
+  min-width: 100px;
+  border-radius: 4px;
+  background-color: $black;
+  .text {
+    font-size: 16px;
+    font-style: italic;
+    color: $eggshell;
   }
 }
 
@@ -75,7 +143,6 @@
   height: 540px;
   overflow: hidden;
   background: white;
-//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border: 1px solid $gray;
   margin-bottom: 25px;
   h2 {
