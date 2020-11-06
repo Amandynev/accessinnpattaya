@@ -20,7 +20,7 @@ RSpec.describe Booking, type: :model do
     it { is_expected.to belong_to(:user) }
   end
 
-  context 'methods' do
+  context 'Methods' do
     it '#price' do
       booking = build(:booking)
       expect(booking.price.to_i).to eq(booking.room.category.price.to_i * 200)
