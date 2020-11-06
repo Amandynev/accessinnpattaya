@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :restaurant, :event, :contact, :new, :create]
+  skip_before_action :authenticate_user!, only: %i[home restaurant event contact new create]
 
   def home
     @categories = Category.all
@@ -25,14 +25,12 @@ class PagesController < ApplicationController
   def create
     @contact = Page.new(params[:page])
     @contact.request = request
-
-      if @contact.deliver
-        # re-initialize Home object for cleared form
-        @contact = Page.new
-        @modalsuccess = true
-        redirect_to contact_path
-      else
-        render 'contact'
-      end
+    if @contact.deliver
+      @contact = Page.new
+      @modalsuccess = true
+      redirect_to contact_path
+    else
+      render 'contact'
+    end
   end
 end

@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   get 'home/index'
   devise_for :users
   root to: 'pages#home'
-  get 'contact', to: 'pages#contact'
+  resources :pages, only: [:index]
+  get 'contact', to: 'pages#contact', as: 'contact'
   get 'restaurant', to: 'pages#restaurant'
   get 'event', to: 'pages#event'
   resources :contacts, only: [:index,:new, :create]

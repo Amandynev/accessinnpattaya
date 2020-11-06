@@ -35,7 +35,7 @@ class BookingsController < ApplicationController
 
   def destroy_bookings
     category = Category.find(params[:category_id])
-    bookings = Booking.where(room: category.rooms, user: current_user)
+    bookings = Booking.user_bookings_category(current_user, category)
     bookings.each(&:destroy)
     redirect_to allmybookings_path
   end

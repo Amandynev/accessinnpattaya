@@ -38,7 +38,7 @@ const functionValidation = () => {
 
 const initSweetalert = (selector, options = {}) => {
   const swalButton = document.querySelector(selector);
-  if (swalButton) { // protect other pages
+  if (swalButton) {
     swal(options);
   }
 };
