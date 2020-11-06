@@ -46,5 +46,4 @@ document.addEventListener('turbolinks:load', () => {
   loadDynamicBannerText();
   AOS.init();
   sweetAlertNOK();
-
 });
