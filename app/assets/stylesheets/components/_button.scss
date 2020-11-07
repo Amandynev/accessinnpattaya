@@ -24,6 +24,8 @@
 .button-access-calendar:hover{
   color:$white;
   font-weight:bold;
+  background-color:$black;
+  border: none;
 }
 
 .button-access-book{
@@ -38,4 +40,12 @@
   color: white;
   font-weight:bold;
 
+}
+
+@media(max-width: 650px){
+  .button-access-calendar{
+    font-size:12px;
+    font-weight:bold;
+    height:100px;
+  }
 }

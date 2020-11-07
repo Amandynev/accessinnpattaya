@@ -86,8 +86,11 @@
       align-items: center;
       .calendar-box{
         width: 150px;
+          border-bottom-width: 1px;
+          border-bottom-style: solid;
+          border-bottom-color: $light-gray ;
         .title{
-          font-size: 20px;
+          font-size: 10px;
         }
         .date{
           .day{
@@ -95,6 +98,13 @@
           }
           .month{
             font-size: 10px;
+            i {
+              position: absolute;
+            top: 30px;
+            left: 0px;
+            padding-top:8px;
+
+            }
           }
         }
       }
