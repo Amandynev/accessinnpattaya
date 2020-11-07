@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "destroy data ..."
 
+Order.destroy_all
 Booking.destroy_all
 Room.destroy_all
 Category.destroy_all
@@ -71,8 +72,6 @@ superior = Category.create!(
   balcony: false,
   corner_table: false
 )
-
-
 
 puts "create rooms..."
 

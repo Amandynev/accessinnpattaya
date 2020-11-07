@@ -1,0 +1,66 @@
+#input-width{
+  height:30px;
+  background-color: $light-gray;
+  padding-left: 300px;
+}
+
+.form-control-access {
+  padding-bottom: 15px;
+
+i {
+  visibility:hidden
+}
+small{
+  visibility:hidden
+}
+
+}
+
+.form-contact{
+  label {
+    padding: 0px;
+  }
+}
+
+.contact-form-name{
+  width: 80%;
+  border-color: $light-gray;
+  background-color:$light-gray;
+}
+.contact-form-email{
+  width: 80%;
+}
+.contact-form-phone{
+  width: 80%;
+}
+.contact-form-message{
+  width: 80%;
+  height: 100px;
+}
+
+.hidden{
+  visibility:hidden
+}
+
+.form-control-access.success input {
+  border-color: green;
+}
+.form-control-access.success i.fa-check-circle {
+  margin-left: 5px;
+  color: green;
+  visibility: visible;
+}
+.form-control-access.failed input {
+  border-color: $red;
+}
+
+.form-control-access.failed small {
+  visibility: visible;
+  color:$red;
+}
+
+.form-control-access.failed i.fa-exclamation-circle {
+  color: $red;
+  visibility: visible;
+}
+

@@ -20,6 +20,17 @@
   background:linear-gradient(rgba(28, 28, 28, 0.2) 0%, rgba(28, 28, 28, 0.7) 100%);
 }
 
+.banner-pages{
+  background-image: linear-gradient(rgba(28, 28, 28, 0.2) 0%, rgba(28, 28, 28, 0.7) 100%), asset-url("rooms/premiumblue.jpg");
+  background-size: cover;
+  background-position: center;
+  width:100vw;
+  height: 60vh;
+  position: relative;
+  display:grid;
+  justify-items:center;
+}
+
 .typed-cursor{
   display:none;
 }
@@ -29,10 +40,15 @@
   font-weight: bold;
   color: $white;
   font-family: $headers-font;
+  vertical-align: center;
 }
 
-footer{
-  background-color: $black;
+.name-banner{
+  font-size: 70px;
+  font-weight: bold;
+  color: $white;
+  font-family: $headers-font;
+
 }
 
 // .banner-home p {

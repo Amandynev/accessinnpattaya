@@ -33,6 +33,7 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { calendarPat } from '../plugins/calendar'
 import { flatpickrDisplay } from  "../plugins/flatpickr";
 import { sweetAlertNOK } from '../plugins/init_sweetalert';
+import { functionValidation } from '../components/form';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -46,4 +47,5 @@ document.addEventListener('turbolinks:load', () => {
   loadDynamicBannerText();
   AOS.init();
   sweetAlertNOK();
+  functionValidation();
 });

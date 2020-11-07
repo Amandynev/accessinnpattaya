@@ -12,7 +12,7 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
+          <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
           <%= link_to "Rooms", rooms_path, class: "nav-link" %>
         </li>
@@ -23,7 +23,7 @@
           <%= link_to "Events", event_path, class: "nav-link" %>
         </li>
         <li>
-          <%= link_to "Contact us",contacts_path, class: "nav-link" %>
+          <%= link_to "Contact us",contact_path, class: "nav-link" %>
         </li>
         <li>
           <%= link_to "Book now", class: "nav-link button-access" %>
@@ -32,7 +32,7 @@
           <%= image_tag "accessinn-logo.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "My account", "#", class: "dropdown-item" %>
-            <%= link_to "My reservations", "#", class: "dropdown-item" %>
+            <%= link_to "My reservations", allmybookings_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
