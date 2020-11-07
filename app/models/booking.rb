@@ -11,7 +11,7 @@ class Booking < ApplicationRecord
   }
 
   scope :user_bookings_category, lambda { |user, category|
-  where(user_id: user.id, category: category, state: "pending")
+  where(user_id: user.id, room: category.rooms, state: "pending")
 }
 
   def start_at_cannot_be_in_the_past
@@ -33,5 +33,4 @@ class Booking < ApplicationRecord
   def price
     (end_at - start_at).to_i * room.category.price_cents
   end
-
 end
