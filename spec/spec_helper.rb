@@ -1,13 +1,3 @@
-require 'vcr'
-
-VCR.configure do |config|
-  config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
-  config.hook_into :webmock
-  config.filter_sensitive_data('<API-URL>') { 'http://jsonplaceholder.typicode.com'}
-  config.configure_rspec_metadata!
-  config.ignore_localhost = true
-end
-
 # Capybara Chrome Headless
 Capybara.register_driver :chrome do |app|
   Capybara::Selenium::Driver.new app, browser: :chrome,
@@ -35,6 +25,7 @@ Capybara.default_max_wait_time = 5
 RSpec.configure do |config|
   # Factory Bot Lint
   config.before(:suite) do
+    # Factory Bot Lint
     FactoryBot.lint
   end
 
