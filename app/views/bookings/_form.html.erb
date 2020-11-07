@@ -1,43 +1,43 @@
-<div class="calendar-form">
+<div class="calendar-form-square">
   <%= simple_form_for [ @room, @booking ] do |f| %>
-    <div class="calendar-container">
-      <div class="calendar-box">
+    <div class="calendar-container-square">
+      <div class="calendar-box-square">
         <%= f.input :start_at, label: false, as: :string, input_html: {id: 'range_start'}, require: true %>
-        <div class="title">
-          Check-in
+        <div class="title-square">
+          CHECK-IN
         </div>
-        <div class="date">
+        <div class="date-square">
           <div id="start-day-calendar" class="day">
             <%= Date.today.to_formatted_s(:short).split(" ").first %>
           </div>
           <div id="start-month-calendar" class="month">
           <%= Date.today.to_formatted_s(:short).split(" ").last %>
-            <i class="fas fa-chevron-circle-down"></i>
+            <i class="fas fa-chevron-down fa-xs"></i>
           </div>
         </div>
       </div>
-      <div class="calendar-box">
+      <div class="calendar-box-square padding-left">
         <%= f.input :end_at, label: false, as: :string, input_html: {id: 'range_end'}, require: true  %>
-        <div class="title">
-          Check-out
+        <div class="title-square">
+          CHECK-OUT
         </div>
-        <div class="date">
+        <div class="date-square">
           <div id="end-day-calendar" class="day">
             <%= Date.today.to_formatted_s(:short).split(" ").first %>
           </div>
           <div id="end-month-calendar" class="month">
           <%= Date.today.to_formatted_s(:short).split(" ").last %>
-            <i class="fas fa-chevron-circle-down"></i>
+            <i class="fas fa-chevron-down fa-xs"></i>
           </div>
         </div>
       </div>
     </div>
-    <div class="number">
-      <div class="title">
-        Number of rooms
+    <div class="number text-align">
+      <div class="title-square">
+        N° ROOMS
       </div>
       <%= f.number_field :number, label: false, value: 1, min: 1, max: 11 %>
     </div>
-    <%= f.submit "Book", class: "button-access-calendar", id: "sweet-alert-booking" %>
+    <%= f.submit "BOOK NOW", class: "button-access-calendar-square", id: "sweet-alert-booking" %>
   <% end %>
 </div>
