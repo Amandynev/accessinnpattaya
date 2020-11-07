@@ -1,0 +1,41 @@
+.button-access{
+  color: $red;
+  padding: 15px 30px;
+  font-size: 15px;
+  background:none;
+  border: 2px solid $red;
+}
+
+.button-access:hover{
+  color: $red;
+  font-weight:bold;
+}
+
+.button-access-calendar{
+  color: $eggshell;
+  width: 100%;
+  padding: 15px 15px;
+  font-size: 15px;
+  background:$red;
+  border: 2px solid $red;
+}
+
+.button-access-calendar:hover{
+  color:$eggshell;
+  font-weight:bold;
+  border: 3px solid $eggshell;
+}
+
+.button-access-book{
+  color: $eggshell;
+  padding: 15px 20px;
+  font-size: 15px;
+  background:$red;
+  border: 2px solid $red;
+}
+
+.button-access-book:hover{
+  color: $eggshell;
+  font-weight:bold;
+
+}

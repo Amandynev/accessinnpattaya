@@ -1,0 +1,70 @@
+.banner-home {
+  background-image: linear-gradient(rgba(28, 28, 28, 0.2) 0%, rgba(28, 28, 28, 0.7) 100%), asset-url("rooms/premiumblue.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 100vh;
+  min-height: 786px;
+  width: 100vw;
+  position: relative;
+  display:grid;
+  justify-items:center;
+}
+
+.banner-show {
+  background-position: center;
+  position: relative;
+}
+
+.photo-show-banner{
+  background:linear-gradient(rgba(28, 28, 28, 0.2) 0%, rgba(28, 28, 28, 0.7) 100%);
+}
+
+.banner-pages{
+  background-image: linear-gradient(rgba(28, 28, 28, 0.2) 0%, rgba(28, 28, 28, 0.7) 100%), asset-url("rooms/premiumblue.jpg");
+  background-size: cover;
+  background-position: center;
+  width:100vw;
+  height: 60vh;
+  position: relative;
+  display:grid;
+  justify-items:center;
+}
+
+.typed-cursor{
+  display:none;
+}
+
+.name{
+  font-size: 70px;
+  font-weight: bold;
+  color: $white;
+  font-family: $headers-font;
+  vertical-align: center;
+}
+
+.name-banner{
+  font-size: 70px;
+  font-weight: bold;
+  color: $white;
+  font-family: $headers-font;
+
+}
+
+// .banner-home p {
+//   font-size: 28px;
+//   color: white;
+//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+//   position:absolute;
+//   top:60%;
+//   bottom:40%;
+//   left:40%;
+//   right: 40%;
+
+// }
+
+@media(max-width: 620px) {
+  .name {
+    font-size:30px;
+  }
+}
