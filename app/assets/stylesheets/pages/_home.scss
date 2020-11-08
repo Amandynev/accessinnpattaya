@@ -2,7 +2,15 @@
 body{
   background-color:white;
 }
-
+.container-restau{
+  margin:auto;
+  width:100vw;
+  color:$black;
+  background-color: #F9F9F9;
+  display:grid;
+  justify-items:center;
+  grid-template-columns: 1fr 1fr;
+}
 .container-hotel{
   margin: auto;
   width: 90vw;
@@ -73,11 +81,53 @@ body{
 .line{
   color: $black;
 }
+.line-red{
+  color: $red;
+}
 
-@media(max-width: 620px) {
+.image-size-home{
+  width:650px;
+  height:500px;
+}
+
+.restaurant-text{
+  background-color:white;
+  width:650px;
+  height:500px;
+  margin-top:20px;
+  padding-top:50px;
+  display:grid;
+  justify-items:space-around;
+}
+
+.margin-top{
+  margin-top:20px;
+}
+.paragraphe-color{
+  color: gray;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.color-title{
+  color: $black;
+}
+
+.title-separate{
+   background-image: linear-gradient(315deg, $eggshell, $red);
+
+  background-repeat: no-repeat;
+  background-size: 100% 0.9em;
+  background-position: 0 99%;
+  transition: background-size 0.25s ease-in;
+  &:hover {
+    background-size: 100% 100%;
+  }
+}
+
+@media(max-width: 650px) {
   .hotel-home {
     grid-template-columns: 1fr;
-    grid-templace-rows: 1fr;
     }
   .photo-buddha{
     height: 250px;
@@ -92,18 +142,21 @@ body{
     display:none;
   }
 
-  .container-list{
-
-  }
-
-  .card-home{
+  .container-restau{
     display:grid;
     grid-template-columns: 1fr;
     justify-items:center;
   }
-  .card-square-list{
-    display:grid;
-    grid-template-columns: 1fr;
-    justify-items:center;
-    }
+  .image-size-home{
+    width:100%;
+    height:400px;
   }
+  .restaurant-text{
+    background-color:white;
+    width:100%;
+    height:400px;
+  }
+}
+.container-typed{
+  height: 100px;
+}

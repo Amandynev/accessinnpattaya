@@ -1,0 +1,89 @@
+<%= form_for @contact, url: pages_path, remote: true do |f| %>
+  <div class="form-contact">
+
+    <div class="form-control-access">
+      <%= f.label :name %>
+      <div class="display-icone d-flex">
+
+          <%= f.text_field  :name, class: "contact-form-name" %>
+
+          <i class="fas fa-check-circle "></i>
+          <i class="fas fa-exclamation-circle"></i>
+
+      </div>
+
+
+        <small>Please give me your full name</small>
+
+    </div>
+
+     <div class="form-control-access">
+      <%= f.label :email %>
+      <div class="display-icone d-flex">
+
+          <%= f.text_field  :email, class: "contact-form-email" %>
+
+
+          <i class="fas fa-check-circle "></i>
+          <i class="fas fa-exclamation-circle"></i>
+
+      </div>
+
+      <div class="text-error-email">
+        <small>Email adress is required</small>
+      </div>
+    </div>
+
+    <div class="form-control-access">
+      <%= f.label :phone %>
+      <div class="display-icone d-flex">
+
+          <%= f.text_field  :phone, class: "contact-form-phone input-width" %>
+
+
+          <i class="fas fa-check-circle "></i>
+          <i class="fas fa-exclamation-circle"></i>
+
+      </div>
+
+      <div class="text-error-phone">
+        <small></small>
+      </div>
+    </div>
+
+    <div class="form-control-access">
+      <%= f.label :message %>
+      <div class="display-icone d-flex">
+
+          <%= f.text_field  :message, class: "contact-form-message" %>
+
+
+          <i class="fas fa-check-circle "></i>
+          <i class="fas fa-exclamation-circle"></i>
+
+      </div>
+
+      <div class="text-error-message">
+        <small>Please tell us more</small>
+      </div>
+    </div>
+
+
+      <div class="captcha">
+            <div class= "hidden">
+              <%= f.label :nickname %>
+              <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
+            </div>
+      </div>
+
+          <div>
+            <%= f.submit 'Send Message', class: 'button-access', id:'sweet-alert-message' %>
+          </div>
+
+    </div>
+  <% end %>
+
+  <% if @modalsuccess %>
+    <div class="col-md-6" id="success-form">
+    </div>
+  <% end %>

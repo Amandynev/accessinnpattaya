@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_21_084441) do
+ActiveRecord::Schema.define(version: 2020_11_02_132816) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,9 @@ ActiveRecord::Schema.define(version: 2020_10_21_084441) do
     t.bigint "room_id", null: false
     t.date "start_at"
     t.date "end_at"
+    t.string "state", default: "pending"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["room_id"], name: "index_bookings_on_room_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
@@ -27,11 +30,21 @@ ActiveRecord::Schema.define(version: 2020_10_21_084441) do
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.integer "price"
     t.integer "room_size"
     t.string "bed_size"
     t.boolean "balcony"
     t.boolean "corner_table"
+    t.integer "price_cents", default: 0, null: false
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "homes", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "hotels", force: :cascade do |t|
@@ -43,6 +56,24 @@ ActiveRecord::Schema.define(version: 2020_10_21_084441) do
     t.string "address"
   end
 
+<<<<<<< HEAD
+=======
+  create_table "orders", force: :cascade do |t|
+    t.string "state"
+    t.integer "amount_cents", default: 0, null: false
+    t.string "checkout_session_id"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
+  create_table "pages", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+>>>>>>> afea88f786adaaf441d3f9e4ad4f30d65ec8aff0
   create_table "rooms", force: :cascade do |t|
     t.bigint "category_id", null: false
     t.string "photo"
@@ -63,5 +94,9 @@ ActiveRecord::Schema.define(version: 2020_10_21_084441) do
 
   add_foreign_key "bookings", "rooms"
   add_foreign_key "bookings", "users"
+<<<<<<< HEAD
+=======
+  add_foreign_key "orders", "users"
+>>>>>>> afea88f786adaaf441d3f9e4ad4f30d65ec8aff0
   add_foreign_key "rooms", "categories"
 end
