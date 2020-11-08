@@ -12,22 +12,34 @@
 }
 
 .button-access-calendar{
-  color: $eggshell;
+  color: white;
   width: 100%;
   padding: 15px 15px;
   font-size: 15px;
   background:$red;
   border: 2px solid $red;
+  font-family:$body-font;
+}
+
+.button-access-calendar-square{
+  color: white;
+  width: 100%;
+  padding: 15px 15px;
+  font-size: 15px;
+  background:$red;
+  border: 2px solid $red;
+  font-family:$body-font;
 }
 
 .button-access-calendar:hover{
-  color:$eggshell;
+  color:$white;
   font-weight:bold;
-  border: 3px solid $eggshell;
+  background-color:$black;
+  border: none;
 }
 
 .button-access-book{
-  color: $eggshell;
+  color: white;
   padding: 15px 20px;
   font-size: 15px;
   background:$red;
@@ -35,7 +47,15 @@
 }
 
 .button-access-book:hover{
-  color: $eggshell;
+  color: white;
   font-weight:bold;
 
+}
+
+@media(max-width: 650px){
+  .button-access-calendar{
+    font-size:12px;
+    font-weight:bold;
+    height:100px;
+  }
 }

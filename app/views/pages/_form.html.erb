@@ -1,10 +1,10 @@
 <div class="calendar-form">
   <%= form_tag searchedrooms_path, method: :get do %>
     <div class="calendar-container">
-      <div class="calendar-box">
+      <div class="calendar-box border-right">
         <%= date_field :start_at, params[:start_at], required: false, id: "range_start" %>
         <div class="title">
-          Check-in
+          CHECK-IN
         </div>
         <div class="date">
           <div id="start-day-calendar" class="day">
@@ -12,14 +12,14 @@
           </div>
           <div id="start-month-calendar" class="month">
           <%= Date.today.to_formatted_s(:short).split(" ").last %>
-            <i class="fas fa-chevron-circle-down"></i>
+            <i class="fas fa-chevron-down fa-xs"></i>
           </div>
         </div>
       </div>
       <div class="calendar-box">
         <%= date_field :end_at, params[:end_at], required: false, id: "range_end", type: :text, class:"flatpickr-input" %>
         <div class="title">
-          Check-out
+          CHECK-OUT
         </div>
         <div class="date">
           <div id="end-day-calendar" class="day">
@@ -27,11 +27,11 @@
           </div>
           <div id="end-month-calendar" class="month">
           <%= Date.today.to_formatted_s(:short).split(" ").last %>
-            <i class="fas fa-chevron-circle-down"></i>
+            <i class="fas fa-chevron-down fa-xs"></i>
           </div>
         </div>
       </div>
+    <%= submit_tag "CHECK AVAILABILITY", class: "button-access-calendar" %>
     </div>
-    <%= submit_tag "Looking for rooms", class: "button-access-calendar" %>
   <% end %>
 </div>
