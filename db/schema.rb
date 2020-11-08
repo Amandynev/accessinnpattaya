@@ -56,8 +56,6 @@ ActiveRecord::Schema.define(version: 2020_11_02_132816) do
     t.string "address"
   end
 
-<<<<<<< HEAD
-=======
   create_table "orders", force: :cascade do |t|
     t.string "state"
     t.integer "amount_cents", default: 0, null: false
@@ -73,7 +71,6 @@ ActiveRecord::Schema.define(version: 2020_11_02_132816) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
->>>>>>> afea88f786adaaf441d3f9e4ad4f30d65ec8aff0
   create_table "rooms", force: :cascade do |t|
     t.bigint "category_id", null: false
     t.string "photo"
@@ -94,9 +91,6 @@ ActiveRecord::Schema.define(version: 2020_11_02_132816) do
 
   add_foreign_key "bookings", "rooms"
   add_foreign_key "bookings", "users"
-<<<<<<< HEAD
-=======
   add_foreign_key "orders", "users"
->>>>>>> afea88f786adaaf441d3f9e4ad4f30d65ec8aff0
   add_foreign_key "rooms", "categories"
 end
