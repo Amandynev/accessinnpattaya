@@ -2,6 +2,72 @@
 body{
   background-color:white;
 }
+.container-hotel{
+  margin: auto;
+  width: 90vw;
+  color:$black;
+  .hotel-home{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    position:relative;
+    .photo-reception{
+      width: 350px;
+      height: 250px;
+      position:absolute;
+      top: 30px;
+      right: 180px;
+
+    }
+
+    .photo-buddha{
+      position:absolute;
+      bottom: 40px;
+      right: 140px;
+      width: 350px;
+      height: 250px;
+
+    }
+
+    .photo-buddha-white{
+      position:absolute;
+      top: 70px;
+      right: 0px;
+      height: 350px;
+
+    }
+
+    .hotel-text{
+      margin-top: 100px;
+    }
+
+    .big-title-hotel h2{
+      font-size: 50px;
+    }
+  }
+}
+
+ .container-list{
+  margin: auto;
+  width: 100vw;
+  color:$black;
+  background-color: #F9F9F9;
+  .card-home {
+    display:flex;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+  .card-square-list{
+    display:grid;
+    justify-content:space-between;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+ }
+
 .container-restau{
   margin:auto;
   width:100vw;
@@ -10,94 +76,26 @@ body{
   display:grid;
   justify-items:center;
   grid-template-columns: 1fr 1fr;
-}
-.container-hotel{
-  margin: auto;
-  width: 90vw;
-  color:$black;
-}
- .container-list{
-  margin: auto;
-  width: 100vw;
-  color:$black;
-  background-color: #F9F9F9;
- }
-.photo-reception{
-  width: 350px;
-  height: 250px;
-  position:absolute;
-  top: 30px;
-  right: 180px;
+  .image-size-home{
+    width:650px;
+    height:500px;
+  }
 
+  .restaurant-text{
+    background-color:white;
+    width:650px;
+    height:500px;
+    margin-top:20px;
+    padding-top:50px;
+    display:grid;
+    justify-items:space-around;
+  }
 }
-
-.photo-buddha{
-  position:absolute;
-  bottom: 40px;
-  right: 140px;
-  width: 350px;
-  height: 250px;
-
-}
-
-.photo-buddha-white{
-  position:absolute;
-  top: 70px;
-  right: 0px;
-  height: 350px;
-
-}
-
-.hotel-home{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-  position:relative;
-}
-.hotel-text{
-  margin-top: 100px;
-}
-
-.big-title-hotel h2{
-  font-size: 50px;
-}
-
-.card-home {
-  display:flex;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-
-}
-.card-square-list{
-  display:grid;
-  justify-content:space-between;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-}
-
 .line{
   color: $black;
 }
 .line-red{
   color: $red;
-}
-
-.image-size-home{
-  width:650px;
-  height:500px;
-}
-
-.restaurant-text{
-  background-color:white;
-  width:650px;
-  height:500px;
-  margin-top:20px;
-  padding-top:50px;
-  display:grid;
-  justify-items:space-around;
 }
 
 .margin-top{
@@ -114,8 +112,7 @@ body{
 }
 
 .title-separate{
-   background-image: linear-gradient(315deg, $eggshell, $red);
-
+  background-image: linear-gradient(315deg, $eggshell, $red);
   background-repeat: no-repeat;
   background-size: 100% 0.9em;
   background-position: 0 99%;
@@ -128,33 +125,53 @@ body{
 @media(max-width: 650px) {
   .hotel-home {
     grid-template-columns: 1fr;
+    .photo-buddha{
+      height: 250px;
+      right: auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      position: center;
     }
-  .photo-buddha{
-    height: 250px;
-    right: auto;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    position: center;
+    .photo-buddha-white{
+      display:none;
+    }
+    .photo-reception{
+      display:none;
+    }
   }
-  .photo-buddha-white{
-    display:none;
-  }
-  .photo-reception{
-    display:none;
-  }
+  .container-list{
+    .card-home{
+      display:block;
+      justify-items:center;
+    }
+    .card-room-list{
+      position: center;
+      margin:35px;
 
+    }
+    .card-square-list{
+      grid-template-columns: 1fr;
+    }
+  }
   .container-restau{
     display:grid;
     grid-template-columns: 1fr;
     justify-items:center;
+    .image-size-home{
+      width:100%;
+      height:400px;
+    }
+    .restaurant-text{
+      background-color:white;
+      width:100%;
+      height:400px;
+    }
   }
-  .image-size-home{
-    width:100%;
-    height:400px;
+  .column-footer{
+    display:block;
+    grid-template-columns: 1fr;
   }
-  .restaurant-text{
-    background-color:white;
-    width:100%;
-    height:400px;
+  .font-size-footer{
+    font-size:10px;
   }
 }
 .container-typed{
