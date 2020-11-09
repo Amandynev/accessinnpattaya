@@ -30,6 +30,7 @@ RSpec.describe "Bookings", type: :request do
     let!(:suite) { Category.where(name: "Suite double") }
     let!(:room_not_available) { Room.where(category: suite).sample }
     let!(:room_available) { Room.first }
+    Booking.destroy_all
 
     it 'Should not be able to book a room if no more left' do
       create(:booking, room: Room.where(category_id: suite).first)

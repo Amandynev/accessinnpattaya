@@ -11,55 +11,15 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
 
-  <body>
+  <body data-marker-env = "<%= Rails.env %>">
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
 
     <%= yield %>
-    <footer>
-  <ul class="list-unstyled list-inline text-center link-without-style">
-
-  </ul>
-    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 text-center">
-      <h6 class="text-uppercase mb-4 font-weight-bold"></h6>
-
-
-            <li class="list-inline-item mt-4 ">
-              <a class="btn-floating btn-fb mx-1 link-without-style" href="https://www.facebook.com/accessinnpattaya" target="_blank">
-                <i class="fab fa-facebook-f style-picto style-social"> </i>
-              </a>
-            </li>
-
-            <li class="list-inline-item ">
-              <a class="btn-floating btn-fb mx-1 link-without-style" href="https://www.facebook.com/accessinnpattaya" target="_blank">
-                <i class="fab fa-instagram style-picto style-social"></i>
-              </a>
-            </li>
-
-
-
-          <div class="address-footer mt-3">
-            <p>
-              <i class="fas fa-home mr-3 style-picto "></i> 315/29 Moo 9, Nongprue, Banglamung, Chonburi Pattaya, Thailand</p>
-          </div>
-
-          <div>
-            <p>
-              <i class="fas fa-envelope mr-3 style-picto"></i>reservations@accessinnpattaya.com</p>
-            <p>
-              <i class="fas fa-phone mr-3 style-picto"></i>+66(0) 38 721 076</p>
-          </div>
-
-    </div>
-
-
-      <div class="footer-copyright text-center py-3">© 2020 Copyright:
-        <a class="link-without-style" href="http://www.amandyneverdonck.com"> accessinnpattaya.com</a>
-      </div>
-    </footer>
+    <%= render 'shared/footer' %>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

@@ -5,7 +5,8 @@ const flatpickrDisplay = () => {
   flatpickr("#range_start", {
     plugins: [new rangePlugin({ input: "#range_end"})],
     minDate: "today",
-    disableMobile: "true"
+    disableMobile: "true",
+    allowInput: document.body.dataset.markerEnv === 'test' ? "true" : "false"
   });
 };
 
