@@ -1,11 +1,8 @@
 <div class="banner-show">
-
- <%= image_tag 'rooms/' + @room.photo, class: 'photo-show-banner' %>
-
+  <%= image_tag 'rooms/' + @room.photo, class: 'photo-show-banner' %>
 </div>
 
-<div class="container-index">
-
+<div class="container-white">
   <div class="title-room-show">
     <h2 class="title-room-show"> <%= @room.category.name %> </h2>
   </div>
@@ -13,16 +10,14 @@
   <div class="photo-room-calendar">
     <div class="photo-room">
       <%= image_tag 'rooms/' + @room.photo, class: 'photo-show-size' %>
-
-
     </div>
 
     <div class="calendar-booking">
       <%= render '/bookings/form', booking: @booking %>
     </div>
+  </div>
 
-</div>
-   <div class="title-room-show">
+  <div class="title-room-show">
     <h2 class="title-room-show"> Room services </h2>
   </div>
 
