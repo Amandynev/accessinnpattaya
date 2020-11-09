@@ -2,107 +2,114 @@
 body{
   background-color:white;
 }
-.container-restau{
-  margin:auto;
-  width:100vw;
-  color:$black;
-  background-color: #F9F9F9;
-  display:grid;
-  justify-items:center;
-  grid-template-columns: 1fr 1fr;
+
+.container-typed{
+  height: 100px;
 }
+
 .container-hotel{
   margin: auto;
   width: 90vw;
   color:$black;
+  .hotel-home{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    .hotel-text{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 600px;
+    }
+    .photos-hotel{
+      position: relative;
+      height: 600px;
+      .photo-reception{
+        width: 350px;
+        height: 250px;
+        position:absolute;
+        top: 30px;
+        right: 180px;
+      }
+      .photo-buddha{
+        position:absolute;
+        bottom: 0;
+        right: 140px;
+        width: 350px;
+        height: 250px;
+      }
+      .photo-buddha-white{
+        position:absolute;
+        top: 50px;
+        right: 0px;
+        height: 350px;
+      }
+    }
+  }
 }
- .container-list{
+
+.container-list{
   margin: auto;
-  width: 100vw;
+  width: 100%;
   color:$black;
   background-color: #F9F9F9;
+  padding-bottom: 30px;
+  .card-home {
+    overflow-x: hidden;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    .card-square-list{
+      display:grid;
+      justify-content:space-between;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+      grid-auto-rows: minmax(100px, auto);
+    }
+  }
  }
-.photo-reception{
-  width: 350px;
-  height: 250px;
-  position:absolute;
-  top: 30px;
-  right: 180px;
 
+.container-restau, .container-bar{
+  color:$black;
+  background-color: #F9F9F9;
+  display:flex;
+  justify-items:center;
+  align-items: center;
 }
 
-.photo-buddha{
-  position:absolute;
-  bottom: 40px;
-  right: 140px;
-  width: 350px;
-  height: 250px;
-
-}
-
-.photo-buddha-white{
-  position:absolute;
-  top: 70px;
-  right: 0px;
-  height: 350px;
-
-}
-
-.hotel-home{
+.restaurant-text{
+  background-color:white;
+  height:500px;
+  padding-top:50px;
+  width: 50%;
   display:grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-  position:relative;
+  justify-items:space-around;
 }
-.hotel-text{
-  margin-top: 100px;
+
+.image-size-home{
+  width:50%;
+  height:500px;
 }
+
+// Fourre-tout ...
 
 .big-title-hotel h2{
   font-size: 50px;
 }
 
-.card-home {
-  display:flex;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-
-}
-.card-square-list{
-  display:grid;
-  justify-content:space-between;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-}
-
 .line{
   color: $black;
 }
+
 .line-red{
   color: $red;
-}
-
-.image-size-home{
-  width:650px;
-  height:500px;
-}
-
-.restaurant-text{
-  background-color:white;
-  width:650px;
-  height:500px;
-  margin-top:20px;
-  padding-top:50px;
-  display:grid;
-  justify-items:space-around;
 }
 
 .margin-top{
   margin-top:20px;
 }
+
 .paragraphe-color{
   color: gray;
   padding-right: 50px;
@@ -111,42 +118,85 @@ body{
 
 .color-title{
   color: $black;
+  text-align: center;
 }
 
 .title-separate{
-   background-image: linear-gradient(315deg, $eggshell, $red);
-
+  background-image: linear-gradient(315deg, $eggshell, $red);
   background-repeat: no-repeat;
   background-size: 100% 0.9em;
   background-position: 0 99%;
   transition: background-size 0.25s ease-in;
   &:hover {
-    background-size: 100% 100%;
+    background-size: 100%;
+  }
+}
+
+// Media query
+
+@media(max-width: 1180px) {
+  .container-hotel{
+    .hotel-home {
+      grid-template-columns: 1fr;
+      .hotel-text{
+        height: 400px;
+      }
+      .photos-hotel{
+        height: 300px;
+        .photo-buddha{
+          left: 0;
+          right: 0;
+          margin-left: auto;
+          margin-right: auto;
+          bottom: 0;
+          z-index: 2;
+        }
+        .photo-reception{
+          top: -60px;
+          left: 400px;
+          right: 0;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .photo-buddha-white{
+          top: -100px;
+          left: 0;
+          right: 500px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+  .container-list{
+    .card-home {
+      grid-template-columns: 1fr;
+      .card-square-list{
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+    .container-restau{
+      flex-direction: column;
+    }
+    .container-bar{
+    flex-direction: column-reverse;
+  }
+  .restaurant-text, .image-size-home{
+    width: 500px;
+    height:400px;
+  }
+}
+
+
+@media(max-width: 870px) {
+  .photo-buddha-white, .photo-reception{ 
+    display: none;
   }
 }
 
 @media(max-width: 650px) {
-  .hotel-home {
-    grid-template-columns: 1fr;
-    }
-  .photo-buddha{
-    height: 250px;
-    right: auto;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    position: center;
-  }
-  .photo-buddha-white{
-    display:none;
-  }
-  .photo-reception{
-    display:none;
-  }
 
-  .container-restau{
-    display:grid;
-    grid-template-columns: 1fr;
-    justify-items:center;
-  }
   .image-size-home{
     width:100%;
     height:400px;
@@ -157,6 +207,4 @@ body{
     height:400px;
   }
 }
-.container-typed{
-  height: 100px;
-}
+

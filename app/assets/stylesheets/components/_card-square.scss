@@ -24,24 +24,30 @@
   background-color: $red;
 }
 
-@media(max-width: 620px) {
-.card-category {
-  width: 80vw;
-  height: 400px;
+@media(max-width: 1180px){
+  .card-category{
+    width: 500px;
   }
-.card-title-square {
+}
+
+@media(max-width: 620px) {
+  .card-category{
+    width: 80vw;
+  }
+  .card-title-square {
   font-size: 16px;
   }
-.card-title-square-price {
+  .card-title-square-price {
   font-size: 16px;
   padding-left: 5px;
   padding-right: 5px;
   background-color: $red;
   }
-}
- .card-square-list{
+  .card-square-list{
     display:grid;
     grid-template-columns: 1fr;
     justify-items:center;
-    }
+  }
+}
+
 
