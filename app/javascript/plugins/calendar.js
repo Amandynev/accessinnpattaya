@@ -23,8 +23,8 @@ const calendarPat = () => {
 }
 
 const calendarPatTwo = () => {
-  const calendarBoxSquare = document.querySelector('.calendar-box');
-  if (calendarBox) {
+  const calendarBoxSquare = document.querySelector('.calendar-box-square');
+  if (calendarBoxSquare) {
     const startInput = document.querySelector('#range_start');
     const startDayCalendar = document.getElementById('start-day-calendar');
     const startMonthCalendar = document.getElementById('start-month-calendar');
@@ -47,3 +47,4 @@ const calendarPatTwo = () => {
 }
 
 export { calendarPat };
+export { calendarPatTwo };

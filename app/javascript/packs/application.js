@@ -30,7 +30,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { loadDynamicBannerText } from '../components/banner';
 import { initMapbox } from '../plugins/init_mapbox';
-import { calendarPat } from '../plugins/calendar'
+import { calendarPat } from '../plugins/calendar';
+import { calendarPatTwo } from '../plugins/calendar';
 import { flatpickrDisplay } from  "../plugins/flatpickr";
 import { sweetAlertNOK } from '../plugins/init_sweetalert';
 import { functionValidation } from '../components/form';
@@ -41,6 +42,7 @@ import { functionValidation } from '../components/form';
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
   calendarPat();
+  calendarPatTwo();
   flatpickrDisplay();
   // Call your functions here, e.g:
   // initSelect2();
