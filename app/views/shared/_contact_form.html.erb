@@ -69,19 +69,11 @@
       </div>
     </div>
 
-
-      <div class="captcha">
-            <div class= "hidden">
-              <%= f.label :nickname %>
-              <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
-            </div>
-      </div>
-
-          <div>
-            <%= f.submit 'Send Message', class: 'button-access', id:'sweet-alert-message' %>
-          </div>
-
+    <div class="text-center">
+      <%= f.submit 'Send Message', class: 'button-access', id:'sweet-alert-message' %>
     </div>
+
+  </div>
   <% end %>
 
   <% if @modalsuccess %>

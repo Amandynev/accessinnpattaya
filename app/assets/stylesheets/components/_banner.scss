@@ -21,7 +21,7 @@
 }
 
 .banner-pages{
-  background-image: linear-gradient(rgba(28, 28, 28, 0.2) 0%, rgba(28, 28, 28, 0.7) 100%), asset-url("rooms/premiumblue.jpg");
+  background-image: linear-gradient(rgba(28, 28, 28, 0.2) 0%, rgba(28, 28, 28, 0.7) 100%), asset-url("banner-pages.jpg");
   background-size: cover;
   background-position: center;
   width:100vw;
@@ -29,6 +29,8 @@
   position: relative;
   display:grid;
   justify-items:center;
+  justify-content:center;
+  align-items:center;
 }
 
 .typed-cursor{
@@ -40,7 +42,7 @@
   font-weight: bold;
   color: $white;
   font-family: $headers-font;
-  vertical-align: center;
+  align-items:center
 }
 
 .name-banner{
@@ -51,20 +53,12 @@
 
 }
 
-// .banner-home p {
-//   font-size: 28px;
-//   color: white;
-//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-//   position:absolute;
-//   top:60%;
-//   bottom:40%;
-//   left:40%;
-//   right: 40%;
-
-// }
-
 @media(max-width: 620px) {
   .name {
-    font-size:30px;
+    font-size:25px;
+  }
+  .banner-pages{
+    height:30vh;
+
   }
 }
