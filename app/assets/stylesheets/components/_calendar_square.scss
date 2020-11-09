@@ -86,10 +86,10 @@
 
     .title-square{
       padding-top:10px;
-        font-size: 12px;
-        font-family:$body-font;
-        color:white;
-        letter-spacing:.2rem;
+      font-size: 12px;
+      font-family:$body-font;
+      color:white;
+      letter-spacing:.2rem;
     }
     input {
       width: 70px;
@@ -114,16 +114,12 @@
 
 @media(max-width: 650px) {
   .calendar-form-square{
-
-    .calendar-container-sqaure{
+    .calendar-container-square{
       display: flex;
-      flex-direction: column;
       align-items: center;
       .calendar-box-square{
-        width: 150px;
-          border-bottom-width: 1px;
-          border-bottom-style: solid;
-          border-bottom-color: $light-gray ;
+        width: 130px;
+        height: 130px;
         .title-square{
           font-size: 10px;
         }
@@ -134,7 +130,7 @@
           .month{
             font-size: 10px;
             i {
-              position: absolute;
+            position: absolute;
             top: 30px;
             left: 0px;
             padding-top:8px;
@@ -144,6 +140,14 @@
         }
       }
     }
+      .number{
+        height: 120px;
+        width: 120px;
+
+        input{
+          font-size: 48px;
+        }
+      }
   }
 }
 
