@@ -166,6 +166,13 @@ body{
       height:400px;
     }
   }
+  .column-footer{
+    display:block;
+    grid-template-columns: 1fr;
+  }
+  .font-size-footer{
+    font-size:10px;
+  }
 }
 .container-typed{
   height: 100px;

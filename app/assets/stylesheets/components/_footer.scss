@@ -1,6 +1,4 @@
-.address-footer{
-  width: 350px;
-}
+
 
 .style-picto{
   color: $red;
@@ -9,12 +7,26 @@
 .style-social{
   color: white;
   background-color: $red;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   border-radius:  50% 20% / 10% 40%;
+}
+.column-footer{
+  display:flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  align-items:center;
+  justify-content:space-around;
+  }
+.font-size-copyright{
+  font-size:8px;
+  margin:10px;
 }
 
 footer{
   background-color: $black;
   color: white;
+  font-size:12px;
+  padding:5px;
 }
