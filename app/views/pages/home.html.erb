@@ -38,7 +38,7 @@
 
 <!------------------------>
 
-<div class="container-list">
+<div class="container-list d-flex flex-column align-items-center">
 
   <div>
     <p class="text-center pt-4 line">_______</p>
@@ -46,7 +46,7 @@
   </div>
   <br>
 
-  <div class="card-home justify-content-center">
+  <div class="card-home">
     <% @categories.first(1).map { |cat| cat.rooms.first }.each do |room| %>
 
       <div class="card-room-list" data-aos="slide-right" data-aos-duration="1000">
@@ -91,7 +91,7 @@
     <div class="card-square-list">
       <% @categories.last(4).map { |cat| cat.rooms.first }.each do |room| %>
         <%= link_to room_path(room), class:"link-without-style" do %>
-        <div class="card-category" data-aos="slide-right"data-aos-duration="1000" style="background-image: url(<%= asset_path 'rooms/' + room.photo %>)">
+        <div class="card-category" data-aos="slide-left"data-aos-duration="1000" style="background-image: url(<%= asset_path 'rooms/' + room.photo %>)">
           <p class="card-title-square"><%= room.category.name.upcase %></p>
           <p class="card-title-square-price">From <%= room.category.price %> ฿</p>
         </div>
