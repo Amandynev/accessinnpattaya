@@ -9,7 +9,7 @@
 <div class="container-hotel">
   <div class="hotel-home">
 
-    <div class="hotel-text text-center">
+    <div class="hotel-text">
 
       <div class="title-hotel"data-aos="zoom-in-up" data-aos-duration="3000">
         <p>OYO GROUP</p>
@@ -19,28 +19,18 @@
         <h2> Access Inn Pattaya</h2>
       </div>
 
-      <div class="description-hotel" data-aos="zoom-in-up" data-aos-duration="3000">
-        <p>Access Inn Pattaya is a modern and design Hotel with a panoramic lift in the center of the vibrant city of Pattaya. The Hotel features a bar lounge and a restaurant.
+      <div class="description-hotel mb-4" data-aos="zoom-in-up" data-aos-duration="3000">
+        Access Inn Pattaya is a modern and design Hotel with a panoramic lift in the center of the vibrant city of Pattaya. The Hotel features a bar lounge and a restaurant.
         Dine on an international or thai meal at our restaurant,
-        or relax by playing pool or dart games at Access inn bar while drinking wines or specials cocktails.</p>
+        or relax by playing pool or dart games at Access inn bar while drinking wines or specials cocktails.
       </div>
-
-      <div class="pt-3">
-          <%= link_to "About us", rooms_path, class: "button-access link-without-style" %>
-      </div>
+      
+      <%= link_to "About us", rooms_path, class: "button-access link-without-style" %>
 
     </div>
-
-    <div class="hotel-photo">
+    <div class="photos-hotel">
       <%= image_tag "buddha-2.jpg", alt: "photo buddha", class: "photo-buddha"%>
-    </div>
-
-
-    <div class="hotel-photo">
       <%= image_tag "buddha2-2.jpg", alt: "photo buddha 2", class: "photo-buddha-white"%>
-    </div>
-
-    <div class="hotel-photo">
       <%= image_tag "reception-2.jpg", alt: "photo reception", class: "photo-reception"%>
     </div>
   </div>
@@ -60,7 +50,7 @@
     <div class="">
        <% @categories.first(1).map { |cat| cat.rooms.first }.each do |room| %>
 
-        <div class="card-room-list" data-aos="slide-right"data-aos-duration="1000">
+        <div class="card-room-list" data-aos="slide-right" data-aos-duration="1000">
           <%= image_tag "rooms/"+ room.photo, class: 'card-room-image' %>
           <div class="card-room-infos">
               <%= link_to room_path(room), class:"link-without-style" do %>
@@ -123,39 +113,33 @@
 <!------------------------>
 <div class="container-restau text-center">
 
-    <div class="restaurant-text">
-      <div class="title-food">
-        <h2 class="">Food</h2>
-        <p class="text-center line">_______</p>
-      </div>
-        <p class="paragraphe-color">Dine on an international or thai meal at our restaurant with special courses really ofter...
-      </p>
-      <div class="pt-3">
-        <%= link_to "More infos", restaurant_path, class: "button-access link-without-style" %>
-      </div>
+  <div class="restaurant-text">
+    <div class="title-food">
+      <h2 class="">Food</h2>
+      <p class="text-center line">_______</p>
     </div>
-
-    <div class="image-size-home margin-top">
-      <%= image_tag "restaurant.jpg", class: 'image-size-home' %>
-    </div>
-
-
-
-    <div class="bar-photo pt-4 pb-4">
-      <%= image_tag "billard.jpg", class: 'image-size-home' %>
-    </div>
-
-    <div class="restaurant-text">
-      <div class="title-food">
-        <h2>Bar</h2>
-        <p class="text-center line">_______</p>
-      </div>
-      <p class="paragraphe-color"> Or relax by playing pool or dart games at Access inn bar while drinking wines or specials cocktails.
-</p>
+      <p class="paragraphe-color">Dine on an international or thai meal at our restaurant with special courses really ofter...</p>
     <div class="pt-3">
-      <%= link_to "More info", restaurant_path, class: "button-access link-without-style" %>
+      <%= link_to "More infos", restaurant_path, class: "button-access link-without-style" %>
     </div>
+  </div>
+  <%= image_tag "restaurant.jpg", class: 'image-size-home' %>
+</div>
+ 
+<div class="container-bar text-center">
+  <%= image_tag "billard.jpg", class: 'image-size-home' %>
+
+  <div class="restaurant-text">
+    <div class="title-food">
+      <h2>Bar</h2>
+      <p class="text-center line">_______</p>
     </div>
+    <p class="paragraphe-color"> Or relax by playing pool or dart games at Access inn bar while drinking wines or specials cocktails.
+</p>
+  <div class="pt-3">
+    <%= link_to "More info", restaurant_path, class: "button-access link-without-style" %>
+  </div>
+  </div>
 
 </div>
 
