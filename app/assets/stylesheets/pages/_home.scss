@@ -189,9 +189,20 @@ body{
 
 
 @media(max-width: 870px) {
-  .photo-buddha-white, .photo-reception{ 
-    display: none;
+  .container-hotel{
+    .hotel-home {
+      grid-template-columns: 1fr;
+      .hotel-text{
+        height: fit-content;
+      }
+      .photos-hotel{
+        .photo-buddha-white, .photo-reception{ 
+          display: none;
+        }
+      }
+    }
   }
+
 }
 
 @media(max-width: 650px) {
