@@ -22,7 +22,7 @@ class BookingsController < ApplicationController
   end
 
   def allmybookings
-    @bookings = Booking.user_bookings(current_user)
+    @bookings = Booking.includes(room: :category).user_bookings(current_user)
     @hash_bookings = Hash.new { |hash, key| hash[key] = { number: 0, room: nil, nigths: 0, price: 0 } }
     @bookings.each do |booking|
       @hash_bookings[booking.room.category.name][:number] += 1

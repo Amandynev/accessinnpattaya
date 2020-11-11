@@ -23,7 +23,7 @@ class RoomsController < ApplicationController
   def searchedrooms
     @categories = Category.all
     hash_unavailability = Hash.new(0)
-    bookings = Booking.where("end_at >= ?", Date.today)
+    bookings = Booking.includes(room: :category).where("end_at >= ?", Date.today)
     bookings.each do |booking|
       date_range = booking.start_at..booking.end_at
       start_date = params[:start_at] == [""] ? Date.today : Date.parse(params[:start_at].first)
