@@ -16,16 +16,14 @@
       </div>
 
       <div class="big-title-hotel text-center" data-aos="zoom-in-up" data-aos-duration="3000">
-        <h2> Access Inn Pattaya</h2>
+        <h2><%= t('hotel.name') %></h2>
       </div>
 
       <div class="description-hotel mb-4 text-justify" data-aos="zoom-in-up" data-aos-duration="3000">
-        Access Inn Pattaya is a modern and design Hotel with a panoramic lift in the center of the vibrant city of Pattaya. The Hotel features a bar lounge and a restaurant.
-        Dine on an international or thai meal at our restaurant,
-        or relax by playing pool or dart games at Access inn bar while drinking wines or specials cocktails.
+        <%= t('hotel.description') %>
       </div>
       
-      <%= link_to "About us", rooms_path, class: "button-access link-without-style" %>
+      <%= link_to t('page.home.about-us'), rooms_path, class: "button-access link-without-style" %>
 
     </div>
     <div class="photos-hotel">
@@ -42,7 +40,7 @@
 
   <div>
     <p class="text-center pt-4 line">_______</p>
-  <h1 class="text-center pt-1 title-home">The rooms</h1>
+  <h1 class="text-center pt-1 title-home"><%= t('page.home.rooms') %></h1>
   </div>
   <br>
 
@@ -105,7 +103,7 @@
 
 <!------------------------>
 <div class="container-text m-5">
-  <h2 class="color-title">What about <!-- <span class="title-separate">  -->dining and drinking <!-- </span>  -->? </h2>
+  <h2 class="color-title"><%= t('page.home.dining-drinking') %></h2>
 </div>
 
 <!------------------------>
@@ -113,10 +111,12 @@
 
   <div class="restaurant-text">
     <div class="title-food">
-      <h2 class="">Food</h2>
+      <h2 class=""><%= t('restaurant.title') %></h2>
       <p class="text-center line">_______</p>
     </div>
-      <p class="paragraphe-color">Dine on an international or thai meal at our restaurant with special courses really ofter...</p>
+    <p class="paragraphe-color">
+      <%= t('restaurant.description') %>
+    </p>
     <div class="pt-3">
       <%= link_to "More infos", restaurant_path, class: "button-access link-without-style" %>
     </div>
@@ -129,14 +129,15 @@
 
   <div class="restaurant-text">
     <div class="title-food">
-      <h2>Bar</h2>
+      <h2><%= t('bar.title') %></h2>
       <p class="text-center line">_______</p>
     </div>
-    <p class="paragraphe-color"> Or relax by playing pool or dart games at Access inn bar while drinking wines or specials cocktails.
-</p>
-  <div class="pt-3">
-    <%= link_to "More info", restaurant_path, class: "button-access link-without-style" %>
-  </div>
+    <p class="paragraphe-color">
+      <%= t('bar.description') %>
+    </p>
+    <div class="pt-3">
+      <%= link_to "More info", restaurant_path, class: "button-access link-without-style" %>
+    </div>
   </div>
 
 </div>
