@@ -18,4 +18,17 @@ const sweetAlertNOK = () => {
   }
 }
 
+const alertNewBooking = () => {
+ const form = document.querySelector('#new_booking')
+    form.addEventListener('submit',(event) => {
+        initSweetalert('#sweet-alert-booking', {
+        title: "Room pre-booked !",
+        text: "The room have been pre-booked for 30 minutes, please proceed to the payment to completed your reservation.",
+        icon: "success"
+        });
+    });
+};
+
+export { alertNewBooking } ;
+
 export { sweetAlertNOK };
