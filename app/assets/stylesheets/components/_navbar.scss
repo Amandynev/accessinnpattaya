@@ -38,6 +38,11 @@
     font-weight: 600;
   }
 
+  .navbar-nav .nav-item:hover {
+    color: $red;
+    font-weight: 600;
+  }
+
   .avatar-nav{
     display:flex;
     align-items: center;

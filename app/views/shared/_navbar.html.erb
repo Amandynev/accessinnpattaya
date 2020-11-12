@@ -33,12 +33,12 @@
         </li>
         <li class="nav-item dropdown">
 
-
-              <%= image_tag "log-in.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+             <%= image_tag "log-in.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <%= link_to "My account", "#", class: "dropdown-item" %>
-              <%= link_to "My reservations", allmybookings_path, class: "dropdown-item" %>
+              <%= link_to "My reservations", "#", class: "dropdown-item" %>
+              <%= link_to "Checkout", allmybookings_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
 
@@ -58,6 +58,9 @@
         </li>
         <li>
           <%= link_to "Contact us",contact_path, class: "nav-link" %>
+        </li>
+        <li>
+          <%= link_to "My booking", allmybookings_path, class: "button-access-book" %>
         </li>
 
         <div class="loggin">
