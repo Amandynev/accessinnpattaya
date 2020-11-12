@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_02_132816) do
+ActiveRecord::Schema.define(version: 2020_11_12_085824) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,18 @@ ActiveRecord::Schema.define(version: 2020_11_02_132816) do
     t.boolean "balcony"
     t.boolean "corner_table"
     t.integer "price_cents", default: 0, null: false
+  end
+
+  create_table "category_translations", force: :cascade do |t|
+    t.bigint "category_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.string "description"
+    t.string "bed_size"
+    t.index ["category_id"], name: "index_category_translations_on_category_id"
+    t.index ["locale"], name: "index_category_translations_on_locale"
   end
 
   create_table "contacts", force: :cascade do |t|

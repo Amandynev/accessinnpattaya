@@ -73,6 +73,48 @@ superior = Category.create!(
   corner_table: false
 )
 
+puts "Traduction ..."
+
+accessinn.attributes = {
+  name: "The Access inn",
+  description: "Découvrez notre fantastique et unique chambre Access inn. Située aux 2ème et 3ème étages de l'hôtel. Accès par ascenceur panoramique. Chaine HI-FI et lumières new desing dans une chambre spacieuse avec coin sofa et balcon équipé d'une baie vitrée coulissante qui saura vous fournir un véritable coin relaxation pendant votre séjour.",
+  bed_size: "King size",
+  locale: :fr
+}
+accessinn.save
+
+suite.attributes = {
+  name: "Suite double",
+  description: "Découvrez notre fantastique Suite. Située au 1er étage de l'hôtel. Accès par ascenceur panoramique. Chaine HI-FI et lumières new desing dans une chambre spacieuse avec coin sofa et balcon équipé d'une baie vitrée coulissante qui saura vous fournir un véritable coin relaxation pendant votre séjour.",
+  bed_size: "King size",
+  locale: :fr
+}
+suite.save
+
+premium.attributes = {
+  name: "Premium double",
+  description: "Découvrez notre fantastique chambre premium. Située au 3ème étage de l'hôtel. Accès par ascenceur panoramique. Chaine HI-FI, lumières new desing et balcon équipé d'une baie vitrée coulissante qui saura vous fournir un véritable coin relaxation pendant votre séjour.",
+  bed_size: "King size",
+  locale: :fr
+}
+premium.save
+
+deluxe.attributes = {
+  name: "Deluxe double",
+  description: "Découvrez notre fantastique chambre deluxe. Située au 3ème étage de l'hôtel. Accès par ascenceur panoramique. Chaine HI-FI et balcon équipé d'une baie vitrée coulissante qui saura vous fournir un véritable coin relaxation pendant votre séjour.",
+  bed_size: "King size",
+  locale: :fr
+}
+deluxe.save
+
+superior.attributes = {
+  name: "Superior double",
+  description: "Découvrez notre fantastique chambre supérieure. Située au 3ème étage de l'hôtel. Accès par ascenceur panoramique et Chaine HI-FI qui saura répondre à vos attentes pendant votre séjour.",
+  bed_size: "King size",
+  locale: :fr
+}
+superior.save
+
 puts "create rooms..."
 
 5.times do

@@ -3,4 +3,5 @@ class Category < ApplicationRecord
   validates :name, :description, :price, :room_size, presence: true
   validates :balcony, :corner_table, inclusion: { in: [true, false] }
   monetize :price_cents
+  translates :name, :description, :bed_size
 end
