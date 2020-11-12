@@ -21,10 +21,10 @@ gem 'jbuilder', '~> 2.7'
 gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'money-rails'
-gem 'stripe'
-gem 'stripe_event'
-gem 'sidekiq'
+gem 'money-rails', '~> 1.13.3'
+gem 'stripe', '~> 5.28.0'
+gem 'stripe_event', '~> 2.3.1'
+gem 'sidekiq', '~> 6.1.2'
 gem 'sidekiq-failures', '~> 1.0'
 
 # Use Active Storage variant
@@ -33,23 +33,23 @@ gem 'sidekiq-failures', '~> 1.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
-gem 'devise'
-gem 'autoprefixer-rails'
-gem 'font-awesome-sass'
-gem 'simple_form'
-gem 'geocoder'
 gem 'globalize', '~> 5.3.0'
+gem 'devise', '~> 4.7.3'
+gem 'autoprefixer-rails', '~> 10.0.1.0'
+gem 'font-awesome-sass', '~> 5.13.0'
+gem 'simple_form', '~> 5.0.3'
+gem 'geocoder', '~> 1.6.4'
 
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
-  gem 'dotenv-rails'
-  gem 'rspec-rails'
-  gem 'factory_bot_rails'
-  gem 'faker'
-  gem 'rails-controller-testing'
-  gem 'shoulda-matchers'
-  gem 'webmock'
+  gem 'dotenv-rails', '~> 2.7.6'
+  gem 'rspec-rails', '~> 4.0.1'
+  gem 'factory_bot_rails', '~> 6.1.0'
+  gem 'faker', '~> 2.14.0'
+  gem 'rails-controller-testing', '~> 1.0.5'
+  gem 'shoulda-matchers', '~> 4.4.1'
+  gem 'webmock', '~> 3.9.2'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -62,14 +62,16 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'bullet', '~> 6.1.0'
+  gem 'rack-mini-profiler', '~> 2.2.0'
 end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '~> 3.142.7'
   # Easy installation and use of web drivers to run system tests with browsers
-  gem 'webdrivers'
+  gem 'webdrivers', '~> 4.4.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

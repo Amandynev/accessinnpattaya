@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.feature 'Rooms', type: :feature, js: true do
-  let(:room) { Category.all.sample.rooms.first }
-  let(:next_day) { Date.today.next_day }
+  let!(:room) { Category.all.sample.rooms.first }
+  let!(:next_day) { Date.today.next_day }
 
   describe 'Rooms views' do
     it 'Visit a room page' do

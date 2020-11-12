@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "Pages", type: :feature, js: true do
-  let(:next_day) { Date.today.next_day }
+  let!(:next_day) { Date.today.next_day }
 
   describe 'Home Page' do
     it 'Visit the index page' do

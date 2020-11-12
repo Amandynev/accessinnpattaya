@@ -1,12 +1,36 @@
-.navbar-lewagon {
+.navbar-pattaya {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
-  background: white;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  .navbar-brand img {
+    width: 40px;
+  }
+  .navbar-collapse {
+    flex-grow: 0;
+  }
+  .nav-item.active-pattaya > .nav-link {
+    color: $red;
+    font-weight: 600;
+    border-bottom: 2px solid $red;
+  }
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+@media (max-width: 576px){
+  .navbar-pattaya {
+    flex-direction: column;
+    .navbar-brand{
+      margin: 0;
+    }
+    .nav-link{
+      text-align: center;
+    }
+    .nav-item.dropdown{
+      display: flex;
+      justify-content: center;
+    }
+  }
 }
