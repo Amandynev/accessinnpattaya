@@ -20,8 +20,8 @@
 }
 
 .photo-show-size{
-width: 60vw;
-height: 380px;
+  width: 60vw;
+  height: 380px;
 }
 
 .photo-show-banner{
@@ -35,9 +35,10 @@ height: 380px;
   grid-gap: 10px;
   justify-content: center;
   width: 900px;
-  margin: 15px auto;
+  margin: 0 auto;
   .service-item {
     text-align: left;
+    padding-left: 75px;
   }
 }
 
@@ -67,6 +68,9 @@ height: 380px;
   .services-grid{
     grid-template-columns: 1fr 1fr;
     width: 600px;
+    .service-item {
+      padding-left: 120px;
+    }
   }
 }
 
@@ -77,14 +81,14 @@ height: 380px;
   }
   .photo-room-calendar{
     .calendar-booking{
-      height: 400px;
+      height: 430px;
     }
   }
-}
-
-@media(max-width: 576px){
   .services-grid{
     grid-template-columns: 1fr;
     width: 300px;
+    .service-item {
+      padding-left: 120px;
+    }
   }
 }
