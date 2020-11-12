@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[create]
   def create
     @room = Room.find(params[:room_id])
     @booking = Booking.new
@@ -10,11 +11,11 @@ class BookingsController < ApplicationController
         if @booking.save
         # ReservationJob.set(wait: 30.minutes).perform_later(@booking.id)
         else
-          render "rooms/show"
+
           return false
         end
       end
-      redirect_to rooms_path
+
     else
       @modal = true
       render "rooms/show"
