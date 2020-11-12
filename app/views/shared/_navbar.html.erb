@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
+<div class="navbar-expand-sm navbar-light navbar-pattaya fixed-top">
   <%= link_to "#", class: "navbar-brand" do %>
     <%= image_tag "accessinn-logo.png" %>
   <% end %>
@@ -7,26 +7,23 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="nav-item active">
+        <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'home'%>">
           <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
+        <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'rooms'%>">
           <%= link_to "Rooms", rooms_path, class: "nav-link" %>
         </li>
-        <li>
+        <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'restaurant'%>">
           <%= link_to "RestaurantBar", restaurant_path, class: "nav-link" %>
         </li>
-        <li>
+        <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'event'%>">
           <%= link_to "Events", event_path, class: "nav-link" %>
         </li>
-        <li>
+        <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'contact'%>">
           <%= link_to "Contact us",contact_path, class: "nav-link" %>
-        </li>
-        <li>
-          <%= link_to "Book now", class: "nav-link button-access" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "accessinn-logo.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
