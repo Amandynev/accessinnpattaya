@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
-  background-color: white;
+  background-color: $black;
   .navbar-brand img {
     width: 40px;
   }
@@ -17,7 +17,33 @@
     font-weight: 600;
     border-bottom: 2px solid $red;
   }
+  .button-access-book{
+    padding:10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+
+  }
 }
+  .navbar-toggler {
+  color:white !important;
+}
+  .navbar-light .navbar-nav .nav-link {
+    color: #f8f9fa;
+}
+  .navbar-nav .nav-item:hover .nav-link{
+    color: $red;
+    font-weight: 600;
+  }
+
+  .avatar-nav{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+
+  }
 
 @media (max-width: 576px){
   .navbar-pattaya {
@@ -31,6 +57,10 @@
     .nav-item.dropdown{
       display: flex;
       justify-content: center;
+    }
+    .button-access-book {
+      margin-top:10px;
+      margin-bottom: 10px;
     }
   }
 }
