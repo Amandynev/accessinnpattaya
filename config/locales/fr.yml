@@ -15,4 +15,15 @@ fr:
   bar:
     title: "Bar"
     description: "Ou relaxez-vous en jouant au billard ou flechettes au bar pendant que vous dégustez nos vins et autres cocktails."
-  
+  navbar:
+    menu-1: "Accueil"
+    menu-2: "Chambres"
+    menu-3: "RestaurantBar"
+    menu-4: "Evenement"
+    menu-5: "Contact"
+    dropdown:
+      menu-1: "Mon Compte"
+      menu-2: "Mes reservations"
+      menu-3: "Checkout"
+      menu-4: "Logout"
+    pay-btn: "PAYER"
