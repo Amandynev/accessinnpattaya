@@ -14,50 +14,50 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'home'%>">
-          <%= link_to "Home", root_path, class: "nav-link" %>
+          <%= link_to t('navbar.menu-1'), root_path, class: "nav-link" %>
         </li>
         <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'rooms'%>">
-          <%= link_to "Rooms", rooms_path, class: "nav-link" %>
+          <%= link_to t('navbar.menu-2'), rooms_path, class: "nav-link" %>
         </li>
         <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'restaurant'%>">
-          <%= link_to "RestaurantBar", restaurant_path, class: "nav-link" %>
+          <%= link_to t('navbar.menu-3'), restaurant_path, class: "nav-link" %>
         </li>
         <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'event'%>">
-          <%= link_to "Events", event_path, class: "nav-link" %>
+          <%= link_to t('navbar.menu-4'), event_path, class: "nav-link" %>
         </li>
         <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'contact'%>">
-          <%= link_to "Contact us",contact_path, class: "nav-link" %>
+          <%= link_to t('navbar.menu-5'),contact_path, class: "nav-link" %>
         </li>
         <li>
-          <%= link_to "PAY NOW", allmybookings_path, class: "button-access-book" %>
+          <%= link_to t('navbar.pay-btn'), allmybookings_path, class: "button-access-book" %>
         </li>
         <li class="nav-item dropdown">
 
              <%= image_tag "log-in.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <%= link_to "My account", "#", class: "dropdown-item" %>
-              <%= link_to "My reservations", "#", class: "dropdown-item" %>
-              <%= link_to "Checkout", allmybookings_path, class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+              <%= link_to t('navbar.dropdown.menu-1'), "#", class: "dropdown-item" %>
+              <%= link_to t('navbar.dropdown.menu-2'), "#", class: "dropdown-item" %>
+              <%= link_to t('navbar.dropdown.menu-3'), allmybookings_path, class: "dropdown-item" %>
+              <%= link_to t('navbar.dropdown.menu-4'), destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
 
         </li>
       <% else %>
         <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'home'%>">
-          <%= link_to "Home", root_path, class: "nav-link" %>
+          <%= link_to t('navbar.menu-1'), root_path, class: "nav-link" %>
         </li>
         <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'rooms'%>">
-          <%= link_to "Rooms", rooms_path, class: "nav-link" %>
+          <%= link_to t('navbar.menu-2'), rooms_path, class: "nav-link" %>
         </li>
         <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'restaurant'%>">
-          <%= link_to "RestaurantBar", restaurant_path, class: "nav-link" %>
+          <%= link_to t('navbar.menu-3'), restaurant_path, class: "nav-link" %>
         </li>
         <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'event'%>">
-          <%= link_to "Events", event_path, class: "nav-link" %>
+          <%= link_to t('navbar.menu-4'), event_path, class: "nav-link" %>
         </li>
         <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'contact'%>">
-          <%= link_to "Contact us",contact_path, class: "nav-link" %>
+          <%= link_to t('navbar.menu-5'),contact_path, class: "nav-link" %>
         </li>
         <li>
           <%= link_to "My booking", allmybookings_path, class: "button-access-book" %>
