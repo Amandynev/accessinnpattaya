@@ -3,11 +3,12 @@
 </div>
 
 <div class="container-bookings">
+  <% count_booking = 0 %>
   <% @hash_bookings.each do |key, value| %>
+    <% count_booking += 1 %>
     <div class="card-booking">
-    <%= link_to destroy_bookings_path(value[:room].category), method: :delete do %>
-      <i class="far fa-times-circle"></i>
-    <% end %>
+      <%= link_to "", destroy_bookings_path(value[:room].category), method: :delete, id:"delete-link-#{count_booking}", class: "hidden"%>
+      <i class="far fa-times-circle" data-id="<%= count_booking %>" id="delete-icon-<%= count_booking %>"></i>
       <%= image_tag "rooms/"+ value[:room].photo, class: 'card-booking-image' %>
       <div class="room-tag">
         <div class="tag-room-name">

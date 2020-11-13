@@ -33,8 +33,7 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { calendarPat } from '../plugins/calendar';
 import { calendarPatTwo } from '../plugins/calendar';
 import { flatpickrDisplay } from  "../plugins/flatpickr";
-import { sweetAlertNOK } from '../plugins/init_sweetalert';
-import { alertNewBooking } from '../plugins/init_sweetalert';
+import { sweetAlertNOK, alertNewBooking, sweetAlertDanger } from '../plugins/init_sweetalert';
 import { functionValidation } from '../components/form';
 
 // Internal imports, e.g:
@@ -50,6 +49,7 @@ document.addEventListener('turbolinks:load', () => {
   loadDynamicBannerText();
   AOS.init();
   sweetAlertNOK();
+  sweetAlertDanger();
   functionValidation();
   alertNewBooking();
 });

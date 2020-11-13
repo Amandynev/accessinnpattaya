@@ -9,15 +9,16 @@ class BookingsController < ApplicationController
         @booking.room = room
         @booking.user = current_user
         if @booking.save
-        # ReservationJob.set(wait: 30.minutes).perform_later(@booking.id)
+          # ReservationJob.set(wait: 30.minutes).perform_later(@booking.id)
+          @modal_success = true
         else
-
+          render "rooms/show"
           return false
         end
       end
 
     else
-      @modal = true
+      @modal_cancel = true
       render "rooms/show"
     end
   end
@@ -50,7 +51,7 @@ class BookingsController < ApplicationController
   def room_available
     rooms_ok = []
     category = @room.category
-    rooms = Room.where(category: category)
+    rooms = Room.includes(:bookings).where(category: category)
     rooms.each do |room|
       availability = true
       rooms_ok << room if room.bookings.empty?
