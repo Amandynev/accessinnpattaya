@@ -1,5 +1,3 @@
-
-
 .title-room-show{
   padding-top: 20px;
   padding-bottom: 20px;
@@ -8,26 +6,47 @@
   margin: 0;
   letter-spacing: .2rem;
   color: $black;
+  text-align: center;
 }
 
 .photo-room-calendar{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
+  display: flex;
   width: 100%;
 }
 
+.photo-room{
+  margin-right: 50px;
+  width: 750px;
+}
+
 .photo-show-size{
-width: 60vw;
-height: 380px;
+  width: 60vw;
+  height: 380px;
 }
 
 .photo-show-banner{
   width: 100vw;
   height: 350px;
 }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  justify-content: center;
+  width: 900px;
+  margin: 0 auto;
+  .service-item {
+    text-align: left;
+    padding-left: 75px;
+  }
+}
+
 @media(max-width: 1080px) {
+  .photo-room{
+    margin: 0 auto;
+    width: 750px;
+  }
   .photo-room-calendar{
     display:grid;
     grid-template-columns: 1fr;
@@ -36,8 +55,40 @@ height: 380px;
       height: 300px;
     }
     .calendar-booking{
-      height:350px;
+      width: 400px;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      height: 470px;
     }
   }
+}
 
+@media(max-width: 972px){
+  .services-grid{
+    grid-template-columns: 1fr 1fr;
+    width: 600px;
+    .service-item {
+      padding-left: 120px;
+    }
+  }
+}
+
+@media(max-width: 800px){
+  .photo-room{
+    margin: 0 auto;
+    width: 400px;
+  }
+  .photo-room-calendar{
+    .calendar-booking{
+      height: 430px;
+    }
+  }
+  .services-grid{
+    grid-template-columns: 1fr;
+    width: 300px;
+    .service-item {
+      padding-left: 120px;
+    }
+  }
 }
