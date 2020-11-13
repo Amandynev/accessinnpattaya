@@ -1,6 +1,6 @@
 import swal from 'sweetalert';
 
-const initSweetalert = (selector, options = {}, callback = () => {}) => {
+const initSweetalertClick = (selector, options = {}, callback = () => {}) => {
   const swalButton = document.querySelector(selector);
   if (swalButton) { // protect other pages
     swalButton.addEventListener('click', () => {
@@ -9,23 +9,43 @@ const initSweetalert = (selector, options = {}, callback = () => {}) => {
   }
 };
 
+const initSweetalertDOM = (selector, options = {}) => {
+  const swalButton = document.querySelector(selector);
+  if (swalButton) { // protect other pages
+    swal(options);
+  }
+};
+
 const sweetAlertNOK = () => {
-  const modal = document.getElementById("booking-canceled");
-  if (modal) {
-    initSweetalert('#sweet-alert-booking', {
-    title: "Booking canceled",
-    text: "Sorry, there is no availabilities for the choosen dates.",
-    icon: "error"
+  const modal = document.getElementById('booking-canceled');
+  if (modal){
+    initSweetalertDOM('#sweet-alert-booking', {
+      title: "Booking canceled",
+      text: "Sorry, there is no availabilities for the choosen dates.",
+      icon: "error"
     });
   }
 }
+
+const alertNewBooking = () => {
+  const modal = document.getElementById('booking-success');
+  if (modal){
+    initSweetalertDOM('#sweet-alert-booking', {
+      title: "Room pre-booked !",
+      text: "The room have been pre-booked for 30 minutes, please proceed to the payment to completed your reservation.",
+      icon: "success"
+    });
+  }
+};
+
+
 
 const sweetAlertDanger = () => {
   const deleteIcons = document.querySelectorAll('.card-booking > i')
   if (deleteIcons) {
     deleteIcons.forEach((icon) => {
       const id = icon.dataset.id;
-      initSweetalert(`#delete-icon-${id}`, {
+      initSweetalertClick(`#delete-icon-${id}`, {
       title: "Are you sure ?",
       text: "This action cannot be reversed.",
       icon: "warning"
@@ -38,16 +58,5 @@ const sweetAlertDanger = () => {
     })
   }
 }
-
-const alertNewBooking = () => {
- const modal = document.getElementById('booking-success')
- if (modal) {
-    initSweetalert('#sweet-alert-booking', {
-    title: "Room pre-booked !",
-    text: "The room have been pre-booked for 30 minutes, please proceed to the payment to completed your reservation.",
-    icon: "success"
-    });
-  }   
-};
 
 export { sweetAlertNOK, sweetAlertDanger, alertNewBooking };

@@ -10,13 +10,18 @@ class BookingsController < ApplicationController
         @booking.user = current_user
         if @booking.save
           # ReservationJob.set(wait: 30.minutes).perform_later(@booking.id)
-          @modal_success = true
+          @saving = true
         else
-          render "rooms/show"
-          return false
+          @saving = false
         end
       end
-
+      if @saving
+        redirect_to room_path(@room, param: 'ok')
+      elsif current_user.nil?
+        redirect_to new_user_session_path
+      else
+        render "rooms/show"
+      end
     else
       @modal_cancel = true
       render "rooms/show"

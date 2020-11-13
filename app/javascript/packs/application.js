@@ -48,8 +48,8 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   loadDynamicBannerText();
   AOS.init();
-  sweetAlertNOK();
   sweetAlertDanger();
   functionValidation();
+  sweetAlertNOK();
   alertNewBooking();
 });
