@@ -10,6 +10,18 @@
   background-color: #F9F9F9;
 }
 
+span.word {
+  background-image: linear-gradient(315deg,$red, $red);
+  color:white;
+  background-repeat: no-repeat;
+  background-size: 100% 0.9em;
+  background-position: 0 96%;
+  transition: background-size 0.25s ease-in;
+  &:hover {
+    background-size: 100% 98%;
+  }
+}
+
 @media(max-width: 620px) {
 
 }
