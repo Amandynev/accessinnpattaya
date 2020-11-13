@@ -21,9 +21,7 @@
     padding:10px;
     margin-left: 10px;
     margin-right: 10px;
-    display:flex;
-    align-items: center;
-    justify-content:center;
+
 
   }
 }
@@ -40,18 +38,16 @@
     font-weight: 600;
   }
 
-
-
-  .avatar-nav{
-    display:flex;
-    align-items: center;
-    justify-content:center;
-
+  ul{
+    margin: auto;
+    list-style-type: none;
   }
+
+
 
 @media (max-width: 576px){
   .navbar-pattaya {
-    flex-direction: column;
+    flex-direction: flex;
     .navbar-brand{
       margin: 0;
     }
@@ -66,5 +62,8 @@
       margin-top:10px;
       margin-bottom: 10px;
     }
+
+
+
   }
 }
