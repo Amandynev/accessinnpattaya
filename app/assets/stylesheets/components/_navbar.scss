@@ -7,7 +7,7 @@
   padding: 0.5rem 1rem;
   background-color: $black;
   .navbar-brand img {
-    width: 40px;
+    width: 70px;
   }
   .navbar-collapse {
     flex-grow: 0;
@@ -27,10 +27,7 @@
 
   }
 }
-  .navbar-toggler {
-  color:white !important;
-}
-  .navbar-light .navbar-nav .nav-link {
+  .navbar-dark .navbar-nav .nav-link {
     color: #f8f9fa;
 }
   .navbar-nav .nav-item:hover .nav-link{
@@ -42,6 +39,8 @@
     color: $red;
     font-weight: 600;
   }
+
+
 
   .avatar-nav{
     display:flex;

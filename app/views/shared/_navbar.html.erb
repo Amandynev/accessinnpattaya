@@ -1,7 +1,9 @@
-<div class="navbar-expand-sm navbar-light navbar-pattaya fixed-top">
-  <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag "accessinn-logo.png" %>
-  <% end %>
+<div class="navbar-expand-sm navbar-dark navbar-pattaya fixed-top">
+  <div class="logo-access">
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag "accessinn-logo.png" %>
+    <% end %>
+  </div>
 
 
   <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,9 +30,7 @@
         <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'contact'%>">
           <%= link_to "Contact us",contact_path, class: "nav-link" %>
         </li>
-        <li>
-          <%= link_to "PAY NOW", allmybookings_path, class: "button-access-book" %>
-        </li>
+
         <li class="nav-item dropdown">
 
              <%= image_tag "log-in.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -59,17 +59,27 @@
         <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'contact'%>">
           <%= link_to "Contact us",contact_path, class: "nav-link" %>
         </li>
-        <li>
-          <%= link_to "My booking", allmybookings_path, class: "button-access-book" %>
-        </li>
 
+      <% end %>
+
+    </ul>
+  </div>
+    <div class="navbar-nav ">
+      <ul>
         <div class="loggin">
            <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
           </li>
         </div>
-
-      <% end %>
-    </ul>
-  </div>
+        <% if user_signed_in? %>
+          <li>
+            <%= link_to "PAY NOW", allmybookings_path, class: "button-access-book" %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to "My booking", allmybookings_path, class: "button-access-book" %>
+          </li>
+        <%end%>
+      </ul>
+    </div>
 </div>

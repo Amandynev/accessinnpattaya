@@ -24,6 +24,16 @@
             </div>
             <div class="card-booking-description-rooms">
               <div class="card-box">
+                <%= value[:start_at] %>
+                <div class="text"><%= "Check in" %></div>
+              </div>
+              <div class="card-box">
+                <%= value[:end_at] %>
+                <div class="text"> <%= "Check out" %></div>
+              </div>
+            </div>
+            <div class="card-booking-description-rooms">
+              <div class="card-box">
                 <%= value[:number] %>
                 <div class="text"><%= "Room".pluralize(value[:number]) %></div>
               </div>
