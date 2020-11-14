@@ -1,53 +1,55 @@
-<div class="banner-pages mb-4">
-  <span id="" class="name">Check out</span>
-</div>
+<div class="container-void-footer">
+  <div class="banner-pages mb-4">
+    <span id="" class="name">Check out</span>
+  </div>
 
-<div class="container-bookings">
-  <% count_booking = 0 %>
-  <% @hash_bookings.each do |key, value| %>
-    <% count_booking += 1 %>
-    <div class="card-booking">
-      <%= link_to "", destroy_bookings_path(value[:room].category), method: :delete, id:"delete-link-#{count_booking}", class: "hidden"%>
-      <i class="far fa-times-circle" data-id="<%= count_booking %>" id="delete-icon-<%= count_booking %>"></i>
-      <%= image_tag "rooms/"+ value[:room].photo, class: 'card-booking-image' %>
-      <div class="room-tag">
-        <div class="tag-room-name">
-          <%= key.upcase %>
-        </div>
-      </div>
-      <div class="card-booking-description text-center">
-        <div class="card-booking-description-title">
-          Your Reservation
-        </div>
-        <div class="card-booking-description-rooms">
-          <div class="card-box">
-            <%= value[:number] %>
-            <div class="text"><%= "Room".pluralize(value[:number]) %></div>
-          </div>
-          <div class="card-box">
-            <%= value[:nigths] %>
-            <div class="text"> <%= "Night".pluralize(value[:nigths]) %></div>
+  <div class="container-bookings">
+    <% count_booking = 0 %>
+    <% @hash_bookings.each do |key, value| %>
+      <% count_booking += 1 %>
+      <div class="card-booking">
+        <%= link_to "", destroy_bookings_path(value[:room].category), method: :delete, id:"delete-link-#{count_booking}", class: "hidden"%>
+        <i class="far fa-times-circle" data-id="<%= count_booking %>" id="delete-icon-<%= count_booking %>"></i>
+        <%= image_tag "rooms/"+ value[:room].photo, class: 'card-booking-image' %>
+        <div class="room-tag">
+          <div class="tag-room-name">
+            <%= key.upcase %>
           </div>
         </div>
-        <div class="card-booking-description-price">
-          <div class="price">
-            <%= humanized_money value[:price] %>
+        <div class="card-booking-description text-center">
+          <div class="card-booking-description-title">
+            Your Reservation
           </div>
-          <div class="detail">
-            <div class="symbol">
-              <%= (humanized_money_with_symbol @amount).first %>
+          <div class="card-booking-description-rooms">
+            <div class="card-box">
+              <%= value[:number] %>
+              <div class="text"><%= "Room".pluralize(value[:number]) %></div>
             </div>
-            <div class="total">
-              / total
+            <div class="card-box">
+              <%= value[:nigths] %>
+              <div class="text"> <%= "Night".pluralize(value[:nigths]) %></div>
             </div>
           </div>
+          <div class="card-booking-description-price">
+            <div class="price">
+              <%= humanized_money value[:price] %>
+            </div>
+            <div class="detail">
+              <div class="symbol">
+                <%= (humanized_money_with_symbol @amount).first %>
+              </div>
+              <div class="total">
+                / total
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    <% end %>
+  </div>
+  <div class="d-flex justify-content-center">
+    <%= form_tag orders_path do %>
+      <%= submit_tag 'Completed your reservation', class: 'button-access-book' %>
+  </div>
   <% end %>
 </div>
-<div class="d-flex justify-content-center">
-  <%= form_tag orders_path do %>
-    <%= submit_tag 'Completed your reservation', class: 'button-access-book' %>
-</div>
-<% end %>
