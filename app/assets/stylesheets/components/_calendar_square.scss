@@ -1,7 +1,14 @@
 .calendar-form-square{
-  height: 380px;
   background-color: $black;
   position:absolute;
+  .link-sign-in{
+    height: 56px;
+    color: $red;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .calendar-container-square{
     font-family: "Gilda Display";
