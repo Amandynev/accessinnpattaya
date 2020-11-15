@@ -22,12 +22,26 @@
           </div>
           <div class="card-booking-description-rooms">
             <div class="card-box">
+              <div class="title">CHECK-IN</div>
+              <div class="day"><%= value[:start_at].strftime('%d') %></div>
+              <div class="month"><%= value[:start_at].strftime('%b') %>, <%= value[:start_at].strftime('%Y') %></div>
+              <div class="text"><%= value[:start_at].strftime('%A').upcase %></div>
+            </div>
+            <div class="card-box">
+              <div class="title">CHECK-OUT</div>
+              <div class="day"><%= value[:end_at].strftime('%d') %></div>
+              <div class="month"><%= value[:end_at].strftime('%b') %>, <%= value[:end_at].strftime('%Y') %></div>
+              <div class="text"> <%= value[:end_at].strftime('%A').upcase %></div>
+            </div>
+          </div>
+          <div class="card-booking-description-rooms">
+            <div class="card-box">
               <%= value[:number] %>
-              <div class="text"><%= "Room".pluralize(value[:number]) %></div>
+              <div class="text"><%= "Room".pluralize(value[:number]).upcase %></div>
             </div>
             <div class="card-box">
               <%= value[:nigths] %>
-              <div class="text"> <%= "Night".pluralize(value[:nigths]) %></div>
+              <div class="text"> <%= "Night".pluralize(value[:nigths]).upcase %></div>
             </div>
           </div>
           <div class="card-booking-description-price">
