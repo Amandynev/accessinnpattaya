@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.feature "Bookings", type: :feature do
   let!(:user) { create(:user) }
 
-  describe 'Bookings Views' do
+  describe 'Views' do
     it 'Visit allmybookings page' do
       Booking.destroy_all
       login_as user

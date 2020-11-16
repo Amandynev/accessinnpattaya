@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[create]
   def create
     @room = Room.find(params[:room_id])
     @booking = Booking.new
@@ -17,8 +16,6 @@ class BookingsController < ApplicationController
       end
       if @saving
         redirect_to room_path(@room, param: 'ok')
-      elsif current_user.nil?
-        redirect_to new_user_session_path
       else
         render "rooms/show"
       end
