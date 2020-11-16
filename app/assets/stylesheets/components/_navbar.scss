@@ -8,6 +8,13 @@
   .navbar-brand img {
     width: 70px;
   }
+  .loggin {
+    min-width: 70px;
+    text-align: center;
+    .nav-link-log-in{
+      color: white;
+    }
+  }
 
   .navbar-collapse {
     flex-grow: 0;
@@ -55,9 +62,6 @@
       display: flex;
       justify-content: center;
       margin: 0 auto;
-    }
-    #navbarSupportedContent{
-      margin-right: 65px;
     }
   }
 }
