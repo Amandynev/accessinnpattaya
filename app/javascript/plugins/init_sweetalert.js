@@ -29,7 +29,7 @@ const sweetAlertNOK = () => {
 
 const alertNewBooking = () => {
  const modal = document.getElementById('booking-success');
-  initSweetalert('#sweet-alert-booking', {
+  initSweetalertDOM('#sweet-alert-booking', {
   title: "Room Pre-Booked !",
   text: "The room have been pre-booked for 30 minutes, please proceed to the payment to completed your reservation.",
   icon: "success",
@@ -37,9 +37,7 @@ const alertNewBooking = () => {
     cancel: true,
     confirm: {
       text: 'PAY NOW'
-    }.then( functionLink = () => {
-      window.location.href = '/allmybookings'
-      })
+    }
     },
   });
 };
