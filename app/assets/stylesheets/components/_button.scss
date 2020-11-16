@@ -5,7 +5,13 @@
   background:none;
   border: 2px solid $red;
 }
+.button-access-green{
+  color: $white;
+  padding: 15px 30px;
+  font-size: 15px;
+  background-color: #52b788;
 
+}
 .button-access:hover{
   color: $red;
   font-weight:bold;
