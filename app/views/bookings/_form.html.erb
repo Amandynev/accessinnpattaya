@@ -38,6 +38,10 @@
       </div>
       <%= f.number_field :number, label: false, value: 1, min: 1, max: 11 %>
     </div>
-    <%= f.submit "BOOK NOW", class: "button-access-calendar-square", id: "sweet-alert-booking" %>
+    <% if current_user %>
+      <%= f.submit "BOOK NOW", class: "button-access-calendar-square", id: "sweet-alert-booking" %>
+    <% else %>
+      <div class="link-sign-in">You're not logged ! Please  &nbsp; <%= link_to "sign in", new_user_session_path, class: "link-without-style" %> &nbsp; to book a room</div>
+    <% end %>
   <% end %>
 </div>
