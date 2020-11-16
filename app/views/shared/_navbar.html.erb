@@ -1,4 +1,4 @@
-<div class="navbar-expand-sm navbar-dark navbar-pattaya fixed-top">
+<div class="navbar-expand-md navbar-dark navbar-pattaya fixed-top">
   <div class="logo-access">
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "accessinn-logo.png" %>
@@ -12,8 +12,8 @@
 
 
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto ">
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'home'%>">
           <%= link_to t('navbar.menu-1'), root_path, class: "nav-link" %>
@@ -33,57 +33,92 @@
       <% else %>
         <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'home'%>">
 
-          <%= link_to "Home", root_path, class: "nav-link" %>
+          <%= link_to t('navbar.menu-1'), root_path, class: "nav-link" %>
         </li>
         <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'rooms'%>">
-          <%= link_to "Rooms", rooms_path, class: "nav-link" %>
+          <%= link_to t('navbar.menu-2'), rooms_path, class: "nav-link" %>
         </li>
         <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'restaurant'%>">
-          <%= link_to "RestaurantBar", restaurant_path, class: "nav-link" %>
+          <%= link_to t('navbar.menu-3'), restaurant_path, class: "nav-link" %>
         </li>
         <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'event'%>">
-          <%= link_to "Events", event_path, class: "nav-link" %>
+          <%= link_to t('navbar.menu-4'), event_path, class: "nav-link" %>
         </li>
         <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'contact'%>">
-          <%= link_to "Contact us",contact_path, class: "nav-link" %>
+          <%= link_to t('navbar.menu-5'),contact_path, class: "nav-link" %>
         </li>
 
       <% end %>
 
     </ul>
+
   </div>
+  
+  <div class="d-flex align-items-center">
+    <% if user_signed_in? %>
+      <%= link_to "PAY NOW", allmybookings_path, class: "button-access-book" %>
+      <div class="nav-item dropdown">
 
-    <div class="navbar-nav ">
-      <ul class="d-flex align-items-center navbar-right">
+          <%= image_tag "log-in.png", class: "avatar dropdown-toggle navbar-right", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
 
-        <% if user_signed_in? %>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to t('navbar.dropdown.menu-2'), "#", class: "dropdown-item" %>
+          <%= link_to t('navbar.dropdown.menu-4'), destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+        </div>
 
-          <li>
-            <%= link_to "PAY NOW", allmybookings_path, class: "button-access-book" %>
-          </li>
-          <li class="nav-item dropdown">
+      </div>
+    <% else %>
+      <div class="loggin">
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+      </div>
+      <div>
+        <div>
+          <%= link_to "My booking", allmybookings_path, class: "button-access-book" %>
+        </div>
+      </div>
+    <%end%>
+  </div>
+  
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <% if user_signed_in? %>
+        <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'home'%>">
+          <%= link_to t('navbar.menu-1'), root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'rooms'%>">
+          <%= link_to t('navbar.menu-2'), rooms_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'restaurant'%>">
+          <%= link_to t('navbar.menu-3'), restaurant_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'event'%>">
+          <%= link_to t('navbar.menu-4'), event_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'contact'%>">
+          <%= link_to t('navbar.menu-5'),contact_path, class: "nav-link" %>
+        </li>
+      <% else %>
+        <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'home'%>">
 
-              <%= image_tag "log-in.png", class: "avatar dropdown-toggle navbar-right", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <%= link_to t('navbar.menu-1'), root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'rooms'%>">
+          <%= link_to t('navbar.menu-2'), rooms_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'restaurant'%>">
+          <%= link_to t('navbar.menu-3'), restaurant_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'event'%>">
+          <%= link_to t('navbar.menu-4'), event_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'contact'%>">
+          <%= link_to t('navbar.menu-5'),contact_path, class: "nav-link" %>
+        </li>
 
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <%= link_to t('navbar.dropdown.menu-2'), "#", class: "dropdown-item" %>
-              <%= link_to t('navbar.dropdown.menu-4'), destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-            </div>
+      <% end %>
 
-          </li>
-        <% else %>
-          <div class="loggin">
-             <li class="nav-item">
-                <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-             </li>
-          </div>
-          <div>
-            <li>
-              <%= link_to "My booking", allmybookings_path, class: "button-access-book" %>
-            </li>
-          </div>
-        <%end%>
-      </ul>
-    </div>
+    </ul>
+
+  </div>
 
 </div>
