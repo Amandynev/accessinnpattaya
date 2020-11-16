@@ -62,8 +62,7 @@ RSpec.describe "Bookings", type: :request do
     it 'Should be able to destroy a booking' do
       login_as user
       create(:booking, room: Room.find_by(category_id: room_available.category), user: user)
-      visit(allmybookings_path)
-      expect click_on('').to change(Booking, :count).by(1)
+      expect { delete destroy_bookings_path(locale, room_available) }.to change(Booking, :count).by(-1)
     end
   end
 end

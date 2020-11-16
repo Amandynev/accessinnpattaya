@@ -5,7 +5,13 @@
   background:none;
   border: 2px solid $red;
 }
+.button-access-green{
+  color: $white;
+  padding: 15px 30px;
+  font-size: 15px;
+  background-color: $green ;
 
+}
 .button-access:hover{
   color: $red;
   font-weight:bold;
@@ -39,7 +45,7 @@
 }
 
 .button-access-book{
-  color: white;
+  color: white !important;
   padding: 15px 20px;
   font-size: 15px;
   background:$red;
@@ -47,7 +53,7 @@
 }
 
 .button-access-book:hover{
-  color: white;
+  color: white !important;
   font-weight:bold;
 
 }

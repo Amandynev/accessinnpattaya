@@ -3,7 +3,7 @@ fr:
     home:
       button-search: "CHECK DISPONIBILITE"
       dining-drinking: "Et en terme de restauration ?"
-      about-us: "A propos de nous"
+      contact-us: "Contactez-nous"
       rooms: "Les chambres"
   hotel:
     name: "Access Inn Pattaya"
@@ -14,7 +14,7 @@ fr:
     description: "Degustez nos plats locaux et internationaux dans notre restaurant ..."
   bar:
     title: "Bar"
-    description: "Ou relaxez-vous en jouant au billard ou flechettes au bar pendant que vous dégustez nos vins et autres cocktails."
+    description: "Ou relaxez-vous en jouant au billard, flechettes au bar autour d'un verre de vin ou encore d'un nos cocktails maison."
   navbar:
     menu-1: "Accueil"
     menu-2: "Chambres"

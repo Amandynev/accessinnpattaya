@@ -28,16 +28,19 @@ const sweetAlertNOK = () => {
 }
 
 const alertNewBooking = () => {
-  const modal = document.getElementById('booking-success');
-  if (modal){
-    initSweetalertDOM('#sweet-alert-booking', {
-      title: "Room pre-booked !",
-      text: "The room have been pre-booked for 30 minutes, please proceed to the payment to completed your reservation.",
-      icon: "success"
-    });
-  }
+ const modal = document.getElementById('booking-success');
+  initSweetalertDOM('#sweet-alert-booking', {
+  title: "Room Pre-Booked !",
+  text: "The room have been pre-booked for 30 minutes, please proceed to the payment to completed your reservation.",
+  icon: "success",
+  buttons: {
+    cancel: true,
+    confirm: {
+      text: 'PAY NOW'
+    }
+    },
+  });
 };
-
 
 
 const sweetAlertDanger = () => {
@@ -60,3 +63,4 @@ const sweetAlertDanger = () => {
 }
 
 export { sweetAlertNOK, sweetAlertDanger, alertNewBooking };
+
