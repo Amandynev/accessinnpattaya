@@ -6,7 +6,6 @@
   margin: 0;
   letter-spacing: .2rem;
   color: $black;
-  text-align: center;
 }
 
 .calendar-booking{
@@ -33,6 +32,10 @@
   height: 350px;
 }
 
+.services-show{
+  display:flex;
+  justify-content:space-between;
+
   #icone-css-show {
     margin-right: 7px;
     margin-top: 10px;
@@ -40,7 +43,6 @@
     height: 60px;
     width:60px;
     }
-
   #svg-css-show {
     height: 75px;
     width:75px;
@@ -49,6 +51,7 @@
     font-size:20px;
     font-weight:bold;
   }
+}
 
 #black-opacity{
   color:rgba(17, 17, 17, 0.3)
@@ -91,9 +94,7 @@
   .services-grid{
     grid-template-columns: 1fr 1fr;
     width: 600px;
-    .service-item {
-      padding-left: 120px;
-    }
+
   }
 }
 
@@ -108,25 +109,26 @@
     }
   }
   .services-grid{
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     width: 300px;
-    .service-item {
-      padding-left: 120px;
-    }
   }
 }
 
 @media(max-width: 650px){
+  .services-grid{
+    grid-template-columns: 1fr 1fr;
+
+  }
   .services-show{
-    display:grid !important;
-    justify-content:center !important;
-    text-align:center !important;
-    align-items:center!important;
+    display:grid ;
+    justify-content:center;
+    text-align:center;
+    align-items:center;
 
     }
 
     #icone-css-show{
-        margin-top: 30px !important;
+        margin-top: 30px;
       }
     .padding-responsive{
       padding-left:10px;

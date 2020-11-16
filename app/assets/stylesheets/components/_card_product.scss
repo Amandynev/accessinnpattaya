@@ -1,0 +1,37 @@
+.card-product {
+  margin-top:20px;
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  display: flex;
+
+}
+  .photo-card-product {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+  }
+  .title-card-product{
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  }
+
+  .price-card-product {
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    margin-top: 8px;
+    color:$black;
+    }
+  .card-product-infos{
+    padding: 16px;
+  }
+
+
+
+
+
+
+
+
