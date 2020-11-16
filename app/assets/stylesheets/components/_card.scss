@@ -26,19 +26,14 @@
   }
   .room-name {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     .available{
-      display: flex;
+      display:flex;
       justify-content: center;
-      color: $red;
-      margin-right: 15px;;
-      border-radius: 50%;
-      font-size: 24px;
-      font-weight: 700;
-      width: 50px;
-      height: 50%;
-      border: 2px solid $red;
+      .style-available{
+        font-size:10px;
+        color:$red;
+      }
     }
   }
   &:hover h2{
