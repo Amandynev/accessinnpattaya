@@ -27,7 +27,7 @@ class BookingsController < ApplicationController
 
   def allmybookings
     @bookings = Booking.includes(room: :category).user_bookings(current_user)
-    @hash_bookings = Hash.new { |hash, key| hash[key] = { number: 0, room: nil, nigths: 0, price: 0 } }
+    @hash_bookings = Hash.new { |hash, key| hash[key] = { number: 0, room: nil, nigths: 0, price: 0, start_at: nil, end_at: nil } }
     @bookings.each do |booking|
       @hash_bookings[booking.room.category.name][:number] += 1
       @hash_bookings[booking.room.category.name][:nigths] += (booking.end_at - booking.start_at).to_i

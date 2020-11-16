@@ -6,7 +6,7 @@
   padding: 0.5rem 1rem;
   background-color: $black;
   .navbar-brand img {
-    width: 40px;
+    width: 70px;
   }
   .navbar-collapse {
     flex-grow: 0;
@@ -20,16 +20,11 @@
     padding:10px;
     margin-left: 10px;
     margin-right: 10px;
-    display:flex;
-    align-items: center;
-    justify-content:center;
+
 
   }
 }
-  .navbar-toggler {
-  color:white !important;
-}
-  .navbar-light .navbar-nav .nav-link {
+  .navbar-dark .navbar-nav .nav-link {
     color: #f8f9fa;
 }
   .navbar-nav .nav-item:hover .nav-link{
@@ -42,16 +37,16 @@
     font-weight: 600;
   }
 
-  .avatar-nav{
-    display:flex;
-    align-items: center;
-    justify-content:center;
-
+  ul{
+    margin: auto;
+    list-style-type: none;
   }
+
+
 
 @media (max-width: 576px){
   .navbar-pattaya {
-    flex-direction: column;
+    flex-direction: flex;
     .navbar-brand{
       margin: 0;
     }
@@ -66,5 +61,8 @@
       margin-top:10px;
       margin-bottom: 10px;
     }
+
+
+
   }
 }

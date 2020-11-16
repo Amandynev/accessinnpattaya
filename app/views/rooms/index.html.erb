@@ -3,11 +3,11 @@
   <span id="" class="name">Looking for rooms ?</span>
 </div>
 
-<div class="container-white">
+<div class="container-grey">
   <div class="row mt-3">
     <% @categories.map { |cat| cat.rooms.first }.each do |room| %>
-      <div class="col-sm-12 col-xs-12 col-md-6 col-lg-4">
-        <div class="card-room" data-aos="slide-left"data-aos-duration="1000">
+      <div class="col-sm-12 col-xs-12 col-md-6 col-lg-4 d-flex justify-content-center">
+        <div class="card-room"data-aos="slide-right" data-aos-duration="1000">
           <%= image_tag "rooms/"+ room.photo, class: 'card-room-image' %>
           <div class="card-room-infos">
             <div>
@@ -37,7 +37,7 @@
               <div class="button-price">
                 <div>
 
-                 <%= link_to "Book now from #{humanized_money_with_symbol(room.category.price)}/night", room_path(room.category.rooms.first), class: "button-access link-without-style"%>
+                 <%= link_to "Book now from #{humanized_money_with_symbol(room.category.price)}/night", room_path(room.category.rooms.first), class: "button-access-book link-without-style"%>
 
                 </div>
               </div>
