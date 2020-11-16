@@ -24,18 +24,31 @@
             <%= value[:number] %>
             <div class="text"><%= "Room".pluralize(value[:number]) %></div>
           </div>
-          <div class="card-box">
-            <%= value[:nigths] %>
-            <div class="text"> <%= "Night".pluralize(value[:nigths]) %></div>
-          </div>
-        </div>
-        <div class="card-booking-description-price">
-          <div class="price">
-            <%= humanized_money value[:price] %>
-          </div>
-          <div class="detail">
-            <div class="symbol">
-              <%= (humanized_money_with_symbol @amount).first %>
+
+          <div class="card-booking-description text-center">
+            <div class="card-booking-description-title">
+              Your Reservation
+            </div>
+            <div class="card-booking-description-rooms">
+              <div class="card-box">
+                <%= value[:start_at] %>
+                <div class="text"><%= "Check in" %></div>
+              </div>
+              <div class="card-box">
+                <%= value[:end_at] %>
+                <div class="text"> <%= "Check out" %></div>
+              </div>
+            </div>
+            <div class="card-booking-description-rooms">
+              <div class="card-box">
+                <%= value[:number] %>
+                <div class="text"><%= "Room".pluralize(value[:number]) %></div>
+              </div>
+              <div class="card-box">
+                <%= value[:nigths] %>
+                <div class="text"> <%= "Night".pluralize(value[:nigths]) %></div>
+              </div>
+
             </div>
             <div class="total">
               / total
