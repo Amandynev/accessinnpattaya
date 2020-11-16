@@ -1,3 +1,7 @@
+.container-void-footer {
+  min-height: calc(100vh - 111px);
+}
+
 .style-picto{
   color: $red;
 }

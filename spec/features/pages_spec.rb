@@ -25,27 +25,27 @@ RSpec.feature "Pages", type: :feature, js: true do
   describe 'NavBar' do
     it 'Go to the home page through navbar' do
       visit(root_path)
-      click_on('Home')
+      click_on(I18n.t('navbar.menu-1'))
       expect(page).to have_current_path(root_path)
     end
     it 'Go to the room page through navbar' do
       visit(root_path)
-      click_on('Rooms')
+      click_on(I18n.t('navbar.menu-2'))
       expect(page).to have_current_path(rooms_path)
     end
-    it 'Go to the contact page through navbar' do
+    it 'Go to the restaurant page through navbar' do
       visit(root_path)
-      click_on('RestaurantBar')
+      click_on(I18n.t('navbar.menu-3'))
       expect(page).to have_current_path(restaurant_path)
     end
-    it 'Go to the contact page through navbar' do
+    it 'Go to the event page through navbar' do
       visit(root_path)
-      click_on('Events')
+      click_on(I18n.t('navbar.menu-4'))
       expect(page).to have_current_path(event_path)
     end
     it 'Go to the contact page through navbar' do
       visit(root_path)
-      click_on('Contact us')
+      click_on(I18n.t('navbar.menu-5'))
       expect(page).to have_current_path(contact_path)
     end
   end
