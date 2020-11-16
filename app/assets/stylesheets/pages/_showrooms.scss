@@ -29,15 +29,22 @@
   height: 350px;
 }
 
-#icone-css-show {
-  margin-right: 7px;
-  height: 50px;
-  width:50px;
+  #icone-css-show {
+    margin-right: 7px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 60px;
+    width:60px;
+    }
+
+  #svg-css-show {
+    height: 75px;
+    width:75px;
+    }
+  .size-number-show{
+    font-size:20px;
+    font-weight:bold;
   }
-.size-number-show{
-  font-size:20px;
-  font-weight:bold;
-}
 
 #black-opacity{
   color:rgba(17, 17, 17, 0.3)
@@ -105,3 +112,27 @@
     }
   }
 }
+
+@media(max-width: 650px){
+  .services-show{
+    display:grid !important;
+    justify-content:center !important;
+    text-align:center !important;
+    align-items:center!important;
+
+    }
+
+    #icone-css-show{
+        margin-top: 30px !important;
+      }
+    .padding-responsive{
+      padding-left:10px;
+    }
+  }
+
+
+
+
+
+
+
