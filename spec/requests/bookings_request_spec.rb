@@ -26,11 +26,14 @@ RSpec.describe "Bookings", type: :request do
     end
   end
 
+  let!(:locale) { nil }
+
   describe 'As a Logged User' do
     let!(:user) { create(:user) }
     let!(:suite) { Category.where(name: "Suite double") }
+    let!(:accessinn) { Category.where(name: "The Access inn") }
     let!(:room_not_available) { Room.where(category: suite).sample }
-    let!(:room_available) { Room.first }
+    let!(:room_available) { Room.find_by(category: accessinn) }
     Booking.destroy_all
 
     it 'Should not be able to book a room if no more left' do
@@ -54,6 +57,12 @@ RSpec.describe "Bookings", type: :request do
 
       booking_params = attributes_for(:booking, room: room_available, number: 4)
       expect { post room_bookings_path(locale, room_available.category.rooms.first), params: { booking: booking_params } }.not_to change(Booking, :count)
+    end
+
+    it 'Should be able to destroy a booking' do
+      login_as user
+      create(:booking, room: Room.find_by(category_id: room_available.category), user: user)
+      expect { delete destroy_bookings_path(locale, room_available) }.to change(Booking, :count).by(-1)
     end
   end
 end
