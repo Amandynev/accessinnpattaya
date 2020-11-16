@@ -69,17 +69,12 @@
       </div>
     <% else %>
       <div class="loggin">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-      </div>
-      <div>
-        <div>
-          <%= link_to "My booking", allmybookings_path, class: "button-access-book" %>
-        </div>
+          <%= link_to "Login", new_user_session_path, class: "nav-link-log-in" %>
       </div>
     <%end%>
   </div>
   
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="<%= 'margin-right: 65px' if current_user %>">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'home'%>">
