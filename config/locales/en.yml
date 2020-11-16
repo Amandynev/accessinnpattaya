@@ -46,4 +46,16 @@ en:
   bar:
     title: "Bar"
     description: "Or relax by playing pool or dart games at Access inn bar while drinking wines or specials cocktails."
+  navbar:
+    menu-1: "Home"
+    menu-2: "Rooms"
+    menu-3: "RestaurantBar"
+    menu-4: "Event"
+    menu-5: "Contact Us"
+    dropdown:
+      menu-1: "My account"
+      menu-2: "My reservation"
+      menu-3: "Checkout"
+      menu-4: "Logout"
+    pay-btn: "PAY NOW"
   
