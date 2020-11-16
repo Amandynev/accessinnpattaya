@@ -34,7 +34,7 @@ en:
     home:
       button-search: "CHECK AVAILABILITY"
       dining-drinking: "What about dining and drinking ?"
-      about-us: "About us"
+      contact-us: "Contact us"
       rooms: "The rooms"
   hotel:
     name: "Access Inn Pattaya"
@@ -58,4 +58,3 @@ en:
       menu-3: "Checkout"
       menu-4: "Logout"
     pay-btn: "PAY NOW"
-  

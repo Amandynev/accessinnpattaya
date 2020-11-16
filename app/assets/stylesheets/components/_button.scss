@@ -39,7 +39,7 @@
 }
 
 .button-access-book{
-  color: white;
+  color: white !important;
   padding: 15px 20px;
   font-size: 15px;
   background:$red;
@@ -47,7 +47,7 @@
 }
 
 .button-access-book:hover{
-  color: white;
+  color: white !important;
   font-weight:bold;
 
 }
