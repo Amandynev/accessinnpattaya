@@ -26,12 +26,15 @@ puts "create categories..."
 
 accessinn = Category.create!(
   name: "The Access inn",
-  description: "Discover the fantastic refreshing and unique Access inn room. Located on the 2nd and 3rd floor of the hotel. Panoramic Lift access. Music system in room, special LED design and a spacious room with a sofa corner and a balcony with his PVC sliding window as a basement of your personal relaxation during your stay.",
+  description: "Discover the fantastic refreshing and unique Access inn room. Located on the 2nd and 3rd floor of the hotel. Panoramic Lift access. Music system in room, special LED design and a spacious room with a sofa corner and a balcony with his PVC sliding window as a basement of your personal relaxation during your stay.
+  Extra bed available (extra cost)",
   price: 800,
   room_size: 29,
   bed_size: "King size",
   balcony: true,
-  corner_table: true
+  corner_table: true,
+  smoking: true,
+
 )
 suite = Category.create!(
   name: "Suite double",
@@ -40,7 +43,8 @@ suite = Category.create!(
   room_size: 27,
   bed_size: "King size",
   balcony: false,
-  corner_table: true
+  corner_table: true,
+  smoking: false,
 )
 
 premium = Category.create!(
@@ -50,7 +54,8 @@ premium = Category.create!(
   room_size: 25,
   bed_size: "King size",
   balcony: true,
-  corner_table: true
+  corner_table: true,
+  smoking: true,
 )
 
 deluxe = Category.create!(
@@ -60,7 +65,8 @@ deluxe = Category.create!(
   room_size: 19,
   bed_size: "King size",
   balcony: true,
-  corner_table: false
+  corner_table: false,
+  smoking: true,
 )
 
 superior = Category.create!(
@@ -70,7 +76,8 @@ superior = Category.create!(
   room_size: 18,
   bed_size: "Queen size",
   balcony: false,
-  corner_table: false
+  corner_table: false,
+  smoking: false,
 )
 
 puts "Traduction ..."
