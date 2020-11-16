@@ -24,6 +24,23 @@
   background-color: $red;
 }
 
+.card-category-facilities{
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 240px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  border-radius: 1px;
+  font-family: "Gilda Display", "Helvetica", "sans-serif";
+
+}
+
 @media(max-width: 1180px){
   .card-category{
     width: 500px;
@@ -48,6 +65,12 @@
     grid-template-columns: 1fr;
     justify-items:center;
   }
+  .card-category-facilities{
+    margin-bottom:20px;
+    display:grid;
+    justify-content:flex-start;
+  }
+
 }
 
 

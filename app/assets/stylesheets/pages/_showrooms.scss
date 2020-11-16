@@ -8,6 +8,15 @@
   color: $black;
 }
 
+.title-similar-room{
+  padding-top: 25px;
+  font-size: 20px;
+  font-weight: lighter;
+  margin: 0;
+  letter-spacing: .1em;
+  color: $black;
+}
+
 .calendar-booking{
   height: 430px;
 }
@@ -68,6 +77,12 @@
   }
 }
 
+.hotel-facilities{
+  display:flex;
+  justify-content:space-between;
+
+}
+
 @media(max-width: 1080px) {
   .photo-room{
     margin: 0 auto;
@@ -87,6 +102,10 @@
       margin: 0 auto;
       height: 470px;
     }
+    .hotel.facilities{
+    display:grid;
+    justify-content:center;
+  }
   }
 }
 
@@ -112,6 +131,10 @@
     grid-template-columns: 1fr 1fr;
     width: 300px;
   }
+   .hotel.facilities{
+    display:grid;
+    justify-content:center;
+  }
 }
 
 @media(max-width: 650px){
@@ -133,6 +156,10 @@
     .padding-responsive{
       padding-left:10px;
     }
+     .hotel-facilities{
+      display:grid ;
+      justify-content:center;
+  }
   }
 
 

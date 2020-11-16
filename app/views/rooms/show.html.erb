@@ -103,8 +103,6 @@
             <br>
 
 
-
-
           <div class="description-show">
             <p><%=@room.category.description%></p>
           </div>
@@ -153,6 +151,43 @@
                 </div>
             <% end %>
           </div>
+            <br>
+            <hr>
+          <h2 class="title-room-show"> Around the hotel  </h2>
+          <div class="hotel-facilities">
+            <div class="card-square-list">
+
+                <%= link_to restaurant_path, class:"link-without-style" do %>
+                  <div class="card-category-facilities px-1" data-aos="slide-left"data-aos-duration="1000" style="background-image: url(<%= asset_path 'restaurant2.jpg' %>)">
+                    <p class="card-title-square">Restaurant</p>
+
+                  </div>
+                <%end%>
+
+            </div>
+            <div class="card-square-list">
+
+                <%= link_to restaurant_path, class:"link-without-style" do %>
+                  <div class="card-category-facilities px-1" data-aos="slide-left"data-aos-duration="1000" style="background-image: url(<%= asset_path 'billard.jpg' %>)">
+                    <p class="card-title-square">Bar</p>
+
+                  </div>
+                <%end%>
+
+            </div>
+
+            <div class="card-square-list">
+
+                <%= link_to restaurant_path, class:"link-without-style" do %>
+                  <div class="card-category-facilities px-1" data-aos="slide-left"data-aos-duration="1000" style="background-image: url(<%= asset_path 'reception-2.jpg' %>)">
+                    <p class="card-title-square">Reception</p>
+
+                  </div>
+                <%end%>
+
+            </div>
+
+          </div>
   </div>
 
   <div class="column-calendar">
@@ -160,6 +195,8 @@
       <%= render '/bookings/form', booking: @booking %>
     </div>
     <div class="">
+      <h3 class="title-similar-room"> Similar rooms </h3>
+      <p class="line">_______</p>
       <% @categories.last(4).map { |cat| cat.rooms.first }.each do |room| %>
         <div class="card-product">
           <%= image_tag "rooms/"+ room.photo, class: 'photo-card-product' %>
@@ -174,6 +211,7 @@
       <%end%>
     </div>
   </div>
+
 </div>
 
 
