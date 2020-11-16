@@ -8,6 +8,7 @@
   .navbar-brand img {
     width: 70px;
   }
+
   .navbar-collapse {
     flex-grow: 0;
   }
@@ -18,10 +19,7 @@
   }
   .button-access-book{
     padding:10px;
-    margin-left: 10px;
     margin-right: 10px;
-
-
   }
 }
   .navbar-dark .navbar-nav .nav-link {
@@ -42,27 +40,30 @@
     list-style-type: none;
   }
 
-
-
-@media (max-width: 576px){
+@media (max-width: 768px){
   .navbar-pattaya {
     flex-direction: flex;
     .navbar-brand{
       margin: 0;
     }
     .nav-link{
+      width: 150px;
+      margin: 0 auto 0 auto;
       text-align: center;
     }
     .nav-item.dropdown{
       display: flex;
       justify-content: center;
+      margin: 0 auto;
     }
-    .button-access-book {
-      margin-top:10px;
-      margin-bottom: 10px;
+    #navbarSupportedContent{
+      margin-right: 65px;
     }
+  }
+}
 
-
-
+@media (min-width: 768px) {
+  #navbarSupportedContent {
+    display:none!important;
   }
 }
