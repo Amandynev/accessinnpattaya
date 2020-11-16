@@ -22,13 +22,20 @@ const alertNewBooking = () => {
  const form = document.querySelector('#new_booking')
     form.addEventListener('submit',(event) => {
         initSweetalert('#sweet-alert-booking', {
-        title: "Room pre-booked !",
+        title: "Room Pre-Booked !",
         text: "The room have been pre-booked for 30 minutes, please proceed to the payment to completed your reservation.",
-        icon: "success"
-        });
-    });
+        icon: "success",
+        buttons: {
+          cancel: true,
+          confirm: {
+            text: 'PAY NOW'
+          }.then( functionLink = () => {
+            window.location.href = '/allmybookings'
+          })
+        },
+      });
+  });
 };
 
-export { alertNewBooking } ;
-
+export { alertNewBooking };
 export { sweetAlertNOK };
