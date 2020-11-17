@@ -2,7 +2,7 @@ class Room < ApplicationRecord
   belongs_to :category
   has_many :bookings
 
-  SERVICES = ['safety box', 'wifi', 'air condition', 'minibar', 'lift', 'shower', 'room service', 'laundry', 'restaurant', 'bar', 'massage', 'Open 24h/24h']
+  SERVICES = ['Safety box', 'Wifi', 'Air condition', 'Minibar', 'Lift', 'Shower room', 'Room service', 'Laundry service', 'Parking']
 
   def services
     SERVICES

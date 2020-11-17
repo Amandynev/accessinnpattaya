@@ -28,7 +28,25 @@
     padding: 16px;
   }
 
+@media(max-width: 1080px) {
+  .card-product{
+    display:flex;
+    justify-content:center;
+  }
+}
 
+@media(max-width: 972px){
+  .card-product{
+    display:flex;
+    justify-content:center;
+  }
+}
+@media(max-width: 650px){
+   .card-product{
+    display:flex;
+    justify-content:left;
+  }
+}
 
 
 

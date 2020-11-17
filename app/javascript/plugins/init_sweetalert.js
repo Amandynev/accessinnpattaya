@@ -57,6 +57,7 @@ const sweetAlertDanger = () => {
       text: "This action cannot be reversed.",
       icon: "warning"
       }, (value) => {
+        console.log(value)
         if (value) {
           const link = document.querySelector(`#delete-link-${id}`);
           link.click();

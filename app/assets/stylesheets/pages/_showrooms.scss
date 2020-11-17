@@ -70,12 +70,10 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
   width: 900px;
-  margin: 0 auto;
-  .service-item {
-    text-align: left;
-    padding-left: 0px;
-  }
 }
+  .services-svg {
+    display:flex;
+  }
 
 .hotel-facilities{
   display:flex;
@@ -102,19 +100,25 @@
       margin: 0 auto;
       height: 470px;
     }
-    .hotel.facilities{
-    display:grid;
-    justify-content:center;
   }
+  .hotel.facilities{
+  display:flex;
+  justify-content:center;
   }
+  .title-similar-room{
+    text-align:center;
+  }
+  .line{
+    text-align:center;
+    }
 }
 
 @media(max-width: 972px){
   .services-grid{
     grid-template-columns: 1fr 1fr;
     width: 600px;
-
   }
+
 }
 
 @media(max-width: 800px){
@@ -131,15 +135,20 @@
     grid-template-columns: 1fr 1fr;
     width: 300px;
   }
-   .hotel.facilities{
-    display:grid;
-    justify-content:center;
+   .hotel-facilities{
+    flex-direction: column;
+    align-items:center;
+  }
+  .title-room-show{
+      text-align:center;
   }
 }
 
 @media(max-width: 650px){
   .services-grid{
+    display:grid;
     grid-template-columns: 1fr 1fr;
+    justify-content:left
 
   }
   .services-show{
@@ -147,7 +156,6 @@
     justify-content:center;
     text-align:center;
     align-items:center;
-
     }
 
     #icone-css-show{
@@ -158,8 +166,15 @@
     }
      .hotel-facilities{
       display:grid ;
-      justify-content:center;
+      justify-content:left;
+    }
+     .title-similar-room{
+      text-align:left;
   }
+    .line{
+      text-align:left;
+    }
+
   }
 
 
