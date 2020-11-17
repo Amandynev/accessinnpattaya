@@ -6,7 +6,15 @@
   margin: 0;
   letter-spacing: .2rem;
   color: $black;
-  text-align: center;
+}
+
+.title-similar-room{
+  padding-top: 25px;
+  font-size: 20px;
+  font-weight: lighter;
+  margin: 0;
+  letter-spacing: .1em;
+  color: $black;
 }
 
 .calendar-booking{
@@ -33,6 +41,10 @@
   height: 350px;
 }
 
+.services-show{
+  display:flex;
+  justify-content:space-between;
+
   #icone-css-show {
     margin-right: 7px;
     margin-top: 10px;
@@ -40,7 +52,6 @@
     height: 60px;
     width:60px;
     }
-
   #svg-css-show {
     height: 75px;
     width:75px;
@@ -49,6 +60,7 @@
     font-size:20px;
     font-weight:bold;
   }
+}
 
 #black-opacity{
   color:rgba(17, 17, 17, 0.3)
@@ -58,11 +70,17 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
   width: 900px;
-  margin: 0 auto;
-  .service-item {
-    text-align: left;
-    padding-left: 0px;
+}
+  .services-svg {
+    display:flex;
   }
+
+.hotel-facilities{
+  display:flex;
+  justify-content:space-between;
+}
+.services-svg{
+  margin:10px;
 }
 
 @media(max-width: 1080px) {
@@ -85,16 +103,23 @@
       height: 470px;
     }
   }
+  .hotel.facilities{
+  justify-content:center;
+  }
+  .title-similar-room{
+    text-align:center;
+  }
+  .line{
+    text-align:center;
+    }
 }
 
 @media(max-width: 972px){
   .services-grid{
     grid-template-columns: 1fr 1fr;
     width: 600px;
-    .service-item {
-      padding-left: 120px;
-    }
   }
+
 }
 
 @media(max-width: 800px){
@@ -108,29 +133,46 @@
     }
   }
   .services-grid{
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     width: 300px;
-    .service-item {
-      padding-left: 120px;
-    }
+  }
+   .hotel-facilities{
+    flex-direction: column;
+    align-items:center;
   }
 }
 
 @media(max-width: 650px){
-  .services-show{
-    display:grid !important;
-    justify-content:center !important;
-    text-align:center !important;
-    align-items:center!important;
+  .services-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content:left
 
+  }
+  .services-show{
+    display:grid ;
+    justify-content:center;
+    text-align:center;
+    align-items:center;
     }
 
     #icone-css-show{
-        margin-top: 30px !important;
+        margin-top: 30px;
       }
     .padding-responsive{
       padding-left:10px;
     }
+     .hotel-facilities{
+      display:grid ;
+      justify-content:left;
+    }
+     .title-similar-room{
+      text-align:left;
+  }
+    .line{
+      text-align:left;
+    }
+
   }
 
 

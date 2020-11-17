@@ -17,6 +17,11 @@
 .card-title-square {
   font-size: 12px;
 }
+.card-title-square-show {
+  font-size: 14px;
+  padding-left:20px;
+  font-weight: bold;
+}
 .card-title-square-price {
   font-size: 12px;
   padding-left: 5px;
@@ -24,10 +29,41 @@
   background-color: $red;
 }
 
+.card-category-facilities{
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 240px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  border-radius: 1px;
+  font-family: "Gilda Display", "Helvetica", "sans-serif";
+
+}
+
 @media(max-width: 1180px){
   .card-category{
     width: 500px;
   }
+  .card-category-facilities{
+    margin-bottom:10px;
+  }
+}
+
+@media(max-width: 972px){
+
+  .card-category-facilities{
+    margin-bottom:10px;
+  }
+}
+
+@media(max-width: 800px){
+
 }
 
 @media(max-width: 620px) {
@@ -43,11 +79,14 @@
   padding-right: 5px;
   background-color: $red;
   }
-  .card-square-list{
-    display:grid;
-    grid-template-columns: 1fr;
-    justify-items:center;
+
+  .card-category-facilities{
+    margin-bottom:20px;
+    justify-content:flex-start;
+    width: 400px;
+    height: 460px;
   }
+
 }
 
 

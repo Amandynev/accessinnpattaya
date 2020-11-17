@@ -28,6 +28,7 @@ const sweetAlertNOK = () => {
 }
 
 const alertNewBooking = () => {
+
   const modal = document.getElementById('booking-success');
   if (modal) {
     initSweetalertDOM('#sweet-alert-booking', {
@@ -45,6 +46,7 @@ const alertNewBooking = () => {
 };
 
 
+
 const sweetAlertDanger = () => {
   const deleteIcons = document.querySelectorAll('.card-booking > i')
   if (deleteIcons) {
@@ -55,6 +57,7 @@ const sweetAlertDanger = () => {
       text: "This action cannot be reversed.",
       icon: "warning"
       }, (value) => {
+        console.log(value)
         if (value) {
           const link = document.querySelector(`#delete-link-${id}`);
           link.click();
