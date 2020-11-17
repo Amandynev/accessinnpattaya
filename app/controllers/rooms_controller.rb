@@ -16,7 +16,7 @@ class RoomsController < ApplicationController
 
   def show
     @room = Room.find(params[:id])
-    @categories = Category.all.reject {|category| category.name == @room.category.name}
+    @categories = Category.all.reject { |category| category.name == @room.category.name }
     @booking = Booking.new
   end
 

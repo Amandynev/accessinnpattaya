@@ -16,13 +16,22 @@ const initSweetalertDOM = (selector, options = {}) => {
   }
 };
 
+
+const initSweetalertDOMCall = (selector, options = {}, callback = () => {}) => {
+  const swalButton = document.querySelector(selector);
+  if (swalButton) { // protect other pages
+    swal(options).then(callback);
+  }
+};
+
+
 const sweetAlertNOK = () => {
   const modal = document.getElementById('booking-canceled');
   if (modal){
     initSweetalertDOM('#sweet-alert-booking', {
-      title: "Booking canceled",
-      text: "Sorry, there is no availabilities for the choosen dates.",
-      icon: "error"
+    title: "Booking canceled",
+    text: "Sorry, there is no availabilities for the choosen dates.",
+    icon: "error"
     });
   }
 }
@@ -31,16 +40,16 @@ const alertNewBooking = () => {
 
   const modal = document.getElementById('booking-success');
   if (modal) {
-    initSweetalertDOM('#sweet-alert-booking', {
-      title: "Room Pre-Booked !",
-      text: "The room have been pre-booked for 30 minutes, please proceed to the payment to completed your reservation.",
-      icon: "success",
-      buttons: {
-        cancel: true,
-        confirm: {
-          text: 'PAY NOW'
-        }
-      },
+    initSweetalertDOMCall('#sweet-alert-booking', {
+    title: "Room Pre-Booked !",
+    text: "The room have been pre-booked for 30 minutes, please proceed to the payment to completed your reservation.",
+    icon: "success",
+    buttons: { confirm: { text: 'PAY NOW' } }
+    }, (value) => {
+      if (value) {
+        const link = document.querySelector('#my_reservations');
+        link.click()
+      }
     });
   }
 };
@@ -57,7 +66,6 @@ const sweetAlertDanger = () => {
       text: "This action cannot be reversed.",
       icon: "warning"
       }, (value) => {
-        console.log(value)
         if (value) {
           const link = document.querySelector(`#delete-link-${id}`);
           link.click();

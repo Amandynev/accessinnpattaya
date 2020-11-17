@@ -339,9 +339,9 @@
 </div>
 
 
-<% if @modal_cancel %>
+<% if params[:param] == "nok" %>
   <span id="booking-canceled"></span>
 <% end %>
-<% if params[:param] %>
+<% if params[:param] == "ok" %>
   <span id="booking-success"></span>
 <% end %>
