@@ -44,7 +44,7 @@ const alertNewBooking = () => {
     title: "Room Pre-Booked !",
     text: "The room have been pre-booked for 30 minutes, please proceed to the payment to completed your reservation.",
     icon: "success",
-    buttons: { confirm: { text: 'PAY NOW' } }
+    buttons: { close: false, confirm: { text: 'PAY NOW' }}
     }, (value) => {
       if (value) {
         const link = document.querySelector('#my_reservations');

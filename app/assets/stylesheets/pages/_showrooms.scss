@@ -24,11 +24,18 @@
 .photo-room-calendar{
   display: flex;
   width: 100%;
+  justify-content: space-between;
 }
 
 .photo-room{
   margin-right: 50px;
   width: 750px;
+}
+
+.column-calendar {
+  display: flex;
+  flex-direction: column;
+  width: 375px;
 }
 
 .photo-show-size{
@@ -69,7 +76,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
-  width: 900px;
+  width: 100%;
 }
   .services-svg {
     display:flex;
@@ -78,29 +85,37 @@
 .hotel-facilities{
   display:flex;
   justify-content:space-between;
+  .container-card-facilities{
+    width: 240px;
+    justify-self: center;
+    }
 }
 .services-svg{
   margin:10px;
 }
 
-@media(max-width: 1080px) {
+@media(max-width: 1300px) {
   .photo-room{
     margin: 0 auto;
     width: 750px;
   }
+  .column-calendar{
+    margin: 0 auto;
+    margin-top: 20px;
+  }
   .photo-room-calendar{
     display:grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     .photo-show-size{
       width: 90vw;
       height: 300px;
     }
     .calendar-booking{
-      width: 400px;
+      width: 100%;
       display: flex;
       justify-content: center;
       margin: 0 auto;
-      height: 470px;
+      height: 450px;
     }
   }
   .hotel.facilities{
@@ -111,21 +126,20 @@
   }
   .line{
     text-align:center;
-    }
-}
-
-@media(max-width: 972px){
-  .services-grid{
-    grid-template-columns: 1fr 1fr;
-    width: 600px;
   }
-
+  .display-flex-similar-room {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media(max-width: 800px){
+  .column-calendar{
+    width: 100%;
+  }
   .photo-room{
-    margin: 0 auto;
-    width: 400px;
+    width: 100%;
   }
   .photo-room-calendar{
     .calendar-booking{
@@ -134,7 +148,6 @@
   }
   .services-grid{
     grid-template-columns: 1fr 1fr;
-    width: 300px;
   }
    .hotel-facilities{
     flex-direction: column;
@@ -143,12 +156,6 @@
 }
 
 @media(max-width: 650px){
-  .services-grid{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content:left
-
-  }
   .services-show{
     display:grid ;
     justify-content:center;
@@ -164,6 +171,7 @@
     }
      .hotel-facilities{
       display:grid ;
+      grid-template-columns: 100%;
       justify-content:left;
     }
      .title-similar-room{
