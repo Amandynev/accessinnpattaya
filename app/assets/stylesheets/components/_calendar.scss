@@ -78,14 +78,14 @@
 
 @media(max-width: 650px) {
   .calendar-form{
-    width: 150px;
+    width: 170px;
     .calendar-container{
-      width: 150px;
+      width: 170px;
       display: flex;
       flex-direction: column;
       align-items: center;
       .calendar-box{
-        width: 150px;
+        width: 170px;
         border-bottom-width: 1px;
         border-bottom-style: solid;
         border-bottom-color: $light-gray ;

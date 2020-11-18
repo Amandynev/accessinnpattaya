@@ -25,6 +25,8 @@
   background:$red;
   border: 2px solid $red;
   font-family:$body-font;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 
 .button-access-calendar-square{
