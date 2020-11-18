@@ -127,7 +127,9 @@ puts "create rooms..."
 5.times do
   Room.create!(
     category: accessinn,
-    photo: "accessinn.jpg"
+    photo: "accessinn.jpg",
+    phototwo: "accessinngreentwo.jpg",
+    photothree:"accessinnsdbthree.jpg",
     )
 end
 
@@ -141,21 +143,27 @@ end
 6.times do
   Room.create!(
     category: deluxe,
-    photo: "deluxe.jpg"
+    photo: "deluxe.jpg",
+    phototwo: "deluxeorangetwo.jpg",
+    photothree:"deluxeredthree.jpg",
     )
 end
 
 11.times do
   Room.create!(
     category: premium,
-    photo: "premium.jpg"
+    photo: "premium.jpg",
+    phototwo: "premiumorangetwo.jpg",
+    photothree:"premiumorangesdbthree.jpg",
     )
 end
 
 2.times do
   Room.create!(
     category: suite,
-    photo: "suite.jpg"
+    photo: "suite.jpg",
+    phototwo: "suitepurpletwo.jpg",
+    photothree:"suitepurplesdbthree.jpg",
     )
 end
 
