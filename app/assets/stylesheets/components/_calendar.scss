@@ -80,14 +80,15 @@
   .calendar-form{
     width: 150px;
     .calendar-container{
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       .calendar-box{
         width: 150px;
-          border-bottom-width: 1px;
-          border-bottom-style: solid;
-          border-bottom-color: $light-gray ;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: $light-gray ;
         .title{
           font-size: 10px;
         }
