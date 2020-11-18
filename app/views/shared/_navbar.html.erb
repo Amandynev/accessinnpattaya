@@ -51,35 +51,31 @@
       <% end %>
 
     </ul>
-
   </div>
   
   <div class="d-flex align-items-center">
     <% if user_signed_in? %>
-      <%= link_to "PAY NOW", allmybookings_path, class: "button-access-book" %>
+      <% if current_user.bookings.present? %>
+        <%= link_to "PAY NOW", allmybookings_path, class: "button-access-book" %>
+      <% end %>
       <div class="nav-item dropdown">
 
-          <%= image_tag "log-in.png", class: "avatar dropdown-toggle navbar-right", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <%= image_tag "log-in.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
 
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <%= link_to t('navbar.dropdown.menu-2'), "#", class: "dropdown-item" %>
+          <%= link_to t('navbar.dropdown.menu-2'), allmybookings_path, class: "dropdown-item", id:"my_reservations" %>
           <%= link_to t('navbar.dropdown.menu-4'), destroy_user_session_path, method: :delete, class: "dropdown-item" %>
         </div>
 
       </div>
     <% else %>
       <div class="loggin">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-      </div>
-      <div>
-        <div>
-          <%= link_to "My booking", allmybookings_path, class: "button-access-book" %>
-        </div>
+          <%= link_to "Login", new_user_session_path, class: "nav-link-log-in" %>
       </div>
     <%end%>
   </div>
   
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="<%= 'margin-right: 65px' if current_user %>">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item <%= 'active-pattaya' if params[:controller] == 'pages' && params[:action] == 'home'%>">

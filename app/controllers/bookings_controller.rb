@@ -20,8 +20,7 @@ class BookingsController < ApplicationController
         render "rooms/show"
       end
     else
-      @modal_cancel = true
-      render "rooms/show"
+      redirect_to room_path(@room, param: 'nok')
     end
   end
 

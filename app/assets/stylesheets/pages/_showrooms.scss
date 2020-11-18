@@ -6,7 +6,15 @@
   margin: 0;
   letter-spacing: .2rem;
   color: $black;
-  text-align: center;
+}
+
+.title-similar-room{
+  padding-top: 25px;
+  font-size: 20px;
+  font-weight: lighter;
+  margin: 0;
+  letter-spacing: .1em;
+  color: $black;
 }
 
 .calendar-booking{
@@ -16,11 +24,18 @@
 .photo-room-calendar{
   display: flex;
   width: 100%;
+  justify-content: space-between;
 }
 
 .photo-room{
   margin-right: 50px;
   width: 750px;
+}
+
+.column-calendar {
+  display: flex;
+  flex-direction: column;
+  width: 375px;
 }
 
 .photo-show-size{
@@ -33,6 +48,10 @@
   height: 350px;
 }
 
+.services-show{
+  display:flex;
+  justify-content:space-between;
+
   #icone-css-show {
     margin-right: 7px;
     margin-top: 10px;
@@ -40,7 +59,6 @@
     height: 60px;
     width:60px;
     }
-
   #svg-css-show {
     height: 75px;
     width:75px;
@@ -49,6 +67,7 @@
     font-size:20px;
     font-weight:bold;
   }
+}
 
 #black-opacity{
   color:rgba(17, 17, 17, 0.3)
@@ -57,50 +76,70 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
-  width: 900px;
-  margin: 0 auto;
-  .service-item {
-    text-align: left;
-    padding-left: 0px;
+  width: 100%;
+}
+  .services-svg {
+    display:flex;
   }
+
+.hotel-facilities{
+  display:flex;
+  justify-content:space-between;
+  .container-card-facilities{
+    width: 240px;
+    justify-self: center;
+    }
+}
+.services-svg{
+  margin:10px;
 }
 
-@media(max-width: 1080px) {
+@media(max-width: 1300px) {
   .photo-room{
     margin: 0 auto;
     width: 750px;
   }
+  .column-calendar{
+    margin: 0 auto;
+    margin-top: 20px;
+  }
   .photo-room-calendar{
     display:grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     .photo-show-size{
       width: 90vw;
       height: 300px;
     }
     .calendar-booking{
-      width: 400px;
+      width: 100%;
       display: flex;
       justify-content: center;
       margin: 0 auto;
-      height: 470px;
+      height: 450px;
     }
   }
-}
-
-@media(max-width: 972px){
-  .services-grid{
-    grid-template-columns: 1fr 1fr;
-    width: 600px;
-    .service-item {
-      padding-left: 120px;
-    }
+  .hotel.facilities{
+  justify-content:center;
+  }
+  .title-similar-room{
+    text-align:center;
+  }
+  .line{
+    text-align:center;
+  }
+  .display-flex-similar-room {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 @media(max-width: 800px){
+  .column-calendar{
+    width: 100%;
+  }
   .photo-room{
-    margin: 0 auto;
-    width: 400px;
+    width: 100%;
   }
   .photo-room-calendar{
     .calendar-booking{
@@ -108,29 +147,40 @@
     }
   }
   .services-grid{
-    grid-template-columns: 1fr;
-    width: 300px;
-    .service-item {
-      padding-left: 120px;
-    }
+    grid-template-columns: 1fr 1fr;
+  }
+   .hotel-facilities{
+    flex-direction: column;
+    align-items:center;
   }
 }
 
 @media(max-width: 650px){
   .services-show{
-    display:grid !important;
-    justify-content:center !important;
-    text-align:center !important;
-    align-items:center!important;
-
+    display:grid ;
+    justify-content:center;
+    text-align:center;
+    align-items:center;
     }
 
     #icone-css-show{
-        margin-top: 30px !important;
+        margin-top: 30px;
       }
     .padding-responsive{
       padding-left:10px;
     }
+     .hotel-facilities{
+      display:grid ;
+      grid-template-columns: 100%;
+      justify-content:left;
+    }
+     .title-similar-room{
+      text-align:left;
+  }
+    .line{
+      text-align:left;
+    }
+
   }
 
 
