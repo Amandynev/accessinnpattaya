@@ -1,14 +1,14 @@
 fr:
   page:
     home:
-      button-search: "CHECK DISPONIBILITE"
+      button-search: "CHECK DISPONIBILITÉ"
       dining-drinking: "Et en terme de restauration ?"
       contact-us: "Contactez-nous"
       rooms: "Les chambres"
   hotel:
     name: "Access Inn Pattaya"
     address: "soi lengkee, Chon Buri 20150, pattaya, thaïlande"
-    description: "Access Inn Pattaya est un hotel moderne et design avec un ascenseur panoramique en plein centre de la magnifique ville de Pattaya. L'hôtel dispose d'un bar lounge et d'un restaurant. Degustez nos plats locaux et internationaux dans notre restaurant, ou relaxez-vous en jouant au billard ou flechettes au bar pendant que vous dégustez nos vins et autres cocktails."
+    description: "Access Inn Pattaya est un hotel moderne et design avec un ascenseur panoramique en plein centre de la magnifique ville de Pattaya. L'hôtel dispose d'un bar lounge et d'un restaurant. Dégustez nos plats locaux et internationaux dans notre restaurant, ou relaxez-vous en jouant au billard ou flechettes au bar pendant que vous dégustez nos vins et autres cocktails."
   restaurant:
     title: "Restauration"
     description: "Degustez nos plats locaux et internationaux dans notre restaurant ..."
@@ -19,11 +19,11 @@ fr:
     menu-1: "Accueil"
     menu-2: "Chambres"
     menu-3: "RestaurantBar"
-    menu-4: "Evenement"
+    menu-4: "Evénement"
     menu-5: "Contact"
     dropdown:
       menu-1: "Mon Compte"
-      menu-2: "Mes reservations"
+      menu-2: "Mes réservations"
       menu-3: "Checkout"
-      menu-4: "Logout"
+      menu-4: "Déconnexion"
     pay-btn: "PAYER"
