@@ -1,5 +1,8 @@
-<div class="banner-pages mb-4">
-  <span class="name"><%= @room.category.name %></span>
+<div class="banner-show mb-4">
+  <span class="name-show"><%= @room.category.name %></span>
+  <div class="price-grid">
+    <span class="price-show"><%= humanized_money_with_symbol(@room.category.price)%><span class="size-price-banner">/<em>per night</em></span></span>
+  </div>
 </div>
 
 <div class="container-white">
@@ -17,10 +20,10 @@
             <%= image_tag 'rooms/' + @room.photo, class: 'd-block w-100 height-carroussel' %>
           </div>
           <div class="carousel-item">
-            <%= image_tag 'rooms/' + @room.photo, class: 'd-block w-100 height-carroussel' %>
+            <%= image_tag 'rooms/' + @room.phototwo, class: 'd-block w-100 height-carroussel' %>
           </div>
           <div class="carousel-item">
-            <%= image_tag 'rooms/' + @room.photo, class: 'd-block w-100 height-carroussel' %>
+            <%= image_tag 'rooms/' + @room.photothree, class: 'd-block w-100 height-carroussel' %>
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -301,9 +304,9 @@
             </div>
 
             <div class="container-card-facilities">
-                <%= link_to restaurant_path, class:"link-without-style" do %>
+                <%= link_to event_path, class:"link-without-style" do %>
                   <div class="card-category-facilities px-1" data-aos="flip-up"data-aos-duration="1000" style="background-image: url(<%= asset_path 'reception-2.jpg' %>)">
-                    <p class="card-title-square-show">RECEPTION</p>
+                    <p class="card-title-square-show">EVENTS</p>
                   </div>
                 <%end%>
             </div>
