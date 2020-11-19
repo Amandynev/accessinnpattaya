@@ -28,7 +28,7 @@ class RoomsController < ApplicationController
       date_range = booking.start_at..booking.end_at
       start_date = params[:start_at] == [""] ? Date.today : Date.parse(params[:start_at].first)
       end_date = params[:end_at] == [""] ? Date.today : Date.parse(params[:end_at].first)
-      hash_unavailability[booking.room.category.name] += 1 if date_range.include?(start_date) || date_range.include?(end_date) || (start_date < booking.start_at && end_date > booking.end_at)
+      hash_unavailability[booking.room.category.name] += 1 if (date_range.include?(start_date) || date_range.include?(end_date) || (start_date < booking.start_at && end_date > booking.end_at)) && booking.state == "pending"
     end
     @hashsearched = HASH_AVAILABILITY.merge(hash_unavailability) { |_k, newval, oldval| newval - oldval }
   end

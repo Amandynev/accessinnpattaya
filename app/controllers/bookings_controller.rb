@@ -8,7 +8,7 @@ class BookingsController < ApplicationController
         @booking.room = room
         @booking.user = current_user
         if @booking.save
-          ReservationJob.set(wait: 30.seconds).perform_later(@booking.id)
+          ReservationJob.set(wait: 30.minutes).perform_later(@booking.id)
           @saving = true
         else
           @saving = false
