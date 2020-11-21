@@ -5,7 +5,7 @@ RSpec.describe UserMailer, type: :mailer do
     let(:mail) { UserMailer.welcome }
 
     it "renders the headers" do
-      expect(mail.subject).to eq("Welcome")
+      expect(mail.subject).to eq("Welcome to AccessInn Pattaya World")
       expect(mail.to).to eq(["to@example.org"])
       expect(mail.from).to eq(["from@example.com"])
     end
@@ -19,7 +19,7 @@ RSpec.describe UserMailer, type: :mailer do
     let(:mail) { UserMailer.reservation }
 
     it "renders the headers" do
-      expect(mail.subject).to eq("Reservation")
+      expect(mail.subject).to eq("Reservation confirmed")
       expect(mail.to).to eq(["to@example.org"])
       expect(mail.from).to eq(["from@example.com"])
     end

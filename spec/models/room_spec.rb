@@ -7,7 +7,7 @@ RSpec.describe Room, type: :model do
 
   context 'Methods' do
     it '#services' do
-      expect(Room.first.services).to include('open 24h/24h', 'wifi', 'air condition')
+      expect(Room.first.services).to include('Safety-box', 'Minibar', 'Air-condition')
       expect(Room.first.services).not_to include('none valid service')
     end
   end
