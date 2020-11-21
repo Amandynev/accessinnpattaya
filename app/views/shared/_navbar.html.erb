@@ -52,7 +52,7 @@
 
     </ul>
   </div>
-
+  
   <div class="d-flex align-items-center">
     <% if user_signed_in? %>
       <% if current_user.bookings.select { |booking| booking.state == "pending" }.present? %>

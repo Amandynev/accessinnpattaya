@@ -6,5 +6,7 @@ class StripeCheckoutSessionService
     bookings.each do |booking|
       booking.update(state: 'paid')
     end
+    mail = UserMailer.with(user: order.user).reservation
+    mail.deliver_later
   end
 end
