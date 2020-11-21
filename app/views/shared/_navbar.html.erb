@@ -55,7 +55,7 @@
 
   <div class="d-flex align-items-center">
     <% if user_signed_in? %>
-      <% if current_user.bookings.present? %>
+      <% if current_user.bookings.select { |booking| booking.state == "pending" }.present? %>
         <%= link_to t('navbar.pay-btn'), allmybookings_path, class: "button-access-book" %>
       <% end %>
       <div class="nav-item dropdown">
