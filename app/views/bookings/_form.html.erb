@@ -32,11 +32,24 @@
         </div>
       </div>
     </div>
-    <div class="number text-align">
+    <div class="number">
+
       <div class="title-square">
         N° ROOMS
       </div>
       <%= f.number_field :number, label: false, value: 1, min: 1, max: 11 %>
+    </div>
+    <div class="card-booking-description-price">
+      <div class="price" data-price="<%= @room.category.price %>">
+      </div>      
+      <div class="detail">
+        <div class="symbol">
+          ฿
+        </div>
+        <div class="total">
+          / total
+        </div>
+      </div>
     </div>
     <% if current_user %>
       <%= f.submit "BOOK NOW", class: "button-access-calendar-square", id: "sweet-alert-booking" %>

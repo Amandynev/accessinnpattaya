@@ -36,6 +36,8 @@ import { flatpickrDisplay } from  "../plugins/flatpickr";
 import { sweetAlertNOK, alertNewBooking, sweetAlertDanger } from '../plugins/init_sweetalert';
 import { functionValidation } from '../components/form';
 import { galleryLightbox } from '../components/lightbox';
+import { price } from '../plugins/price';
+
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -54,4 +56,5 @@ document.addEventListener('turbolinks:load', () => {
   sweetAlertNOK();
   alertNewBooking();
   galleryLightbox();
+  price();
 });
