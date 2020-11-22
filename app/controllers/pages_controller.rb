@@ -2,8 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[home restaurant event contact new create]
 
   def home
-    @categories = Category.all
-    @booking = Booking.new
+    @categories = Category.includes(:translations).all
   end
 
   def restaurant
