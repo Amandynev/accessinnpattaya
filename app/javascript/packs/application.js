@@ -35,7 +35,7 @@ import { calendarPatTwo } from '../plugins/calendar';
 import { flatpickrDisplay } from  "../plugins/flatpickr";
 import { sweetAlertNOK, alertNewBooking, sweetAlertDanger } from '../plugins/init_sweetalert';
 import { functionValidation } from '../components/form';
-import { galleryLightbox, galleryEvent } from '../components/lightbox';
+import { galleryEvent } from '../components/lightbox';
 import { price } from '../plugins/price';
 
 
