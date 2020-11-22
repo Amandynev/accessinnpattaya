@@ -21,8 +21,8 @@
       <br>
 
       <div class="text-confirmation">
-        We kindly confirm your reservation from .... to ....
-        for the .....room.
+        We kindly confirm your reservation from <%= @order.bookings.first.start_at %> to  <%= @order.bookings.first.end_at %>
+        for the <%= @order.bookings.first.room.category.name %> room.
       </div>
       <div class="text-pickup">
         <p>If you need pick up transportation : </p>

@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "destroy data ..."
 
+OrderBooking.destroy_all
 Order.destroy_all
 Booking.destroy_all
 Room.destroy_all
@@ -136,7 +137,9 @@ end
 3.times do
   Room.create!(
     category: superior,
-    photo: "superior.jpg"
+    photo: "superior.jpg",
+    phototwo: "superior.jpg",
+    photothree: "superior.jpg"
     )
 end
 

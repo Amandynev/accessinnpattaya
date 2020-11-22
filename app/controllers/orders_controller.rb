@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   def create
-    bookings = Booking.where("user_id = ? AND state = ?", current_user, "pending")
+    bookings = Booking.includes(:room).where("user_id = ? AND state = ?", current_user, "pending")
     amount = bookings.map(&:price).sum
     order  = Order.create!(amount: amount, state: 'pending', user: current_user)
     bookings.each do |booking|
@@ -26,5 +26,4 @@ class OrdersController < ApplicationController
   def show
     @order = current_user.orders.find(params[:id])
   end
-  
 end
