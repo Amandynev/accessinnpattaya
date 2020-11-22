@@ -29,5 +29,8 @@ fr:
     pay-btn: "PAYER"
   restaurant:
     title-menu: "Restaurant international"
+    text-menu: "salut"
   event:
     title-event: "Un événement à organiser ?"
+    text-event: "Access inn Pattaya peut vous organiser vos événements sur mesure! Un anniversaire ? séminaire ? mariage ? team building ? soirées à thème ? karaoke ? on s'en occupe pour vous ! L'établissement peut acceuillir jusqu'à 150 personnes et nous pouvons vous proposer des packages incluant Dj boot, la coordination des fournisseurs : déco, ballons, fleurs, coin photos, photographes, buffets..."
+    text-event-two: "Contactez-nous pour en savoir plus et pour que nous puissions en discuter directement ensemble."

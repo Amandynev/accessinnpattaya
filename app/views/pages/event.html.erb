@@ -3,17 +3,13 @@
 </div>
 
 <div class="container">
-  <div>
-    <p class="text-center pt-4 line">_______</p>
-  <h1 class="text-center pt-3 title-home"><%= t('event.title-event') %></h1>
-  <p class="mt-5 text-center">Access inn Pattaya can organise any events for you like seminar, wedding, birthday parties, theme party...
-  The place can welcome up to 150persons, we can offer you different packages with Dj Booth, decorations(balloons tables, flowers, pictures corner), buffet, photograph, karaoke...
-  </p>
-  <p class="mt-5 text-center">Contact us for more info, we will be pleased to discuss with you.
-</p>
+  <div class="text-center">
+    <p class=" pt-4 line">_______</p>
+  <h1 class="pt-3 title-home"><%= t('event.title-event') %></h1>
+  <p class="mt-5 "><%= t('event.text-event') %></p>
+  <p class="my-5 "><%= t('event.text-event-two') %></p>
+  <%= link_to t('page.home.contact-us'), contact_path, class: "button-access link-without-style " %>
 </div>
-
-
 
 <div class="swiper-container">
       <div class="swiper-wrapper">
