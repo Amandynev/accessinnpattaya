@@ -83,22 +83,25 @@
       display: flex;
       justify-content: space-around;
     }
-    .card-booking-description-price{
-      width: 100%;
-      font-size: 42px;
-      text-align: center;
-      background-color: $black;
-      display: inline-flex;
-      justify-content: center;
-      padding: 15px 0;
-      .detail {
-        margin-left: 20px;
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
-        font-size: 21px;
-      }
-    }
+  }
+}
+
+.card-booking-description-price{
+  width: 100%;
+  font-size: 42px;
+  text-align: center;
+  background-color: $black;
+  display: inline-flex;
+  justify-content: center;
+  padding: 15px 0;
+  color: white;
+  background-color: black;
+  .detail {
+    margin-left: 20px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 21px;
   }
 }
 
