@@ -35,7 +35,7 @@ import { calendarPatTwo } from '../plugins/calendar';
 import { flatpickrDisplay } from  "../plugins/flatpickr";
 import { sweetAlertNOK, alertNewBooking, sweetAlertDanger } from '../plugins/init_sweetalert';
 import { functionValidation } from '../components/form';
-import { galleryLightbox } from '../components/lightbox';
+import { galleryLightbox, galleryEvent } from '../components/lightbox';
 import { price } from '../plugins/price';
 
 
@@ -56,5 +56,6 @@ document.addEventListener('turbolinks:load', () => {
   sweetAlertNOK();
   alertNewBooking();
   galleryLightbox();
+  galleryEvent();
   price();
 });

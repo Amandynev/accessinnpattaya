@@ -1,39 +1,184 @@
 /* gellery event*/
 
+html, body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 
-header {
-  width: 100vw;
-  color: rgb(250,250,250);
+.heading {
+  background: white;
+  height: 5%;
+  margin: 10px;
+  padding: 10px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 90%;
+}
+.swiper-slide {
   text-align: center;
-
-}
-
-img {
-  object-fit: cover;  /* perserves aspect ratio, but you don't see the whole image */
-   filter: grayscale(100%);
-
-}
-
-img:hover {
-   filter: grayscale(0%);
-}
-
-#gallery-container{
+  background: #fff;
+  /* Center slide text vertically */
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
-.gallery-tile {
-  width: 32vw;
-  height: 250px;
-  margin-bottom: 2vw;
+// Image Accordions General
+.container-general {
+  padding: 55px 0;
+  margin: 0 auto;
+  width: 800px;
+  .gallery-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 70vh;
+    .item {
+      flex: 1;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: none;
+      transition: all 0.8s ease;
+      &:hover {
+        flex: 7;
+      }
+    }
+  }
 }
 
-.gallery-tile:nth-child(4n) {
-  width: 96vw;
-  height: 500px;
-  margin-bottom: 2vw;
+// Image Accordions Effect 1
+.wrap-effect-1 {
+  .item {
+    &:first-of-type {
+      background-image: url('event/birthday.jpg');
+    }
+    &:nth-of-type(2) {
+      background-image: url('event/birthdaydom.jpg');
+    }
+    &:nth-of-type(3) {
+      background-image: url('event/birthdayfour.jpg');
+    }
+    &:nth-of-type(4) {
+      background-image: url('event/birthdaypink.jpg');
+    }
+    &:nth-of-type(5) {
+      background-image: url('event/birthdayred.jpg');
+    }
+    &:last-of-type {
+      background-image: url('event/billardtable.jpg');
+    }
+
+  }
+}
+
+// Image Accordions Effect 2
+.wrap-effect-2 {
+  .item {
+    &:hover {
+      transform: translate3d(0, 0, 100px);
+      box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+
+    }
+    &:first-of-type {
+      background-image: url('event/karaoke.jpg');
+    }
+    &:nth-of-type(2) {
+      background-image: url('event/buffetfive.jpg');
+    }
+    &:nth-of-type(3) {
+      background-image: url('event/deco.jpg');
+    }
+    &:nth-of-type(4) {
+      background-image: url('event/decotwo.jpg');
+    }
+    &:nth-of-type(5) {
+      background-image: url('event/golfevent.jpg');
+    }
+    &:last-of-type {
+      background-image: url('event/karaoketwo.jpg');
+    }
+  }
+}
+
+// Image Accordions Effect 3
+.wrap-effect-3 {
+  .item {
+    &:hover {
+      animation: rotate 0.7s ease-in-out both;
+      border-radius: 10px;
+      border: 1px solid gray;
+    }
+    &:first-of-type {
+      background-image: url('event/xmas.jpg');
+    }
+    &:nth-of-type(2) {
+      background-image: url('event/songkran.jpg');
+    }
+    &:nth-of-type(3) {
+      background-image: url('event/halloween.jpg');
+    }
+    &:nth-of-type(4) {
+      background-image: url('event/golfeventtwo.jpg');
+    }
+    &:nth-of-type(5) {
+      background-image: url('event/terraceoutdoor.jpg');
+    }
+    &:last-of-type {
+      background-image: url('restaurant/barsix.jpg');
+    }
+  }
+}
+
+.inspire {
+  border: 1px solid rgba(22, 76, 167, 0.6);
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  text-decoration:none;
+  margin: 10px;
+  padding: 10px;
+  &:after {
+    background: #38ef7d;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: .4;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+    z-index: -10;
+  }
+  &:hover {
+    &:after {
+      left: 120%;
+      transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(10deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-10deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(5deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0)
+  }
 }
 /* -----------------------gellery resto------------------ */
 
@@ -144,27 +289,6 @@ img:hover {
   box-sizing: inherit;
 }
 
-html {
-  height: 100%;
-  font-family: sans-serif;
-  font-size: 1vw;
-  scroll-behavior: smooth;
-}
-
-body {
-  height: 100vh;
-  min-width: 100vw;
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-  text-align: center;
-  padding: 1rem;
-   background: -webkit-linear-gradient(130deg, #A155DA, #41B3A3);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 @media only screen and (max-width: 800px) {
   .gallery-wrapper {

@@ -23,7 +23,20 @@ const galleryLightbox = () => {
     lightbox.classList.remove('active')
     document.body.style.overflowY='scroll'
   })
+};
+
+const galleryEvent = () => {
+  const swiper = new Swiper('.swiper-container', {
+  direction: 'vertical',
+  mousewheel: {},
+  effect: 'cube',
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false
+  }
+});
+
 
 };
 
-export { galleryLightbox}
+export { galleryLightbox, galleryEvent}
