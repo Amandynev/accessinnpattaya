@@ -27,3 +27,7 @@ fr:
       menu-3: "Checkout"
       menu-4: "Déconnexion"
     pay-btn: "PAYER"
+  restaurant:
+    title-menu: "Restaurant international"
+  event:
+    title-event: "Un événement à organiser ?"

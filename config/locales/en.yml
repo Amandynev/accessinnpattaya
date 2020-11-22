@@ -58,3 +58,10 @@ en:
       menu-3: "Checkout"
       menu-4: "Logout"
     pay-btn: "PAY NOW"
+  restaurant:
+    title-menu: "Our international restaurant"
+  event:
+    title-event: "Would you like to plan an event ?"
+
+
+
