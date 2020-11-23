@@ -36,7 +36,7 @@ fr:
     contact:
       name: "Nom et prénom"
       phone: "Téléphone"
-      message: "méssage"
+      message: "message"
       send-btn: "Envoyer le message"
   navbar:
     menu-1: "Accueil"
