@@ -1,7 +1,7 @@
 fr:
   page:
     home:
-      button-search: "CHECK DISPONIBILITÉ"
+      button-search: "RECHERCHER"
       dining-drinking: "Et en terme d'expérience ?"
       contact-us: "Contactez-nous"
       rooms: "Les chambres"
@@ -17,6 +17,27 @@ fr:
         description: "Dégustez nos plats locaux et internationaux dans notre restaurant climatisé ou sur notre terrasse extérieur... Ou relaxez-vous en jouant au billard, flechettes au bar autour d'un verre de vin ou encore d'un nos cocktails maison."
       btn-more-infos: "Plus infos"
       from: "À partir de "
+    restaurant:
+      title-menu: "Terrasse intérieur et extérieur"
+    event:
+      title-event: "Un événement à organiser ?"
+      text-event: "Access inn Pattaya peut vous organiser vos événements sur mesure! Un anniversaire ? séminaire ? mariage ? team building ? soirées à thème ? karaoke ? on s'en occupe pour vous ! L'établissement peut acceuillir jusqu'à 150 personnes et nous pouvons vous proposer des packages incluant Dj boot, la coordination des fournisseurs : déco, ballons, fleurs, coin photos, photographes, buffets..."
+      text-event-two: "Contactez-nous pour en savoir plus et pour que nous puissions en discuter directement ensemble."
+    rooms:
+      night: "/par nuit"
+      balcony: "Balcon"
+      corner-table: "Coin table"
+      guests: "personnes"
+      smocking: "Fumeur"
+      no-smocking: "Non fumeur"
+      similar: "Chambres similaires"
+      around: "À l'hôtel"
+      services: "Les points forts"
+    contact:
+      name: "Nom et prénom"
+      phone: "Téléphone"
+      message: "méssage"
+      send-btn: "Envoyer le message"
   navbar:
     menu-1: "Accueil"
     menu-2: "Chambres"
@@ -29,11 +50,9 @@ fr:
       menu-3: "Checkout"
       menu-4: "Déconnexion"
     pay-btn: "PAYER"
-  restaurant:
-    title-menu: "Terrasse intérieur et extérieur"
-
-  event:
-    title-event: "Un événement à organiser ?"
-    text-event: "Access inn Pattaya peut vous organiser vos événements sur mesure! Un anniversaire ? séminaire ? mariage ? team building ? soirées à thème ? karaoke ? on s'en occupe pour vous ! L'établissement peut acceuillir jusqu'à 150 personnes et nous pouvons vous proposer des packages incluant Dj boot, la coordination des fournisseurs : déco, ballons, fleurs, coin photos, photographes, buffets..."
-    text-event-two: "Contactez-nous pour en savoir plus et pour que nous puissions en discuter directement ensemble."
-  book-btn: "Réservez à partir de"
+  book-btn: "Réservez à partir de %{price}/nuit"
+  calendar:
+    book-calendar: "RÉSERVEZ"
+    check-in: "ARRIVÉE"
+    check-out: "DÉPART"
+    number-rooms: "N° CHAMBRES"

@@ -4,7 +4,7 @@
       <div class="calendar-box border-right">
         <%= date_field :start_at, params[:start_at], required: false, id: "range_start" %>
         <div class="title">
-          CHECK-IN
+          <%= t('calendar.check-in') %>
         </div>
         <div class="date">
           <div id="start-day-calendar" class="day">
@@ -19,7 +19,7 @@
       <div class="calendar-box">
         <%= date_field :end_at, params[:end_at], required: false, id: "range_end", type: :text, class:"flatpickr-input" %>
         <div class="title">
-          CHECK-OUT
+          <%= t('calendar.check-out') %>
         </div>
         <div class="date">
           <div id="end-day-calendar" class="day">

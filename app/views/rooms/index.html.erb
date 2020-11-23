@@ -37,7 +37,7 @@
               <div class="button-price">
                 <div>
 
-                 <%= link_to "Book from #{humanized_money_with_symbol(room.category.price)}/night", room_path(room.category.rooms.first), class: "button-access-book link-without-style"%>
+                 <%= link_to t('book-btn', price: humanized_money_with_symbol(room.category.price)), room_path(room), class: "button-access-book link-without-style"%>
 
                 </div>
               </div>

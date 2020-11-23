@@ -95,8 +95,8 @@
 
             <div class="button-price">
               <div>
-                <%= link_to "Book now from #{room.category.price}฿/night", room_path(room), class: "button-access-book link-without-style"%>
-                <%= link_to t('book-btn'), room_path(room), class: "button-access-book link-without-style"%>
+
+                <%= link_to t('book-btn', price: humanized_money_with_symbol(room.category.price)), room_path(room), class: "button-access-book link-without-style"%>
               </div>
             </div>
         </div>
@@ -109,7 +109,7 @@
         <%= link_to room_path(room), class:"link-without-style" do %>
         <div class="card-category" data-aos="slide-left"data-aos-duration="1000" style="background-image: url(<%= asset_path 'rooms/' + room.photo %>)">
           <p class="card-title-square"><%= room.category.name.upcase %></p>
-          <p class="card-title-square-price"><%= t('page.home.from')%><%= room.category.price %> ฿</p>
+          <p class="card-title-square-price"><%= t('page.home.from')%><%= humanized_money_with_symbol(room.category.price) %></p>
         </div>
         <%end%>
       <%end%>
