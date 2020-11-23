@@ -21,6 +21,7 @@ fr:
       title-menu: "Terrasse intérieur et extérieur"
     event:
       title-event: "Un événement à organiser ?"
+      title: " Événements"
       text-event: "Access inn Pattaya peut vous organiser vos événements sur mesure! Un anniversaire ? séminaire ? mariage ? team building ? soirées à thème ? karaoke ? on s'en occupe pour vous ! L'établissement peut acceuillir jusqu'à 150 personnes et nous pouvons vous proposer des packages incluant Dj boot, la coordination des fournisseurs : déco, ballons, fleurs, coin photos, photographes, buffets..."
       text-event-two: "Contactez-nous pour en savoir plus et pour que nous puissions en discuter directement ensemble."
     rooms:
@@ -38,6 +39,15 @@ fr:
       phone: "Téléphone"
       message: "message"
       send-btn: "Envoyer le message"
+      title: "Contactez-nous"
+    index:
+      title: "Vous cherchez une chambre ?"
+    searched:
+      title: "Résultat de votre recherche"
+      please: "Voici ci dessous"
+      available: " les chambres disponibles"
+      date: " pour vos dates :"
+      room-left: "restantes"
   navbar:
     menu-1: "Accueil"
     menu-2: "Chambres"
@@ -56,3 +66,10 @@ fr:
     check-in: "ARRIVÉE"
     check-out: "DÉPART"
     number-rooms: "N° CHAMBRES"
+
+
+
+
+
+
+
