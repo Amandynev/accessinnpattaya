@@ -4,7 +4,7 @@
       <div class="calendar-box-square">
         <%= f.input :start_at, label: false, as: :string, input_html: {id: 'range_start'}, require: true %>
         <div class="title-square">
-          CHECK-IN
+          <%= t('calendar.check-in') %>
         </div>
         <div class="date-square">
           <div id="start-day-calendar" class="day">
@@ -19,7 +19,7 @@
       <div class="calendar-box-square padding-left">
         <%= f.input :end_at, label: false, as: :string, input_html: {id: 'range_end'}, require: true  %>
         <div class="title-square">
-          CHECK-OUT
+          <%= t('calendar.check-out') %>
         </div>
         <div class="date-square">
           <div id="end-day-calendar" class="day">
@@ -35,24 +35,24 @@
     <div class="number">
 
       <div class="title-square">
-        N° ROOMS
+        <%= t('calendar.number-rooms') %>
       </div>
       <%= f.number_field :number, label: false, value: 1, min: 1, max: 11 %>
     </div>
     <div class="card-booking-description-price">
       <div class="price" data-price="<%= @room.category.price %>">
-      </div>      
+      </div>
       <div class="detail">
         <div class="symbol">
           ฿
         </div>
         <div class="total">
-          / total
+          / TOTAL
         </div>
       </div>
     </div>
     <% if current_user %>
-      <%= f.submit "BOOK NOW", class: "button-access-calendar-square", id: "sweet-alert-booking" %>
+      <%= f.submit t('calendar.book-calendar'), class: "button-access-calendar-square", id: "sweet-alert-booking" %>
     <% else %>
       <div class="link-sign-in">You're not logged ! Please  &nbsp; <%= link_to "sign in", new_user_session_path, class: "link-without-style" %> &nbsp; to book a room</div>
     <% end %>

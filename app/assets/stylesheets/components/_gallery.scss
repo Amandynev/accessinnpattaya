@@ -54,22 +54,22 @@ html, body {
 .wrap-effect-1 {
   .item {
     &:first-of-type {
-      background-image: url('event/birthday.jpg');
+      background-image: asset-url('event/birthday.jpg');
     }
     &:nth-of-type(2) {
-      background-image: url('event/birthdaydom.jpg');
+      background-image: asset-url('event/birthdaydom.jpg');
     }
     &:nth-of-type(3) {
-      background-image: url('event/birthdayfour.jpg');
+      background-image: asset-url('event/birthdayfour.jpg');
     }
     &:nth-of-type(4) {
-      background-image: url('event/birthdaypink.jpg');
+      background-image: asset-url('event/birthdaypink.jpg');
     }
     &:nth-of-type(5) {
-      background-image: url('event/birthdayred.jpg');
+      background-image: asset-url('event/birthdayred.jpg');
     }
     &:last-of-type {
-      background-image: url('event/billardtable.jpg');
+      background-image: asset-url('event/billardtable.jpg');
     }
 
   }
@@ -84,22 +84,51 @@ html, body {
 
     }
     &:first-of-type {
-      background-image: url('event/karaoke.jpg');
+      background-image: asset-url('event/karaoke.jpg');
     }
     &:nth-of-type(2) {
-      background-image: url('event/buffetfive.jpg');
+      background-image: asset-url('event/buffetfive.jpg');
     }
     &:nth-of-type(3) {
-      background-image: url('event/deco.jpg');
+      background-image: asset-url('event/deco.jpg');
     }
     &:nth-of-type(4) {
-      background-image: url('event/decotwo.jpg');
+      background-image: asset-url('event/decotwo.jpg');
     }
     &:nth-of-type(5) {
-      background-image: url('event/golfevent.jpg');
+      background-image: asset-url('event/golfevent.jpg');
     }
     &:last-of-type {
-      background-image: url('event/karaoketwo.jpg');
+      background-image: asset-url('event/karaoketwo.jpg');
+    }
+  }
+}
+
+// Image Accordions Effect 2
+.wrap-effect-2-bis {
+  .item {
+    &:hover {
+      transform: translate3d(0, 0, 100px);
+      box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+
+    }
+    &:first-of-type {
+      background-image: asset-url('event/birthdaywhite.jpg');
+    }
+    &:nth-of-type(2) {
+      background-image: asset-url('event/birthdaywhitetwo.jpg');
+    }
+    &:nth-of-type(3) {
+      background-image: asset-url('event/birthdayfour.jpg');
+    }
+    &:nth-of-type(4) {
+      background-image: asset-url('event/birthdaywhitefive.jpg');
+    }
+    &:nth-of-type(5) {
+      background-image: asset-url('event/birthdayblack.jpg');
+    }
+    &:last-of-type {
+      background-image: asset-url('event/birthdaydomtwo.jpg');
     }
   }
 }
@@ -113,22 +142,22 @@ html, body {
       border: 1px solid gray;
     }
     &:first-of-type {
-      background-image: url('event/xmas.jpg');
+      background-image: asset-url('event/xmas.jpg');
     }
     &:nth-of-type(2) {
-      background-image: url('event/songkran.jpg');
+      background-image: asset-url('event/songkran.jpg');
     }
     &:nth-of-type(3) {
-      background-image: url('event/halloween.jpg');
+      background-image: asset-url('event/halloween.jpg');
     }
     &:nth-of-type(4) {
-      background-image: url('event/golfeventtwo.jpg');
+      background-image: asset-url('event/golfeventtwo.jpg');
     }
     &:nth-of-type(5) {
-      background-image: url('event/terraceoutdoor.jpg');
+      background-image: asset-url('event/terraceoutdoor.jpg');
     }
     &:last-of-type {
-      background-image: url('restaurant/barsix.jpg');
+      background-image: asset-url('restaurant/barsix.jpg');
     }
   }
 }
