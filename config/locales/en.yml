@@ -58,3 +58,12 @@ en:
       menu-3: "Checkout"
       menu-4: "Logout"
     pay-btn: "PAY NOW"
+  restaurant:
+    title-menu: "Terrace indoor and outdoor"
+    text-menu: "salut"
+  event:
+    title-event: "Would you like to plan an event ?"
+    text-event: "Access inn Pattaya can organise any events for you like seminar, wedding, birthday parties, theme party...The place can welcome up to 150persons, we can offer you different packages with Dj Booth, decorations(balloons tables, flowers, pictures corner), buffet, photograph, karaoke..."
+    text-event-two: "Contact us for more info, we will be pleased to discuss with you."
+
+

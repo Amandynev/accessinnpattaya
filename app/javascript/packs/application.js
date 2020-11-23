@@ -37,6 +37,7 @@ import { sweetAlertNOK, alertNewBooking, sweetAlertDanger } from '../plugins/ini
 import { functionValidation } from '../components/form';
 import { price } from '../plugins/price';
 
+
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 

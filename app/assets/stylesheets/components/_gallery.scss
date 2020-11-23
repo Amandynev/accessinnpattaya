@@ -1,0 +1,338 @@
+/* gellery event*/
+
+html, body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.heading {
+  background: white;
+  height: 5%;
+  margin: 10px;
+  padding: 10px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 90%;
+}
+.swiper-slide {
+  text-align: center;
+  background: #fff;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Image Accordions General
+.container-general {
+  padding: 55px 0;
+  margin: 0 auto;
+  width: 800px;
+  .gallery-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 70vh;
+    .item {
+      flex: 1;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: none;
+      transition: all 0.8s ease;
+      &:hover {
+        flex: 7;
+      }
+    }
+  }
+}
+
+// Image Accordions Effect 1
+.wrap-effect-1 {
+  .item {
+    &:first-of-type {
+      background-image: url('event/birthday.jpg');
+    }
+    &:nth-of-type(2) {
+      background-image: url('event/birthdaydom.jpg');
+    }
+    &:nth-of-type(3) {
+      background-image: url('event/birthdayfour.jpg');
+    }
+    &:nth-of-type(4) {
+      background-image: url('event/birthdaypink.jpg');
+    }
+    &:nth-of-type(5) {
+      background-image: url('event/birthdayred.jpg');
+    }
+    &:last-of-type {
+      background-image: url('event/billardtable.jpg');
+    }
+
+  }
+}
+
+// Image Accordions Effect 2
+.wrap-effect-2 {
+  .item {
+    &:hover {
+      transform: translate3d(0, 0, 100px);
+      box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+
+    }
+    &:first-of-type {
+      background-image: url('event/karaoke.jpg');
+    }
+    &:nth-of-type(2) {
+      background-image: url('event/buffetfive.jpg');
+    }
+    &:nth-of-type(3) {
+      background-image: url('event/deco.jpg');
+    }
+    &:nth-of-type(4) {
+      background-image: url('event/decotwo.jpg');
+    }
+    &:nth-of-type(5) {
+      background-image: url('event/golfevent.jpg');
+    }
+    &:last-of-type {
+      background-image: url('event/karaoketwo.jpg');
+    }
+  }
+}
+
+// Image Accordions Effect 3
+.wrap-effect-3 {
+  .item {
+    &:hover {
+      animation: rotate 0.7s ease-in-out both;
+      border-radius: 10px;
+      border: 1px solid gray;
+    }
+    &:first-of-type {
+      background-image: url('event/xmas.jpg');
+    }
+    &:nth-of-type(2) {
+      background-image: url('event/songkran.jpg');
+    }
+    &:nth-of-type(3) {
+      background-image: url('event/halloween.jpg');
+    }
+    &:nth-of-type(4) {
+      background-image: url('event/golfeventtwo.jpg');
+    }
+    &:nth-of-type(5) {
+      background-image: url('event/terraceoutdoor.jpg');
+    }
+    &:last-of-type {
+      background-image: url('restaurant/barsix.jpg');
+    }
+  }
+}
+
+.inspire {
+  border: 1px solid rgba(22, 76, 167, 0.6);
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  text-decoration:none;
+  margin: 10px;
+  padding: 10px;
+  &:after {
+    background: #38ef7d;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: .4;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+    z-index: -10;
+  }
+  &:hover {
+    &:after {
+      left: 120%;
+      transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(10deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-10deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(5deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0)
+  }
+}
+/* -----------------------gellery resto------------------ */
+
+.gallery-wrapper {
+  padding: 2rem 7rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+  grid-auto-flow: dense;
+}
+
+
+.gallery-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  filter: drop-shadow(2px 2px 3px #333);
+}
+
+.gallery-item .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gallery-item .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  cursor: pointer;
+  transition: all 400ms ease-in;
+  transform: scale(1);
+}
+
+.gallery-item .image img:hover {
+  transform: scale(1.1);
+}
+
+.w-1{
+  grid-column: span 1;
+}
+.w-2{
+  grid-column: span 2;
+}
+.w-3{
+  grid-column: span 3;
+}
+.w-4{
+  grid-column: span 4;
+}
+.w-5{
+  grid-column: span 5;
+}
+
+.h-1{
+  grid-row: span 1;
+}
+.h-2{
+  grid-row: span 2;
+}
+.h-3{
+  grid-row: span 3;
+}
+.h-4{
+  grid-row: span 4;
+}
+.h-5{
+  grid-row: span 5;
+}
+
+/* ***** LIGHTBOX EFFECT ***** */
+
+#lightbox {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .92);
+  display: none;
+}
+
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox .images-restaurant {
+  max-width: 90%;
+  max-height: 80%;
+  padding: 4px;
+  filter: none;
+
+  /* border-radius: 1%; */
+  /* background-color: white; */
+  border: 0.2px solid silver;
+}
+
+/* Generic Styles */
+:root {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .gallery-wrapper {
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: 1fr;
+    grid-gap: 2;
+    grid-auto-flow: dense;
+  }
+  .gallery-container:nth-child(3n+2) {
+    grid-column: 1 / span 2;
+    grid-row-end: span 2;
+  }
+
+  .gallery-container:nth-child(4n+3) {
+    grid-column: 2 / span 1;
+    grid-row-end: span 2;
+  }
+
+/*  reseting the css for the class within the divs to show a different way to achieve grid control using the nth childs*/
+  .w-1,
+  .w-2,
+  .w-3,
+  .w-4,
+  .w-5 {
+  grid-column: span 1;
+}
+
+.h-1,
+.h-2,
+.h-3,
+.h-4,
+.h-5 {
+  grid-row: span 1;
+}
+
+}
+
+@media only screen and (max-width: 400px) {
+/* An example to use combined with flex but could also be grids with different repetition of columns  */
+  .gallery-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: wrap;
+    gap: 2.5rem;
+    margin: 5rem;
+  }
+}
