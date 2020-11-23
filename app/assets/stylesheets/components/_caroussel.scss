@@ -4,6 +4,12 @@
 
 @media(max-width: 800px){
   .img-caroussel, .height-carroussel{
+    height: 400px;
+  }
+}
+
+@media(max-width: 650px){
+  .img-caroussel, .height-carroussel{
     height: 200px;
   }
 }
