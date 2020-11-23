@@ -319,7 +319,7 @@ html, body {
 }
 
 
-@media only screen and (max-width: 800px) {
+@media(max-width: 800px) {
   .gallery-wrapper {
     grid-template-columns: repeat(2, 2fr);
     grid-template-rows: 1fr;
@@ -355,13 +355,4 @@ html, body {
 
 }
 
-@media only screen and (max-width: 400px) {
-/* An example to use combined with flex but could also be grids with different repetition of columns  */
-  .gallery-wrapper {
-    display: flex;
-    flex-direction: column;
-    flex: wrap;
-    gap: 2.5rem;
-    margin: 5rem;
-  }
-}
+
