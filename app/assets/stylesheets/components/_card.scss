@@ -175,8 +175,26 @@
     opacity: .7;
     margin: 0;
     color: $black;
-
   }
+}
+
+.card-payment {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 20px 0;
+  text-align: center;
+  row-gap: 20px;
+}
+
+.summary-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-header {
+  color: $red;
+  font-weight: 700;
 }
 
 @media(max-width: 620px) {
@@ -187,8 +205,16 @@
 
   .card-room:hover h2{
   font-weight: bold;
+  }
+
+  .summary-header{
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      text-align: center;
+    }
+  }
 }
- }
 
 
 // .card-room {
