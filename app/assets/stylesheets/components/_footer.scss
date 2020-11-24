@@ -49,12 +49,17 @@
   font-size:8px;
   margin:10px;
 }
-
+.content{
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
 footer{
   background-color: $black;
   color: white;
   font-size:12px;
   padding:5px;
+  width: 100%;
 }
 
 @media(max-width: 576px){

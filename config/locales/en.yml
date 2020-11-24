@@ -52,7 +52,7 @@ en:
       title-menu: "Terrace indoor and outdoor"
     event:
       title-event: "Would you like to plan an event ?"
-      event: "Events"
+      title: "Events"
       text-event: "Access inn Pattaya can organise any events for you like seminar, wedding, birthday parties, theme party, charity events...The place can welcome up to 150persons, we can offer you different packages with Dj Booth, decorations(balloons tables, flowers, pictures corner), buffet, photograph, karaoke..."
       text-event-two: "Contact us for more info, we will be pleased to discuss with you."
     rooms:
@@ -79,6 +79,17 @@ en:
       available: " rooms available"
       date: " for your dates : "
       room-left: "rooms left"
+    confirmation:
+      title: "Confirmation of reservation n°"
+      issue: "Issued on"
+      total: "TOTAL PAID"
+      text: "We kindly confirm your reservation from"
+      to: "to"
+      for: "for the"
+      room: "room"
+      taxi: "If you need pick up transportation : "
+      please: "Please let us know here"
+      error: "The payment of your reservation has been canceled, please proceed to the payment to confirm your reservation."
   navbar:
     menu-1: "Home"
     menu-2: "Rooms"
@@ -97,6 +108,9 @@ en:
     check-in: "CHECK IN"
     check-out: "CHECK OUT"
     number-rooms: "N° ROOMS"
+    not-log: "You're not logged ! Please"
+    sign-in: "Sign-in"
+    book: "to book a room"
 
 
 

@@ -20,6 +20,18 @@
   color:$red;
 }
 
+.container-error{
+  position:relative;
+  text-align:center;
+  .error-message{
+    margin-top: 100px;
+  }
+  .size-error{
+    font-size: 70px;
+    color: $red;
+  }
+}
+
 @media(max-width: 650px){
   .svg-order{
     height: 100%;

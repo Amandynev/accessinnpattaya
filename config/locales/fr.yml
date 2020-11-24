@@ -48,6 +48,16 @@ fr:
       available: " les chambres disponibles"
       date: " pour vos dates :"
       room-left: "restantes"
+    confirmation:
+      title: "Confirmation de réservation n°"
+      issue: "Éffectuée le"
+      total: "MONTANT TOTAL"
+      text: "Nous vous confirmons votre réservation du"
+      to: "au"
+      for: "pour votre chambre"
+      taxi: "Besoin qu'un taxi vienne vous récupérer à l'aéroport ?"
+      please: "Faites le nous savoir ici"
+      error: "Le paiement de votre réservation a été annulé, merci de confirmer votre réservation en finalisant votre paiement."
   navbar:
     menu-1: "Accueil"
     menu-2: "Chambres"
@@ -66,6 +76,9 @@ fr:
     check-in: "ARRIVÉE"
     check-out: "DÉPART"
     number-rooms: "N° CHAMBRES"
+    not-log: " Vous n'êtes pas connecté ! Svp "
+    sign-in: " Connectez-vous "
+    book: " pour réserver."
 
 
 
