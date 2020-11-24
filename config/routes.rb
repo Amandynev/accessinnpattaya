@@ -4,11 +4,10 @@ Rails.application.routes.draw do
   scope '(:locale)', locale: /fr/ do
     get 'home/index'
     root to: 'pages#home'
-    resources :pages, only: [:index]
+    resources :pages, only: [:index,:new, :create]
     get 'contact', to: 'pages#contact', as: 'contact'
     get 'restaurant', to: 'pages#restaurant'
     get 'event', to: 'pages#event'
-    resources :contacts, only: [:index,:new, :create]
     get 'allmybookings', to: 'bookings#allmybookings', as: 'allmybookings'
     get 'searchedrooms', to: 'rooms#searchedrooms'
     resources :rooms, only: [:index, :show] do

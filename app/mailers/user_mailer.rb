@@ -6,7 +6,6 @@ class UserMailer < ApplicationMailer
   #
   def welcome
     @user = params[:user]
-
     mail to: @user.email, subject: 'Welcome to AccessInn Pattaya World'
   end
 
@@ -17,7 +16,6 @@ class UserMailer < ApplicationMailer
   #
   def reservation
     @user = params[:user]
-
     mail to: @user.email, subject: 'Reservation confirmed'
   end
 end
