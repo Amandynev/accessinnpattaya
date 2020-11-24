@@ -39,6 +39,7 @@ gem 'autoprefixer-rails', '~> 10.0.1.0'
 gem 'font-awesome-sass', '~> 5.13.0'
 gem 'simple_form', '~> 5.0.3'
 gem 'geocoder', '~> 1.6.4'
+gem 'postmark-rails',
 
 group :development, :test do
   gem 'pry-byebug'
