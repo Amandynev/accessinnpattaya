@@ -39,7 +39,7 @@ gem 'autoprefixer-rails', '~> 10.0.1.0'
 gem 'font-awesome-sass', '~> 5.13.0'
 gem 'simple_form', '~> 5.0.3'
 gem 'geocoder', '~> 1.6.4'
-gem 'postmark-rails',
+gem 'postmark-rails'
 
 group :development, :test do
   gem 'pry-byebug'
@@ -51,6 +51,7 @@ group :development, :test do
   gem 'rails-controller-testing', '~> 1.0.5'
   gem 'shoulda-matchers', '~> 4.4.1'
   gem 'webmock', '~> 3.9.2'
+  gem 'postmark-rails'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
