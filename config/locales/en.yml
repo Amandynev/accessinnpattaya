@@ -90,6 +90,12 @@ en:
       taxi: "If you need pick up transportation : "
       please: "Please let us know here"
       error: "The payment of your reservation has been canceled, please proceed to the payment to confirm your reservation."
+    allmybookings:
+      title: "Checkout"
+      title-card: "Your reservation"
+      rooms: "Rooms"
+      night: "Nights"
+      completed: "Completed your reservation"
   navbar:
     menu-1: "Home"
     menu-2: "Rooms"

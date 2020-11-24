@@ -2,15 +2,17 @@
 <br>
 <br>
 <br>
-<div class="container">
+<div class="container-void-footer mx-5">
   <div class="summary-header">
     <h1>Checkout summary</h1>
     <button id="pay" class="button-access-book">Pay <%= humanized_money_with_symbol @order.amount %></button>
   </div>
-  <div class="card-payment text-header">
-    <div>Room</div>
-    <div>Nigths * Price</div>
-    <div>Total Price</div>
+  <div class="card-payment title-summary">
+    <div>Room
+    <hr>
+    </div>
+    <div>Nigths * Price<hr></div>
+    <div>Total Price<hr></div>
   </div>
   <% @hash_bookings.each do |key, value| %>
     <div class="card-payment">
