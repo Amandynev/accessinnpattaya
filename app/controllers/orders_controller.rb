@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
   def create
     bookings = Booking.includes(:room).where("user_id = ? AND state = ?", current_user, "pending")
-    amount = bookings.map(&:price).sum
+    amount = bookings.map(&:price).sum / 100
     order  = Order.create!(amount: amount, state: 'pending', user: current_user)
     bookings.each do |booking|
       OrderBooking.create(order: order, booking: booking)
@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
       payment_method_types: ['card'],
       line_items: [{
         name: order.id,
-        amount: amount,
+        amount: order.amount_cents,
         currency: 'thb',
         quantity: 1
       }],

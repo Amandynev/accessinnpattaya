@@ -35,7 +35,6 @@ class BookingsController < ApplicationController
       @hash_bookings[booking.room.category.name][:start_at] = booking.start_at if @hash_bookings[booking.room.category.name][:start_at].nil?
       @hash_bookings[booking.room.category.name][:end_at] = booking.end_at if @hash_bookings[booking.room.category.name][:end_at].nil?
     end
-    @amount = @bookings.map(&:price).sum
   end
 
   def destroy_bookings
