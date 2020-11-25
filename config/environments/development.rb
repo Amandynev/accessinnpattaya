@@ -41,14 +41,16 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors= true
   config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.postmark_settings = { api_token: ENV['POSTMARK_API_TOKEN'] }
   config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
+    address:              'smtp.postmarkapp.com',
     port:                 587,
-    domain:               'gmail.com',
-    user_name:            ENV["GMAIL_EMAIL"],
-    password:             ENV["GMAIL_PASSWORD"],
-    authentication:       'plain',
-    enable_starttls_auto: true }
+    domain:               'yourdomain.com',
+    user_name:             ENV["POSTMARK_API_TOKEN"],
+    password:              ENV["POSTMARK_API_TOKEN"],
+    authentication:       :plain,
+    enable_starttls_auto: true
+  }
 
   # Bullet config
   config.after_initialize do
@@ -72,7 +74,7 @@ Rails.application.configure do
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
-  config.hosts << "49741b9fdcd2.ngrok.io"
+  config.hosts << "1d2620d4931b.ngrok.io"
 
   # Raises error for missing translations.
   # config.action_view.raise_on_missing_translations = true
