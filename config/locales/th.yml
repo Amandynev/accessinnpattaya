@@ -1,78 +1,95 @@
 th:
   page:
     home:
-      button-search: "ตรวจสอบความพร้อมใช้งาน"
-      dining-drinking: "สิ่งอำนวยความสะดวกของเรา"
+      button-search:  "ตรวจสอบความพร้อมใช้งาน"
+      dining-drinking:  "สิ่งอำนวยความสะดวกของเรา"
       contact-us: "ติดต่อเรา"
-      rooms: "ห้องพัก"
-hotel:
-name: "Access Inn Pattaya » >>> THAI แอ็คเซส อินน์ พัทยา
-address: "soi lengkee, Chon Buri 20150, pattaya, thailand » >>> THAI : ซอยเล้งกี่ , ชลบุรี 20150 พัทยา, ประเทศไทย
-description: "Access Inn Pattaya is a modern and design Hotel with a panoramic lift in the center of the vibrant city of Pattaya. The Hotel features a bar lounge and a restaurant. Dine on an international or thai meal at our restaurant, or relax by playing pool or dart games at Access inn bar while drinking wines or specials cocktails." แอ็คเซส อินน์ พัทยา เป็นโรงแรมที่ทันสมัยและมีดีไซน์พร้อมลิฟต์แบบพาโนรามาใจกลางเมืองพัทยาที่มีชีวิตชีวา โรงแรมมีเลานจ์บาร์และห้องอาหาร รับประทานอาหารนานาชาติหรืออาหารไทยที่ร้านอาหารของเราหรือผ่อนคลายด้วยการเล่นพูลหรือเกมปาเป้าที่ แอ็คเซส อินน์ พัทยา ในขณะที่ดื่มไวน์หรือค็อกเทลสูตรพิเศษ "
-restaurant: ร้านอาหาร
-title: "Events" อีเว้นท์
-description: "Fancy of celebrate your birthday with us or organise a private night ? let us know and we will take care of everything for you !"
-"อยากฉลองวันเกิดกับเราหรือจัดงานราตรีส่วนตัว ท่านสามารถแจ้งให้เราทราบและเราจะดูแลทุกอย่างให้คุณ!"
-bar:
-title: "Restaurant & Bar" ร้านอาหารและบาร์
+      rooms:  "ห้องพัก"
+      hotel:
+        name: "แอ็คเซส อินน์ พัทยา"
+        address:  "ซอยเล้งกี่, ชลบุรี 20150 พัทยา, ประเทศไทย"
+        description:  "แอ็คเซส อินน์ พัทยา เป็นโรงแรมที่ทันสมัยและมีดีไซน์พร้อมลิฟต์แบบพาโนรามาใจกลางเมืองพัทยาที่มีชีวิตชีวา โรงแรมมีเลานจ์บาร์และห้องอาหาร รับประทานอาหารนานาชาติหรืออาหารไทยที่ร้านอาหารของเราหรือผ่อนคลายด้วยการเล่นพูลหรือเกมปาเป้าที่ แอ็คเซส อินน์ พัทยา ในขณะที่ดื่มไวน์หรือค็อกเทลสูตรพิเศษ"
+      restaurant:
+        title: "อีเว้นท์"
+        description: "อยากฉลองวันเกิดกับเราหรือจัดงานราตรีส่วนตัว ท่านสามารถแจ้งให้เราทราบและเราจะดูแลทุกอย่างให้คุณ!"
+      bar:
+        title: "ร้านอาหารและบาร์"
+        description: "รับประทานอาหารนานาชาติหรืออาหารไทยที่ร้านอาหารในร่มและกลางแจ้งของเราซึ่งมีหลักสูตรพิเศษบ่อยๆ ... หรือผ่อนคลายด้วยการเล่นพูลหรือเกมปาเป้าที่ แอ็คเซส อินน์ บาร์ ในขณะที่ดื่มไวน์หรือค็อกเทลพิเศษ"
+      btn-more-infos: "ข้อมูลเพิ่มเติม"
+      from: "จาก"
+    restaurant:
+      title-menu: "ระเบียงในร่มและกลางแจ้ง"
+    event:
+      title-event: "คุณต้องการวางแผนการจัดงานอีเว้นท์หรือไม่"
+      title: "อีเว้นท์"
+      text-event: " แอคเซส อินน์ พัทยา สามารถจัดงานต่างๆให้คุณได้เช่นงานสัมมนา งานแต่งงาน งานปาร์ตี้วันเกิด ธีมงานการกุศล ... สถานที่นี้สามารถรองรับแขกได้ถึง 150 คนเราสามารถนำเสนอแพ็คเกจต่างๆให้กับคุณพร้อมด้วย บูธดีเจ การตกแต่ง (โต๊ะลูกโป่งดอกไม้ มุมถ่ายรูป), บุฟเฟ่ต์, ช่างถ่ายรูป, คาราโอเกะ ... "
+      text-event-two: " ติดต่อเราเพื่อขอข้อมูลเพิ่มเติมเรายินดีที่จะพูดคุยกับคุณ "
+    rooms:
+      night: "ต่อคืน"
+      balcony: "ระเบียง"
+      corner-table: "โต๊ะหัวมุม"
+      guests: "แขกเข้าพัก"
+      smocking: "สูบบุหรี่"
+      no-smocking: "ห้ามสูบบุหรี่"
+      similar: "ห้องที่คล้ายกัน"
+      around: "รอบ ๆ โรงแรม"
+      services: "บริการรูมเซอร์วิส"
+    contact:
+      name: "นามสกุลและชื่อจริง"
+      phone: "หมายเลขโทรศัพท์"
+      message: "ข้อความ"
+      send-btn: "ส่งข้อความ"
+      title: "ติดต่อเรา"
+    index:
+      title: "กำลังมองหาห้องพัก ?"
+    searched:
+      title: "ตรวจสอบห้องว่าง"
+      please: "โปรดดูที่ด้านล่าง"
+      available: "ห้องว่าง"
+      date: "สำหรับวันที่เข้าพักของคุณ"
+      room-left: "จำนวนห้องที่เหลือ"
+    confirmation:
+      title:  "การยืนยันหมายเลขการจอง"
+      issue: "ออกเมื่อ"
+      total: "ทั้งหมดที่จ่าย"
+      text: "เรายืนยันการจองห้องพักของคุณ"
+      to: "ถึง"
+      for: "สำหรับ"
+      room: "ห้อง"
+      taxi: "ถ้าคุณต้องการให้ทางโรงแรมไปรับ"
+      please: "โปรดแจ้งให้เราทราบที่นี่"
+      error: "การชำระเงินการจองของคุณถูกยกเลิกโปรดดำเนินการชำระเงินเพื่อยืนยันการจองของคุณ"
+    allmybookings:
+      title: "ออกจากระบบ"
+      title-card: "การจองของคุณ"
+      rooms: "ห้อง"
+      night: "คืน"
+      completed: " ทำการจองเรียบร้อยแล้ว"
+  navbar:
+    menu-1: "เมนูหน้าหลัก"
+    menu-2: "ห้องพัก"
+    menu-3: "ร้านอาหารบาร์"
+    menu-4: "อีเว้นท์"
+    menu-5: "ติดต่อเรา"
+    dropdown:
+      menu-1: "บัญชีของฉัน"
+      menu-2: "การจองของฉัน"
+      menu-3: "เช็คเอาท์จากระบบ"
+      menu-4: "ออกจากระบบ"
+    pay-btn: "จ่ายตอนนี้"
+  book-btn: "จองตอนนี้จาก %{price}/คืน"
+  calendar:
+    book-calendar:  "จองตอนนี้"
+    check-in: "เช็คอิน"
+    check-out:  "เช็คเอาท์"
+    number-rooms: "จำนวนห้องพัก"
+    not-log:  "คุณไม่ได้เข้าสู่ระบบ! กรุณาเข้าสู่ระบบ"
+    sign-in:  "เข้าสู่ระบบ"
+    book: "เพื่อจองห้องพัก"
 
-description: "Dine on an international or thai meal at our indoor & outdoor restaurant with special courses really often...Or relax by playing pool or dart games at Access inn bar while drinking wines or specials cocktails."
 
- "รับประทานอาหารนานาชาติหรืออาหารไทยที่ร้านอาหารในร่มและกลางแจ้งของเราซึ่งมีหลักสูตรพิเศษบ่อยๆ ... หรือผ่อนคลายด้วยการเล่นพูลหรือเกมปาเป้าที่ แอ็คเซส อินน์ บาร์ ในขณะที่ดื่มไวน์หรือค็อกเทลพิเศษ"
 
-btn-more-infos: "More infos" ข้อมูลเพิ่มเติม
-from: "From" จาก
-restaurant: ร้านอาหาร
-title-menu: "Terrace indoor and outdoor"  ระเบียงในร่มและกลางแจ้ง
-event: อีเว้นท์
-title-event: "Would you like to plan an event ?"
- คุณต้องการวางแผนการจัดงานอีเว้นท์หรือไม่
-event: "Events"
-  text-event: "Access inn Pattaya can organise any events for you like seminar, wedding, birthday parties, theme party, charity events...The place can welcome up to 150persons, we can offer you different packages with Dj Booth, decorations(balloons tables, flowers, pictures corner), buffet, photograph, karaoke..."
 
-แอคเซส อินน์ พัทยา สามารถจัดงานต่างๆให้คุณได้เช่นงานสัมมนา งานแต่งงาน งานปาร์ตี้วันเกิด ธีมงานการกุศล ... สถานที่นี้สามารถรองรับแขกได้ถึง 150 คนเราสามารถนำเสนอแพ็คเกจต่างๆให้กับคุณพร้อมด้วย บูธดีเจ การตกแต่ง (โต๊ะลูกโป่งดอกไม้ มุมถ่ายรูป), บุฟเฟ่ต์, ช่างถ่ายรูป, คาราโอเกะ ... "
 
-  text-event-two: "Contact us for more info, we will be pleased to discuss with you." ติดต่อเราเพื่อขอข้อมูลเพิ่มเติมเรายินดีที่จะพูดคุยกับคุณ "
 
-rooms:  ห้องพัก
-  night: "/per night" ต่อคืน
-  balcony: "Balcony" ระเบียง
-  corner-table: "Corner-table" โต๊ะหัวมุม
-  guests: "guests" แขกเข้าพัก
-  smocking: "Smocking" สูบบุหรี่
-  no-smocking: "No smocking" ห้ามสูบบุหรี่
-  similar: "Similar rooms" ห้องที่คล้ายกัน
-  around: "Around the hotel" รอบ ๆ โรงแรม
-  services: "Room services" บริการรูมเซอร์วิส
-contact: ติดต่อ
-  name: "Last name and First name" นามสกุลและชื่อจริง
-  phone: "Phone number" หมายเลขโทรศัพท์
-  message: "message" ข้อความ
-  send-btn: "Send message" ส่งข้อความ
-  title: "Contact us" ติดต่อเรา
-index:
-  title: "Looking for rooms ?" กำลังมองหาห้องพัก
-searched:
-  title: "Check availability" ตรวจสอบห้องว่าง
-  please: " Please see below" โปรดดูที่ด้านล่าง
-  available: " rooms available" "ห้องว่าง"
-  date: " for your dates : " "สำหรับวันที่เข้าพักของคุณ"
-  room-left: "rooms left" จำนวนห้องที่เหลือ
-navbar:
-menu-1: "Home" เมนูหน้าหลัก
-menu-2: "Rooms" ห้องพัก
-menu-3: "RestaurantBar" ร้านอาหารบาร์
-menu-4: "Event" อีเว้นท์
-menu-5: "Contact Us" ติดต่อเรา
-dropdown:
-menu-1: "My account" บัญชีของฉัน
-menu-2: "My reservation" การจองของฉัน
-menu-3: "Checkout" เช็คเอาท์จากระบบ
-menu-4: "Logout" ออกจากระบบ
-pay-btn: "PAY NOW" จ่ายตอนนี้
-book-btn: "Book now from %{price}/night" จองตอนนี้จาก% {ราคา} / คืน"
-calendar: ปฏิทิน
-book-calendar: "BOOK NOW" จองตอนนี้
-check-in: "CHECK IN" เช็คอิน
-check-out: "CHECK OUT" เช็คเอาท์
-number-rooms: "N° ROOMS" จำนวนห้องพัก
+
