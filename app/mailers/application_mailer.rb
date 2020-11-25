@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: ENV["GMAIL_EMAIL"]
+  default from: "reservations@accessinnpattaya.com"
   layout 'mailer'
 end
