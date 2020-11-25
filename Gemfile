@@ -35,6 +35,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'globalize', '~> 5.3.0'
 gem 'devise', '~> 4.7.3'
+gem 'devise-i18n'
 gem 'autoprefixer-rails', '~> 10.0.1.0'
 gem 'font-awesome-sass', '~> 5.13.0'
 gem 'simple_form', '~> 5.0.3'

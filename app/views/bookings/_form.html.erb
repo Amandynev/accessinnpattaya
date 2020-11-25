@@ -54,7 +54,11 @@
     <% if current_user %>
       <%= f.submit t('calendar.book-calendar'), class: "button-access-calendar-square", id: "sweet-alert-booking" %>
     <% else %>
-      <div class="link-sign-in">You're not logged ! Please  &nbsp; <%= link_to "sign in", new_user_session_path, class: "link-without-style" %> &nbsp; to book a room</div>
+      <div class="link-sign-in size-not-log">
+        <div class="size-not-log"> <%= t('calendar.not-log')%> </div>
+        <%= link_to t('calendar.sign-in'), new_user_session_path, class: "link-without-style size-not-log" %>
+        <%=t('calendar.book')%>
+      </div>
     <% end %>
   <% end %>
 </div>

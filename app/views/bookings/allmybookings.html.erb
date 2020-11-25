@@ -1,6 +1,6 @@
 <div class="container-void-footer">
   <div class="banner-pages mb-4">
-    <span id="" class="name">Check out</span>
+    <span id="" class="name"><%= t('page.allmybookings.title') %></span>
   </div>
   <% if @hash_bookings.present? %>
 
@@ -19,17 +19,17 @@
           </div>
           <div class="card-booking-description text-center">
             <div class="card-booking-description-title">
-              Your Reservation
+              <%= t('page.allmybookings.title-card') %>
             </div>
             <div class="card-booking-description-rooms">
               <div class="card-box">
-                <div class="title">CHECK-IN</div>
+                <div class="title"><%= t('calendar.check-in') %></div>
                 <div class="day"><%= value[:start_at].strftime('%d') %></div>
                 <div class="month"><%= value[:start_at].strftime('%b') %>, <%= value[:start_at].strftime('%Y') %></div>
                 <div class="text"><%= value[:start_at].strftime('%A').upcase %></div>
               </div>
               <div class="card-box">
-                <div class="title">CHECK-OUT</div>
+                <div class="title"><%= t('calendar.check-out') %></div>
                 <div class="day"><%= value[:end_at].strftime('%d') %></div>
                 <div class="month"><%= value[:end_at].strftime('%b') %>, <%= value[:end_at].strftime('%Y') %></div>
                 <div class="text"> <%= value[:end_at].strftime('%A').upcase %></div>
@@ -38,11 +38,11 @@
             <div class="card-booking-description-rooms">
               <div class="card-box">
                 <%= value[:number] %>
-                <div class="text"><%= "Room".pluralize(value[:number]).upcase %></div>
+                <div class="text"><%=t('page.allmybookings.rooms').pluralize(value[:number]).upcase %></div>
               </div>
               <div class="card-box">
                 <%= value[:nigths] %>
-                <div class="text"> <%= "Night".pluralize(value[:nigths]).upcase %></div>
+                <div class="text"> <%= t('page.allmybookings.nights').pluralize(value[:nigths]).upcase %></div>
               </div>
             </div>
             <div class="card-booking-description-price">
@@ -64,7 +64,7 @@
     </div>
     <div class="d-flex justify-content-center">
       <%= form_tag orders_path do %>
-        <%= submit_tag 'Completed your reservation', class: 'button-access-book' %>
+        <%= submit_tag t('page.allmybookings.completed'), class: 'button-access-book' %>
     </div>
     <% end %>
   <% else %>

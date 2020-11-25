@@ -1,4 +1,5 @@
 .container-void-footer {
+  margin: auto;
   min-height: calc(100vh - 111px);
 }
 
@@ -49,12 +50,13 @@
   font-size:8px;
   margin:10px;
 }
-
 footer{
   background-color: $black;
   color: white;
   font-size:12px;
+  margin-top: 5px;
   padding:5px;
+  width: 100%;
 }
 
 @media(max-width: 576px){

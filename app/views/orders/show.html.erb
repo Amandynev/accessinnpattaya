@@ -1,9 +1,8 @@
 <% if @order.state == "paid" %>
-
   <div class="container text-center">
         <div class="confirmation-reservation">
-          <h2>Confirmation of reservation n°<%= @order.id %></h1>
-             <p><strong>Issued on</strong> <%= @order.created_at.to_date %></p>
+          <%= t('page.confirmation.title') %><h2><%= @order.id %></h2>
+             <p><strong><%= t('page.confirmation.issue') %></strong> <%= @order.created_at.to_date %></p>
         </div>
   <div class="svg-paiement">
     <div class="">
@@ -16,22 +15,40 @@
         </div>
 
         <div class="info-paiement">
-          <p><strong>TOTAL PAID</strong> <%= humanized_money_with_symbol @order.amount %></p>
+          <p><strong><%= t('page.confirmation.total') %></strong> <%= humanized_money_with_symbol @order.amount %></p>
         </div>
         <hr>
         <br>
 
         <div class="text-confirmation">
-          We kindly confirm your reservation from <%= @order.bookings.first.start_at %> to  <%= @order.bookings.first.end_at %>
-          for the <%= @order.bookings.first.room.category.name %> room.
+          <%= t('page.confirmation.text') %><%= @order.bookings.first.start_at %> <%= t('page.confirmation.to') %>  <%= @order.bookings.first.end_at %>
+          <%= t('page.confirmation.for') %><%= @order.bookings.first.room.category.name %><%= t('page.confirmation.room') %>.
         </div>
         <div class="text-pickup">
-          <p>If you need pick up transportation : </p>
-          <a href="mailto:reservations@accessinnpattaya.com" class="link-without-style color-red "> <strong>Please let us know here</strong></a>
+          <p><%= t('page.confirmation.taxi') %></p>
+          <a href="mailto:reservations@accessinnpattaya.com" class="link-without-style color-red "> <strong><%= t('page.confirmation.please') %></strong></a>
         </div>
      </div>
   </div>
   </div>
 <% else %>
-  <p class="mt-5"> error paiment, your reservation isn't confirm please do it again</p>
+  <div class="container-void-footer">
+    <div class="error-message">
+      <p class=""> <%= t('page.confirmation.error') %></p>
+    </div>
+    <i class="far fa-times-circle size-error"></i>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+  </div>
 <% end  %>

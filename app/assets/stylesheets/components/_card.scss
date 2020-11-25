@@ -88,12 +88,12 @@
 
 .card-booking-description-price{
   width: 100%;
-  font-size: 35px;
+  font-size: 30px;
   text-align: center;
   background-color: $black;
   display: inline-flex;
   justify-content: center;
-  padding: 15px 0;
+  padding: 5px 0;
   color: white;
   background-color: black;
   .detail {
@@ -192,7 +192,7 @@
   justify-content: space-between;
 }
 
-.text-header {
+.title-summary {
   color: $red;
   font-weight: 700;
 }

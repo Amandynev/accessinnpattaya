@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  scope '(:locale)', locale: /fr/ do
+  scope '(:locale)', locale: /th|fr/ do
     get 'home/index'
     root to: 'pages#home'
     resources :pages, only: [:index,:new, :create]
