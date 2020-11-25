@@ -15,7 +15,7 @@ class UserMailer < ApplicationMailer
   #   en.user_mailer.reservation.subject
   #
   def reservation
-    # @user = params[:user]
-    mail to: "maxence.lenoir1206@gmail.com", subject: 'Reservation confirmed', from: 'reservations@accessinnpattaya.com', track_opens: 'true', message_stream: 'outbound'
+    @user = params[:user]
+    mail to: @user.email, subject: 'Reservation confirmed', from: 'reservations@accessinnpattaya.com', track_opens: 'true', message_stream: 'outbound'
   end
 end
