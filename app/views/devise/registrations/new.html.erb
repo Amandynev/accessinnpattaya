@@ -4,6 +4,12 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :first_name, label: 'First name', required: true, input_html: { maxlength: 15, size: 40, value: nil } %>
+    <%= f.input :last_name, label: 'Last name', required: true, input_html: { maxlength: 15, size: 40, value: nil } %>
+    <%= f.input :phone, label: 'Phone number', required: true, input_html: { maxlength: 15, size: 40, value: nil }%>
+    <%= f.input :text_field, label: 'Adress', input_html: { maxlength: 15, size: 40, value: nil }%>
+    <%= f.input :text_field, label: 'City code', input_html: { maxlength: 15, size: 40, value: nil }%>
+    <%= f.input :text_field, label: 'Country', required: true, input_html: { maxlength: 15, size: 40, value: nil }%>
     <%= f.input :email,
                 required: true,
                 autofocus: true ,
