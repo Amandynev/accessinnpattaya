@@ -15,12 +15,12 @@ class BookingsController < ApplicationController
         end
       end
       if @saving
-        redirect_to room_path(@room, param: 'ok')
+        redirect_to room_path(@room), booked: 'ok'
       else
         render "rooms/show"
       end
     else
-      redirect_to room_path(@room, param: 'nok')
+      redirect_to room_path(@room), not_booked: 'ok'
     end
   end
 

@@ -23,29 +23,8 @@ const functionValidation = () => {
       event.preventDefault();
       checkInputsMessage();
     });
-  
-    const form = document.querySelector('.new_page')
-    form.addEventListener('submit',(event) => {
-      const success = document.querySelectorAll('.success')
-      if(success.length === 3){
-        initSweetalert('#sweet-alert-message', {
-        title: "Message sent",
-        text: "We will get back to you shortly.",
-        icon: "success"
-        });
-      };
-    });
   }
 };
-
-const initSweetalert = (selector, options = {}) => {
-  const swalButton = document.querySelector(selector);
-  if (swalButton) {
-    swal(options);
-  }
-};
-
-
 
 const checkInputsName = () => {
   const name = document.querySelector('.contact-form-name');
