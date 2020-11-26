@@ -6,7 +6,32 @@
   <div class="contactus">
 
       <div class="contact-design" id="contact">
-        <%= render 'shared/contact_form' %>
+        <% if user_signed_in? %>
+          <%= simple_form_for @contact, url: pages_path, remote: true do |f| %>
+            <div class="form-contact">
+              <div class="form-control-access">
+                <%= f.input :message, class:"contact-form-message" %>
+                <%= f.input :name, as: :hidden, class:"contact-form-message", input_html: { value: current_user.email } %>
+                <%= f.input :email, as: :hidden, class:"contact-form-message", input_html: { value: current_user.email } %>
+                <%= f.input :phone, as: :hidden, class:"contact-form-message", input_html: { value: current_user.email } %>
+
+                <i class="fas fa-check-circle "></i>
+                <i class="fas fa-exclamation-circle"></i>
+
+                <div class="text-error-message">
+                  <small>Please tell us more</small>
+                </div>
+              </div>
+
+              <div class="text-center">
+                <button type="submit" class='button-access' id='sweet-alert-message'><%= t('page.contact.send-btn') %></button>
+              </div>
+
+            </div>
+          <% end %>
+        <% else %>
+          <%= render 'shared/contact_form' %>
+        <% end %>
       </div>
 
 
