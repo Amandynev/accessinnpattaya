@@ -105,6 +105,8 @@ en:
       title-card: "Your reservation"
       rooms: "Rooms"
       nights: "Nights"
+      total: "Total"
+      price: "Price"
       completed: "Completed your reservation"
   navbar:
     menu-1: "Home"

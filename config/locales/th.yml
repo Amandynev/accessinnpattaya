@@ -73,8 +73,11 @@ th:
       title: "ออกจากระบบ"
       title-card: "การจองของคุณ"
       rooms: "ห้อง"
-      night: "คืน"
+      nights: "คืน"
+      total: "ราคารวม"
+      price: "ราคา"
       completed: " ทำการจองเรียบร้อยแล้ว"
+
   navbar:
     menu-1: "เมนูหน้าหลัก"
     menu-2: "ห้องพัก"

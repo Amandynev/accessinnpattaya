@@ -4,20 +4,20 @@
 <br>
 <div class="container-void-footer mx-5">
   <div class="summary-header">
-    <h1>Checkout summary</h1>
+    <h1><%= t('page.allmybookings.title') %></h1>
     <button id="pay" class="button-access-book">Pay <%= humanized_money_with_symbol @order.amount %></button>
   </div>
   <div class="card-payment title-summary">
-    <div>Room
+    <div><%=t('page.allmybookings.rooms')%>
     <hr>
     </div>
-    <div>Nigths * Price<hr></div>
-    <div>Total Price<hr></div>
+    <div><%= t('page.allmybookings.nights')%> * <%=t('page.allmybookings.price')%><hr></div>
+    <div><%= t('page.allmybookings.total') %><hr></div>
   </div>
   <% @hash_bookings.each do |key, value| %>
     <div class="card-payment">
       <div><%= key %></div>
-      <div><%= " #{value[:nigths]} nigths * #{humanized_money_with_symbol value[:price]}" %></div>
+      <div><%= " #{value[:nigths]} #{t('page.allmybookings.nights')} * #{humanized_money_with_symbol value[:price]}" %></div>
       <div><%= "#{humanized_money_with_symbol value[:price]*value[:nigths]}" %></div>
     </div>
   <% end %>

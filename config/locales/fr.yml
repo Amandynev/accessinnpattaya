@@ -73,6 +73,8 @@ fr:
       title-card: "Votre réservation"
       rooms: "Chambre"
       nights: "Nuits"
+      total: "Total"
+      price: "Prix"
       completed: "Paiement"
   navbar:
     menu-1: "Accueil"
