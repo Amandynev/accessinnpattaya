@@ -19,6 +19,7 @@ th:
       from: "จาก"
     restaurant:
       title-menu: "ระเบียงในร่มและกลางแจ้ง"
+      title-banner: "ร้านอาหารและบาร์"
     event:
       title-event: "คุณต้องการวางแผนการจัดงานอีเว้นท์หรือไม่"
       title: "อีเว้นท์"
@@ -34,6 +35,15 @@ th:
       similar: "ห้องที่คล้ายกัน"
       around: "รอบ ๆ โรงแรม"
       services: "บริการรูมเซอร์วิส"
+      safety-box: " ตู้เซฟ"
+      wifi: "ไวไฟ อินเทอร์เน็ตไร้สาย"
+      air-cond: " เครื่องปรับอากาศ"
+      minibar: "มินิบาร์"
+      lift: "ลิฟต์"
+      shower-room: "ห้องอาบน้ำ"
+      room-service: "รูมเซอร์วิส"
+      laundry: "บริการซักรีด"
+      parking: "ที่จอดรถ"
     contact:
       name: "นามสกุลและชื่อจริง"
       phone: "หมายเลขโทรศัพท์"

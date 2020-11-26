@@ -19,6 +19,7 @@ fr:
       from: "À partir de "
     restaurant:
       title-menu: "Terrasse intérieur et extérieur"
+      title-banner: "Restaurant & Bar "
     event:
       title-event: "Un événement à organiser ?"
       title: " Événements"
@@ -35,6 +36,14 @@ fr:
       around: "À l'hôtel"
       services: "Les points forts"
       safety-box: "Coffre-fort"
+      wifi: "Wifi"
+      air-cond: "Climatisation"
+      minibar: "Mini bar"
+      lift: "Ascenseur"
+      shower-room: "Douche"
+      room-service: "Services en chambre"
+      laundry: "Blanchisserie"
+      parking: "Parking(payant)"
     contact:
       name: "Nom et prénom"
       phone: "Téléphone"
