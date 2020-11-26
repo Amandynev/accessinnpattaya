@@ -339,9 +339,9 @@
 </div>
 
 
-<% if params[:param] == "nok" %>
+<% if booked %>
   <span id="booking-canceled"></span>
 <% end %>
-<% if params[:param] == "ok" %>
+<% if not_booked %>
   <span id="booking-success"></span>
 <% end %>

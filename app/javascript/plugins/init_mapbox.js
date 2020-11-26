@@ -16,7 +16,6 @@ const initMapbox = () => {
       style: 'mapbox://styles/mapbox/streets-v10'
     });
     const marker = JSON.parse(mapElement.dataset.markers);
-    console.log(marker)
     new mapboxgl.Marker()
       .setLngLat([ marker.lng, marker.lat ])
       .addTo(map);
