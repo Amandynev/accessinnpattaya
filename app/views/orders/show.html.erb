@@ -1,7 +1,7 @@
 <% if @order.state == "paid" %>
   <div class="container text-center">
         <div class="confirmation-reservation">
-          <%= t('page.confirmation.title') %><h2><%= @order.id %></h2>
+         <h2><%= t('page.confirmation.title') %><%= @order.id %></h2>
              <p><strong><%= t('page.confirmation.issue') %></strong> <%= @order.created_at.to_date %></p>
         </div>
   <div class="svg-paiement">
@@ -21,8 +21,12 @@
         <br>
 
         <div class="text-confirmation">
-          <%= t('page.confirmation.text') %><%= @order.bookings.first.start_at %> <%= t('page.confirmation.to') %>  <%= @order.bookings.first.end_at %>
-          <%= t('page.confirmation.for') %><%= @order.bookings.first.room.category.name %><%= t('page.confirmation.room') %>.
+          <div class="space">
+            <%= t('page.confirmation.text') %><%= @order.bookings.first.start_at %>
+            <%= t('page.confirmation.to') %> <%= @order.bookings.first.end_at %>
+            <%= t('page.confirmation.for') %><%= @order.bookings.first.room.category.name %>
+            <%= t('page.confirmation.room') %>.
+          </div>
         </div>
         <div class="text-pickup">
           <p><%= t('page.confirmation.taxi') %></p>

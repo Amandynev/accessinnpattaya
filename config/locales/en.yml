@@ -50,6 +50,7 @@ en:
       from: "From"
     restaurant:
       title-menu: "Terrace indoor and outdoor"
+      title-banner: "Restaurant & Bar "
     event:
       title-event: "Would you like to plan an event ?"
       title: "Events"
@@ -66,6 +67,14 @@ en:
       around: "Around the hotel"
       services: "Room services"
       safety-box: "Safety-box"
+      wifi: "Wifi"
+      air-cond: "Air-condition"
+      minibar: "Minibar"
+      lift: "Lift"
+      shower-room: "Shower-room"
+      room-service: "Room-service"
+      laundry: "Laundry services"
+      parking: "Parking"
     contact:
       name: "Last name and First name"
       phone: "Phone number"
@@ -95,7 +104,9 @@ en:
       title: "Checkout"
       title-card: "Your reservation"
       rooms: "Rooms"
-      night: "Nights"
+      nights: "Nights"
+      total: "Total"
+      price: "Price"
       completed: "Completed your reservation"
   navbar:
     menu-1: "Home"
