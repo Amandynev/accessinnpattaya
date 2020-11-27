@@ -314,7 +314,7 @@
   <!------------------------- column calendar et card product -------------------------------->
 
     <div class="column-calendar">
-      <div class="calendar-booking">
+      <div class="calendar-booking" id="booking-dates-disabled" data-bookings="<%= @bookings_dates.to_json %>">
         <%= render '/bookings/form', booking: @booking %>
       </div>
       <div class="display-flex-similar-room">
@@ -338,10 +338,9 @@
   </div>
 </div>
 
-
 <% if booked %>
-  <span id="booking-canceled"></span>
+  <span id="booking-success"></span>
 <% end %>
 <% if not_booked %>
-  <span id="booking-success"></span>
+  <span id="booking-canceled"></span>
 <% end %>
