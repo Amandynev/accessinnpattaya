@@ -28,6 +28,6 @@ class OrdersController < ApplicationController
   end
 
   def allmyreservations
-    @orders = Order.where(user: current_user, state: %w[paid pending])
+    @orders = Order.where(user: current_user, state: %w[paid pending]).order(created_at: :asc)
   end
 end
