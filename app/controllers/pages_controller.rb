@@ -23,9 +23,13 @@ class PagesController < ApplicationController
 
   def create
     @contact = Page.new(params[:page])
-    mail = UserMailer.with(email: @contact.email, message: @contact.message).contact
-    if mail.deliver_later
-      redirect_to contact_path, sent: "ok"
+    if @contact.valid?
+      mail = UserMailer.with(email: @contact.email, message: @contact.message).contact
+      if mail.deliver_later
+        redirect_to contact_path, sent: "ok"
+      else
+        render 'contact'
+      end
     else
       render 'contact'
     end
