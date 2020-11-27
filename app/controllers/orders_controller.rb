@@ -26,4 +26,8 @@ class OrdersController < ApplicationController
   def show
     @order = current_user.orders.find(params[:id])
   end
+
+  def allmyreservations
+    @orders = Order.where(user: current_user, state: %w[paid pending])
+  end
 end

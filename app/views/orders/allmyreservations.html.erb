@@ -1,0 +1,9 @@
+<div class="container-void-footer">
+  <% if @orders.empty? %>
+    Vous n'avez pas de réservation pour le moment, n'hésitez pas à le faire now !
+  <% else %>
+    <% @orders.each do |order| %>
+      <%= order %>
+    <% end %>
+  <% end %>
+</div>

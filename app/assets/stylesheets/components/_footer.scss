@@ -1,5 +1,8 @@
 .container-void-footer {
   margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: calc(100vh - 111px);
 }
 
