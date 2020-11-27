@@ -5,4 +5,8 @@ class Order < ApplicationRecord
   monetize :amount_cents
   validates :amount_cents, presence: true
   validates :state, inclusion: { in: ["pending", "canceled", "paid"] }
+
+  def paid?
+    state == "paid"
+  end
 end

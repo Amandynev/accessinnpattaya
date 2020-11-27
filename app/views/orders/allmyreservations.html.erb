@@ -1,0 +1,27 @@
+<div class="container">
+  <% if @orders.empty? %>
+    Vous n'avez pas de réservation pour le moment, n'hésitez pas à le faire now !
+  <% else %>
+  <br><br><br><br>
+    <% @orders.each do |order| %>
+    <div class="card-resa">
+      <div class="card-resa-title">
+        This is my order
+      </div>
+      <% refacto_order(order.bookings).each do |key, value| %>
+        <div>Chambre : <%= key %> - Date <%= value[:start_at] %> - <%= value[:end_at] %> - Nombre chambre : <%= value[:number] %> - Nombre nuits : <%= value[:nigths] %> - Prix : <%= "#{value[:price]}#{order.amount.symbol}" %></div>
+      <% end %>
+      <% if order.paid? %>
+        <div class="icon validated">
+          <i class="fas fa-check"></i>
+        </div>
+      <% else %>
+        <div class="icon pending">
+          <i class="fas fa-ellipsis-h"></i>
+        </div>
+      <% end %>
+    </div>
+    <% end %>
+  <% end %>
+</div>
+<% console %>
