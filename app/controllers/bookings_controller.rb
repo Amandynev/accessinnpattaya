@@ -64,7 +64,7 @@ class BookingsController < ApplicationController
         start_date = params[:booking][:start_at] == "" ? Date.today : Date.parse(params[:booking][:start_at])
         end_date = params[:booking][:end_at] == "" ? Date.today : Date.parse(params[:booking][:end_at])
         registered_booking_range = start_date..end_date
-        availability = false if booking_range.overlaps?(registered_booking_range)
+        availability = false if booking_range.overlaps?(registered_booking_range) || date_range.include?(end_date) || (start_date < booking.start_at && end_date > booking.end_at)
         rooms_ok << room if availability
       end
       return rooms_ok if rooms_ok.size == params[:booking][:number].to_i

@@ -18,6 +18,7 @@ class RoomsController < ApplicationController
     @room = Room.find(params[:id])
     @categories = Category.includes(:translations).all.reject { |category| category.name == @room.category.name }
     @booking = Booking.new
+    dates_flat_pickr
   end
 
   def searchedrooms
@@ -37,5 +38,19 @@ class RoomsController < ApplicationController
 
   def set_room
     @room = Room.find(params[:id])
+  end
+
+  def dates_flat_pickr
+    hash_availability = Hash.new(0)
+    @bookings_dates = []
+    bookings = Booking.where(state: %w[pending paid], room: Category.first.rooms)
+    bookings.map { |booking| (booking.start_at..booking.end_at)}.each do |range_date|
+      range_date.each do |date|
+        hash_availability[date.to_s] += 1
+      end
+    end
+    hash_availability.each do |date, value|
+      @bookings_dates << { from: date, to: date } if value == Category.first.rooms.size
+    end
   end
 end
