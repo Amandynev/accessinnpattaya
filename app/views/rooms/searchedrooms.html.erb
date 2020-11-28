@@ -18,7 +18,7 @@
               <div class="room-name">
                 <h2><%= room.category.name %></h2>
                 <div class="available">
-                  <span class= "style-available">
+                  <span class= "style-available" id="<%= room.category.name.split("").first %>">
                   <% if @hashsearched[room.category.name] %>
                     <%= @hashsearched[room.category.name] %>
                   <% end %>
