@@ -6,4 +6,8 @@ class User < ApplicationRecord
 
   has_many :bookings
   has_many :orders
+
+  def bookings?
+    bookings.select{ |booking| booking.state == "pending"}.present?
+  end
 end
