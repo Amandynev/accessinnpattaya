@@ -26,7 +26,7 @@ class BookingsController < ApplicationController
   end
 
   def allmybookings
-    @bookings = Booking.includes(room: :category).user_bookings(current_user)
+    @bookings = Booking.includes(room: { category: :translations }).user_bookings(current_user)
     @hash_bookings = helpers.refacto_order(@bookings)
   end
 

@@ -4,7 +4,7 @@ class Booking < ApplicationRecord
   has_one :category, through: :room
   has_one :order_booking
   has_one :order, through: :order_booking
-  validates_presence_of :start_at, :end_at, message: "'Start'Coucou"
+  validates_presence_of :start_at, :end_at
   validate :start_at_cannot_be_in_the_past
   validate :end_at_cannot_be_before_start_at
 

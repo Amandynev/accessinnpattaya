@@ -2,10 +2,13 @@ class OrdersController < ApplicationController
   def create
     bookings = Booking.includes(:room).where("user_id = ? AND state = ?", current_user, "pending")
     amount = bookings.map(&:price).sum / 100
-    order  = Order.create!(amount: amount, state: 'pending', user: current_user)
+    order_30_minutes_before = Order.where("state = ? AND user_id = ?", "pending", current_user)
+    order_30_minutes_before.destroy_all unless order_30_minutes_before.empty?
+    order = Order.create!(amount: amount, state: 'pending', user: current_user)
     bookings.each do |booking|
       OrderBooking.create(order: order, booking: booking)
     end
+    OrderJob.set(wait: 30.minutes).perform_later(order.id)
 
     session = Stripe::Checkout::Session.create(
       payment_method_types: ['card'],
@@ -28,6 +31,6 @@ class OrdersController < ApplicationController
   end
 
   def allmyreservations
-    @orders = Order.where(user: current_user, state: %w[paid pending]).order(created_at: :asc)
+    @orders = Order.includes(:order_bookings, bookings: { room: { category: :translations } }).where(user: current_user, state: %w[paid pending]).order(created_at: :asc)
   end
 end
