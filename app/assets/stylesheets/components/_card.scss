@@ -50,7 +50,7 @@
   position: relative;
   color: white;
   font-family: "Gilda Display";
-  i {
+  .fa-times-circle {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -195,23 +195,6 @@
 .title-summary {
   color: $red;
   font-weight: 700;
-}
-
-.card-resa{
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  align-items: flex-start;
-  .card-resa-title {
-    font-size: 20px;
-    color: $red;
-  }
-  .icon {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    font-size: 16px;
-  }
 }
 
 @media(max-width: 620px) {

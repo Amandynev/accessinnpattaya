@@ -63,7 +63,7 @@
           <%= image_tag "log-in.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
 
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <%= link_to t('navbar.dropdown.menu-2'), allmybookings_path, class: "dropdown-item", id:"my_reservations" %>
+          <%= link_to t('navbar.dropdown.menu-2'), allmyreservations_path, class: "dropdown-item", id:"my_reservations" %>
           <%= link_to t('navbar.dropdown.menu-4'), destroy_user_session_path, method: :delete, class: "dropdown-item" %>
         </div>
 
