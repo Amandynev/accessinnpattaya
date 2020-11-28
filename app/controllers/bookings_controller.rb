@@ -17,6 +17,7 @@ class BookingsController < ApplicationController
       if @saving
         redirect_to room_path(@room), booked: 'ok'
       else
+        @categories = Category.includes(:translations).all.reject { |category| category.name == @room.category.name }
         render "rooms/show"
       end
     else

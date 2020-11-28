@@ -18,7 +18,6 @@ class RoomsController < ApplicationController
     @room = Room.find(params[:id])
     @categories = Category.includes(:translations).all.reject { |category| category.name == @room.category.name }
     @booking = Booking.new
-    dates_flat_pickr(@room.category.rooms)
   end
 
   def searchedrooms
@@ -26,10 +25,11 @@ class RoomsController < ApplicationController
     hash_unavailability = Hash.new(0)
     bookings = Booking.includes(room: :category).where("end_at >= ?", Date.today)
     bookings.each do |booking|
-      date_range = booking.start_at..booking.end_at
+      booking_range = booking.start_at..booking.end_at
       start_date = params[:start_at] == [""] ? Date.today : Date.parse(params[:start_at].first)
       end_date = params[:end_at] == [""] ? Date.today : Date.parse(params[:end_at].first)
-      hash_unavailability[booking.room.category.name] += 1 if (date_range.include?(start_date) || date_range.include?(end_date) || (start_date < booking.start_at && end_date > booking.end_at)) && booking.state == "pending"
+      registered_booking_range = start_date..end_date
+      hash_unavailability[booking.room.category.name] += 1 if booking_range.overlaps?(registered_booking_range) && %w[pending paid].include?(booking.state)
     end
     @hashsearched = HASH_AVAILABILITY.merge(hash_unavailability) { |_k, newval, oldval| newval - oldval }
   end
@@ -38,19 +38,5 @@ class RoomsController < ApplicationController
 
   def set_room
     @room = Room.find(params[:id])
-  end
-
-  def dates_flat_pickr(rooms)
-    hash_availability = Hash.new(0)
-    @bookings_dates = []
-    bookings = Booking.where(state: %w[pending paid], room: rooms).where("end_at >= ?", Date.today)
-    bookings.map { |booking| (booking.start_at..booking.end_at) }.each do |range_date|
-      range_date.each do |date|
-        hash_availability[date.to_s] += 1
-      end
-    end
-    hash_availability.each do |date, value|
-      @bookings_dates << { from: date, to: date } if value == rooms.size
-    end
   end
 end
