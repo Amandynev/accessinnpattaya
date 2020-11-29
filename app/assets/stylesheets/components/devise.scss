@@ -1,0 +1,21 @@
+.container-devise{
+  margin: auto;
+  min-height: calc(100vh - 111px);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  .devise {
+    width: 30%;
+    margin-top: 80px;
+  }
+}
+
+
+@media(max-width: 620px) {
+  .container-devise {
+    .devise{
+      width: 90%;
+    }
+  }
+  }
+

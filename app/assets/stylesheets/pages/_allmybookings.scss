@@ -2,4 +2,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content:center;
+  min-height: calc(100vh - 111px);
+}
+.no-booking-yet{
+  margin-top: 100px;
+  margin-bottom: 50px;
+  display: grid;
+  text-align: center;
 }

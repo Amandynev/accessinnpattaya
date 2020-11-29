@@ -50,6 +50,7 @@ fr:
       message: "message"
       send-btn: "Envoyer le message"
       title: "Contactez-nous"
+      open-24: "Ouvert 24h/24h"
     index:
       title: "Vous cherchez une chambre ?"
     searched:
@@ -76,6 +77,7 @@ fr:
       total: "Total"
       price: "Prix"
       completed: "Paiement"
+      no-booking-yet: "Vous n'avez aucune réservation pour le moment ..."
   navbar:
     menu-1: "Accueil"
     menu-2: "Chambres"
