@@ -1,6 +1,11 @@
 <div class="container-bookings">
   <% if @orders.empty? %>
-    Vous n'avez pas de réservation pour le moment, n'hésitez pas à le faire now !
+    <div class=" no-booking-yet">
+      <%= t('page.allmybookings.no-booking-yet') %>
+      <div class="">
+        <%= link_to t('calendar.book-calendar'), rooms_path, class: "button-access-book" %>
+      </div>
+    </div>
   <% else %>
     <br><br><br><br>
     <% @orders.each do |order| %>
@@ -14,7 +19,7 @@
           </div>
           <div class="card-booking-description text-center">
             <div class="card-booking-description-title">
-              <%= t('page.allmybookings.title-card') %>             
+              <%= t('page.allmybookings.title-card') %>
               <% if order.paid? %>
                 <span class="icon validated">
                   <i class="fas fa-check"></i>

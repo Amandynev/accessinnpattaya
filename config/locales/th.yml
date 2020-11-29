@@ -50,6 +50,7 @@ th:
       message: "ข้อความ"
       send-btn: "ส่งข้อความ"
       title: "ติดต่อเรา"
+      open-24: "Open 24h hours"
     index:
       title: "กำลังมองหาห้องพัก ?"
     searched:
@@ -77,7 +78,7 @@ th:
       total: "ราคารวม"
       price: "ราคา"
       completed: " ทำการจองเรียบร้อยแล้ว"
-
+      no-booking-yet: "คุณยังไม่มีการจอง ..."
   navbar:
     menu-1: "เมนูหน้าหลัก"
     menu-2: "ห้องพัก"

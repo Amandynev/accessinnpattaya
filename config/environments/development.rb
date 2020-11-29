@@ -39,18 +39,17 @@ Rails.application.configure do
   #mail-form setup
 
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors= true
   config.action_mailer.delivery_method = :letter_opener
   # config.action_mailer.postmark_settings = { api_token: ENV['POSTMARK_API_TOKEN'] }
-  config.action_mailer.smtp_settings = {
-    address:              'smtp.postmarkapp.com',
-    port:                 587,
-    domain:               'yourdomain.com',
-    user_name:             ENV["POSTMARK_API_TOKEN"],
-    password:              ENV["POSTMARK_API_TOKEN"],
-    authentication:       :plain,
-    enable_starttls_auto: true
-  }
+  # config.action_mailer.smtp_settings = {
+  #   address:              'smtp.postmarkapp.com',
+  #   port:                 587,
+  #   domain:               'yourdomain.com',
+  #   user_name:             ENV["POSTMARK_API_TOKEN"],
+  #   password:              ENV["POSTMARK_API_TOKEN"],
+  #   authentication:       :plain,
+  #   enable_starttls_auto: true
+  # }
 
   # Bullet config
   config.after_initialize do

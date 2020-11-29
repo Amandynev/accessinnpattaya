@@ -68,8 +68,11 @@
     </div>
     <% end %>
   <% else %>
-    <div class="d-flex justify-content-center">
-      You don't any have booking yet ...
+   <div class=" no-booking-yet">
+      <%= t('page.allmybookings.no-booking-yet') %>
+      <div class="">
+        <%= link_to t('calendar.book-calendar'), rooms_path, class: "button-access-book" %>
+      </div>
     </div>
   <% end %>
 </div>
