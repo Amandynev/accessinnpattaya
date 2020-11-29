@@ -109,6 +109,7 @@ en:
       total: "Total"
       price: "Price"
       completed: "Completed your reservation"
+      no-booking-yet: "You don't any have booking yet ..."
   navbar:
     menu-1: "Home"
     menu-2: "Rooms"
@@ -143,6 +144,7 @@ en:
               blank: "Select date"
             end_at:
               blank: "Select date"
+
 
 
 
