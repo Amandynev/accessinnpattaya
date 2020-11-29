@@ -66,7 +66,7 @@ en:
   first-name: "First name"
   last-name: "Last name"
   phone-user: "Phone number"
-  adress-user: "Adress"
+  adress-user: "Address"
   citycode-user: "City code"
   country-user: "Country"
 

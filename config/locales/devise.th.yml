@@ -60,3 +60,9 @@ th:
       not_saved:
         one: "1 ข้อผิดพลาด %{resource} จะไม่ถูกบันทึก:"
         other: "%{count} ข้อผิดพลาด %{resource} จะไม่ถูกบันทึก:"
+  first-name: "ชื่อจริง"
+  last-name: "นามสกุล"
+  phone-user: "หมายเลขโทรศัพท์"
+  adress-user: "ที่อยู่"
+  citycode-user: "รหัสเมือง"
+  country-user: "ประเทศ"
