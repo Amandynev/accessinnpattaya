@@ -59,7 +59,7 @@ const alertNewBooking = () => {
     buttons: { close: false, confirm: { text: 'PAY NOW' }}
     }, (value) => {
       if (value) {
-        const link = document.querySelector('#my_reservations');
+        const link = document.querySelector('#all_my_bookings');
         link.click()
       }
     });
