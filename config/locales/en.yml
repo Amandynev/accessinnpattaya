@@ -81,6 +81,7 @@ en:
       message: "message"
       send-btn: "Send message"
       title: "Contact us"
+      open-24: "Open 24h hours"
     index:
       title: "Looking for rooms ?"
     searched:

@@ -50,6 +50,7 @@ th:
       message: "ข้อความ"
       send-btn: "ส่งข้อความ"
       title: "ติดต่อเรา"
+      open-24: "Open 24h hours"
     index:
       title: "กำลังมองหาห้องพัก ?"
     searched:

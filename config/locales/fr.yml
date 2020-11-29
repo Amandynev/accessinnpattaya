@@ -50,6 +50,7 @@ fr:
       message: "message"
       send-btn: "Envoyer le message"
       title: "Contactez-nous"
+      open-24: "Ouvert 24h/24h"
     index:
       title: "Vous cherchez une chambre ?"
     searched:
