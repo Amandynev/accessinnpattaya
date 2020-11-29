@@ -61,3 +61,9 @@ fr:
       not_saved:
         one: "1 erreur a empêché ce(tte) %{resource} d'être sauvegardé(e) :"
         other: "%{count} erreurs ont empêché ce(tte) %{resource} d'être sauvegardé(e) :"
+  first-name: "Nom"
+  last-name: "Prénom"
+  phone-user: "Numéro de téléphone"
+  adress-user: "Adresse"
+  citycode-user: "Code postal"
+  country-user: "Pays"
