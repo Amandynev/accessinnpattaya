@@ -15,26 +15,19 @@ class BookingsController < ApplicationController
         end
       end
       if @saving
-        redirect_to room_path(@room, param: 'ok')
+        redirect_to room_path(@room), booked: 'ok'
       else
+        @categories = Category.includes(:translations).all.reject { |category| category.name == @room.category.name }
         render "rooms/show"
       end
     else
-      redirect_to room_path(@room, param: 'nok')
+      redirect_to room_path(@room), not_booked: 'ok'
     end
   end
 
   def allmybookings
-    @bookings = Booking.includes(room: :category).user_bookings(current_user)
-    @hash_bookings = Hash.new { |hash, key| hash[key] = { number: 0, room: nil, nigths: 0, price: 0, start_at: nil, end_at: nil } }
-    @bookings.each do |booking|
-      @hash_bookings[booking.room.category.name][:number] += 1
-      @hash_bookings[booking.room.category.name][:nigths] += (booking.end_at - booking.start_at).to_i
-      @hash_bookings[booking.room.category.name][:price] += booking.price / 100
-      @hash_bookings[booking.room.category.name][:room] = booking.room if @hash_bookings[booking.room.category.name][:room].nil?
-      @hash_bookings[booking.room.category.name][:start_at] = booking.start_at if @hash_bookings[booking.room.category.name][:start_at].nil?
-      @hash_bookings[booking.room.category.name][:end_at] = booking.end_at if @hash_bookings[booking.room.category.name][:end_at].nil?
-    end
+    @bookings = Booking.includes(room: { category: :translations }).user_bookings(current_user)
+    @hash_bookings = helpers.refacto_order(@bookings)
   end
 
   def destroy_bookings
@@ -60,10 +53,11 @@ class BookingsController < ApplicationController
       room.bookings.each do |booking|
         next if booking.end_at < Date.today
 
-        date_range = booking.start_at..booking.end_at
+        booking_range = booking.start_at..booking.end_at
         start_date = params[:booking][:start_at] == "" ? Date.today : Date.parse(params[:booking][:start_at])
         end_date = params[:booking][:end_at] == "" ? Date.today : Date.parse(params[:booking][:end_at])
-        availability = false if date_range.include?(start_date) || date_range.include?(end_date) || (start_date < booking.start_at && end_date > booking.end_at)
+        registered_booking_range = start_date..end_date
+        availability = false if booking_range.overlaps?(registered_booking_range)
         rooms_ok << room if availability
       end
       return rooms_ok if rooms_ok.size == params[:booking][:number].to_i

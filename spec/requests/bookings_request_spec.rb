@@ -9,11 +9,6 @@ RSpec.describe "Bookings", type: :request do
       expect(response).to have_http_status '200'
     end
 
-    it 'Should access the rooms index' do
-      get rooms_path
-      expect(response).to have_http_status '200'
-    end
-
     it 'Should not have access to the allmybookings page' do
       get allmybookings_path
       expect(response).to have_http_status '302'

@@ -12,6 +12,7 @@ const initSweetalertClick = (selector, options = {}, callback = () => {}) => {
 const initSweetalertDOM = (selector, options = {}) => {
   const swalButton = document.querySelector(selector);
   if (swalButton) { // protect other pages
+
     swal(options);
   }
 };
@@ -32,6 +33,17 @@ const sweetAlertNOK = () => {
     title: "Booking canceled",
     text: "Sorry, there is no availabilities for the choosen dates.",
     icon: "error"
+    });
+  }
+}
+
+const sweetAlertMessage = () => {
+  const message = document.getElementById('message-sent');
+  if (message){
+    initSweetalertDOM('#page_message', {
+    title: "Message Sent",
+    text: "We will get back to you shortly",
+    icon: "success"
     });
   }
 }
@@ -75,5 +87,5 @@ const sweetAlertDanger = () => {
   }
 }
 
-export { sweetAlertNOK, sweetAlertDanger, alertNewBooking };
+export { sweetAlertNOK, sweetAlertDanger, alertNewBooking, sweetAlertMessage };
 

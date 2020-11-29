@@ -23,13 +23,21 @@ class PagesController < ApplicationController
 
   def create
     @contact = Page.new(params[:page])
-    @contact.request = request
-    if @contact.deliver
-      @contact = Page.new
-      @modalsuccess = true
-      redirect_to contact_path
+    if @contact.valid?
+      mail = UserMailer.with(email: @contact.email, message: @contact.message).contact
+      if mail.deliver_later
+        redirect_to contact_path, sent: "ok"
+      else
+        render 'contact'
+      end
     else
       render 'contact'
     end
+  end
+
+  private
+
+  def booking_params
+    params.require(:page).permit(:name, :email, :phone, :message)
   end
 end

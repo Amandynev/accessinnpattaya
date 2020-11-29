@@ -312,9 +312,8 @@
           </div>
   </div>
   <!------------------------- column calendar et card product -------------------------------->
-
     <div class="column-calendar">
-      <div class="calendar-booking">
+      <div class="calendar-booking" id="booking-dates-disabled" data-bookings="<%= dates_flat_pickr(@room.category.rooms).to_json %>">
         <%= render '/bookings/form', booking: @booking %>
       </div>
       <div class="display-flex-similar-room">
@@ -338,10 +337,9 @@
   </div>
 </div>
 
-
-<% if params[:param] == "nok" %>
-  <span id="booking-canceled"></span>
-<% end %>
-<% if params[:param] == "ok" %>
+<% if booked %>
   <span id="booking-success"></span>
+<% end %>
+<% if not_booked %>
+  <span id="booking-canceled"></span>
 <% end %>

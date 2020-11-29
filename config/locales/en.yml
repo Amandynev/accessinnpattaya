@@ -129,6 +129,19 @@ en:
     not-log: "You're not logged ! Please"
     sign-in: "Sign-in"
     book: "to book a room"
+  activerecord:
+    attributes:
+      booking:
+        start_at: ""
+        end_at: ""
+    errors:
+      models:
+        booking:
+          attributes:
+            start_at:
+              blank: "Select date"
+            end_at:
+              blank: "Select date"
 
 
 

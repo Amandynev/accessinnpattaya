@@ -33,7 +33,7 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { calendarPat } from '../plugins/calendar';
 import { calendarPatTwo } from '../plugins/calendar';
 import { flatpickrDisplay } from  "../plugins/flatpickr";
-import { sweetAlertNOK, alertNewBooking, sweetAlertDanger } from '../plugins/init_sweetalert';
+import { sweetAlertNOK, alertNewBooking, sweetAlertDanger, sweetAlertMessage} from '../plugins/init_sweetalert';
 import { functionValidation } from '../components/form';
 import { price } from '../plugins/price';
 
@@ -54,5 +54,6 @@ document.addEventListener('turbolinks:load', () => {
   functionValidation();
   sweetAlertNOK();
   alertNewBooking();
+  sweetAlertMessage();
   price();
 });
