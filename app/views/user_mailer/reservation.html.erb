@@ -1,63 +1,8 @@
 <h1>Your reservation</h1>
 
-<div class="container-bookings">
-    <br><br><br><br>
-    <% @orders.each do |order| %>
-      <% refacto_order(order.bookings).each do |key, value| %>
-        <div class="card-booking">
-          <%= image_tag "rooms/"+ value[:room].photo, class: 'card-booking-image' %>
-          <div class="room-tag">
-            <div class="tag-room-name">
-              <%= key.upcase %>
-            </div>
-          </div>
-          <div class="card-booking-description text-center">
-            <div class="card-booking-description-title">
-              <%= t('page.allmybookings.title-card') %>
-                 <span class="icon validated">
-                  <i class="fas fa-check"></i>
-                </span>
-            </div>
-            <div class="card-booking-description-rooms">
-              <div class="card-box">
-                <div class="title"><%= t('calendar.check-in') %></div>
-                <div class="day"><%= value[:start_at].strftime('%d') %></div>
-                <div class="month"><%= value[:start_at].strftime('%b') %>, <%= value[:start_at].strftime('%Y') %></div>
-                <div class="text"><%= value[:start_at].strftime('%A').upcase %></div>
-              </div>
-              <div class="card-box">
-                <div class="title"><%= t('calendar.check-out') %></div>
-                <div class="day"><%= value[:end_at].strftime('%d') %></div>
-                <div class="month"><%= value[:end_at].strftime('%b') %>, <%= value[:end_at].strftime('%Y') %></div>
-                <div class="text"> <%= value[:end_at].strftime('%A').upcase %></div>
-              </div>
-            </div>
-            <div class="card-booking-description-rooms">
-              <div class="card-box">
-                <%= value[:number] %>
-                <div class="text"><%=t('page.allmybookings.rooms').pluralize(value[:number]).upcase %></div>
-              </div>
-              <div class="card-box">
-                <%= value[:nigths] %>
-                <div class="text"> <%= t('page.allmybookings.nights').pluralize(value[:nigths]).upcase %></div>
-              </div>
-            </div>
-            <div class="card-booking-description-price">
-              <div class="price">
-                <%= humanized_money value[:price] %>
-              </div>
-              <div class="detail">
-                <div class="symbol">
-                  <%= (humanized_money_with_symbol value[:price]).first %>
-                </div>
-                <div class="total">
-                  / <%= t('page.allmybookings.total') %>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      <% end %>
+  Votre réservation :
+  <% order.bookings.each do ¦bookgin| %>
+    <%= booking.start_at %> - <%= booking.end_at %>
   <% end %>
 
   <h2> See you soon, Access Inn team</h2>
