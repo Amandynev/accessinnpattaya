@@ -17,7 +17,7 @@ User.destroy_all
 
 puts "create users ..."
 
-maxence = User.create!(email: "maxence@lewagon.org", password: "azerty")
+maxence = User.create!(email: "maxence.lenoir1206@gmail.com", password: "azerty", name: "maxence", last_name: "lenoir", phone:"0761600552", adress: "66 impasse des palombes", city_code: "59495", country: "France")
 
 puts "create hotel ..."
 
