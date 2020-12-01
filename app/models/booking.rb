@@ -2,7 +2,7 @@ class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :room
   has_one :category, through: :room
-  has_one :order_booking
+  has_one :order_booking, dependent: :destroy
   has_one :order, through: :order_booking
   validates_presence_of :start_at, :end_at
   validate :start_at_cannot_be_in_the_past

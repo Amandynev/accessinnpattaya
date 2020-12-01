@@ -1,7 +1,5 @@
-<h1>Your reservation :</h1>
+<h1>A reservation has been made :</h1>
 
 <% @order.bookings.each do |booking| %>
   <%= booking.room.category.name %> : <%= booking.start_at %> - <%= booking.end_at %> - <%= humanized_money_with_symbol booking.price / 100 %>
 <% end %>
-
-<h2> See you soon, Access Inn team</h2>

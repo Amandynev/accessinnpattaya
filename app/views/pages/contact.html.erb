@@ -11,9 +11,9 @@
             <div class="form-contact">
               <div class="form-control-access">
                 <%= f.input :message, class:"contact-form-message" %>
-                <%= f.input :name, as: :hidden, input_html: { value: current_user.email } %>
+                <%= f.input :name, as: :hidden, input_html: { value: current_user.name } %>
                 <%= f.input :email, as: :hidden, input_html: { value: current_user.email } %>
-                <%= f.input :phone, as: :hidden, input_html: { value: current_user.email } %>
+                <%= f.input :phone, as: :hidden, input_html: { value: current_user.phone } %>
 
                 <i class="fas fa-check-circle "></i>
                 <i class="fas fa-exclamation-circle"></i>
