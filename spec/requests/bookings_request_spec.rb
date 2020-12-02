@@ -45,6 +45,17 @@ RSpec.describe "Bookings", type: :request do
       expect { post room_bookings_path(locale, room_available.category.rooms.first), params: { booking: booking_params } }.to change(Booking, :count).by(2)
     end
 
+    it 'Should be able to book 50 times the same room with diferents dates' do
+      login_as user
+      count = 0
+      50.times do
+        rand_numb = rand(1..5)
+        count += 2
+        booking_params = attributes_for(:booking, start_at: Date.today + count, end_at:Date.today + count + 1, room: room_available, number: rand_numb)
+        expect { post room_bookings_path(locale, room_available.category.rooms.first), params: { booking: booking_params } }.to change(Booking, :count).by(rand_numb  )
+      end
+    end
+
     it 'Should not be able to book 4 rooms if not enough availables' do
       login_as user
       create(:booking, room: Room.where(category_id: room_available.category).first)

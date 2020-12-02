@@ -4,3 +4,5 @@
 <% @order.bookings.each do |booking| %>
   <%= booking.room.category.name %> : <%= booking.start_at %> - <%= booking.end_at %> - <%= humanized_money_with_symbol booking.price / 100 %>
 <% end %>
+
+<h2><%= @order.user.email %></h2>
