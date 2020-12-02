@@ -52,7 +52,7 @@ RSpec.describe "Bookings", type: :request do
         rand_numb = rand(1..5)
         count += 2
         booking_params = attributes_for(:booking, start_at: Date.today + count, end_at:Date.today + count + 1, room: room_available, number: rand_numb)
-        expect { post room_bookings_path(locale, room_available.category.rooms.first), params: { booking: booking_params } }.to change(Booking, :count).by(rand_numb)
+        expect { post room_bookings_path(locale, room_available.category.rooms.first), params: { booking: booking_params } }.to change(Booking, :count).by(rand_numb  )
       end
     end
 
