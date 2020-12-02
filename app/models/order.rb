@@ -1,3 +1,4 @@
+require 'paypal-checkout-sdk'
 class Order < ApplicationRecord
   belongs_to :user
   has_many :order_bookings, dependent: :destroy
@@ -9,4 +10,5 @@ class Order < ApplicationRecord
   def paid?
     state == "paid"
   end
+
 end

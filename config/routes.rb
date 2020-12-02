@@ -15,8 +15,12 @@ Rails.application.routes.draw do
       resources :bookings, only: [:index, :create]
     end
     delete 'destroy_bookings/:category_id', to: 'bookings#destroy_bookings', as: "destroy_bookings"
-    resources :orders, only: [:show, :create] do
+    resources :orders, only: [:index, :show, :create, :create_order, :capture_order] do
       resources :payments, only: :new
+    end
+
+    namespace :paypal do
+      resources :checkouts, only: [:create]
     end
 
     mount StripeEvent::Engine, at: '/stripe-webhooks'

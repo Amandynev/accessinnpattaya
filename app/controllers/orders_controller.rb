@@ -1,4 +1,11 @@
+
 class OrdersController < ApplicationController
+    skip_before_action :verify_authenticity_token
+    before_action :paypal_init, :except => [:index]
+
+  def index
+  end
+
   def create
     bookings = Booking.includes(:room).where("user_id = ? AND state = ?", current_user, "pending")
     amount = bookings.map(&:price).sum / 100
@@ -26,6 +33,59 @@ class OrdersController < ApplicationController
     redirect_to new_order_payment_path(order)
   end
 
+  def create_order
+    bookings = Booking.includes(:room).where("user_id = ? AND state = ?", current_user, "pending")
+    amount = bookings.map(&:price).sum / 100
+    order_30_minutes_before = Order.where("state = ? AND user_id = ?", "pending", current_user)
+    order_30_minutes_before.destroy_all unless order_30_minutes_before.empty?
+    order = Order.create!(amount: amount, state: 'pending', user: current_user)
+    bookings.each do |booking|
+      OrderBooking.create(order: order, booking: booking)
+    end
+    OrderJob.set(wait: 30.minutes).perform_later(order.id)
+
+    price = '100.00'
+    request = PayPalCheckoutSdk::Orders::OrdersCreateRequest::new
+    request.request_body({
+      :intent => 'CAPTURE',
+      :purchase_units => [
+        {
+          :amount => {
+            :currency_code => 'USD',
+            :value => price
+          }
+        }
+      ]
+    })
+    begin
+      response = @client.execute request
+      order = Order.new
+      order.price = price.to_i
+      order.token = response.result.id
+      if order.save
+        return render :json => {:token => response.result.id}, :status => :ok
+        redirect_to new_order_payment_path(order)
+      end
+    rescue PayPalHttp::HttpError => ioe
+      # HANDLE THE ERROR
+    end
+  end
+
+ def capture_order
+  request = PayPalCheckoutSdk::Orders::OrdersCaptureRequest::new params[:order_id]
+  begin
+    response = @client.execute request
+    order = Order.find_by :token => params[:order_id]
+    order.paid = response.result.status == 'COMPLETED'
+    if order.save
+      return render :json => {:status => response.result.status}, :status => :ok
+      redirect_to new_order_payment_path(order)
+    end
+  rescue PayPalHttp::HttpError => ioe
+    # HANDLE THE ERROR
+  end
+  end
+
   def show
     @order = current_user.orders.find(params[:id])
   end
@@ -33,4 +93,12 @@ class OrdersController < ApplicationController
   def allmyreservations
     @orders = Order.includes(:order_bookings, bookings: { room: { category: :translations } }).where(user: current_user, state: %w[paid pending]).order(created_at: :asc)
   end
+
+  def paypal_init
+    client_id = 'PAYPAL_CLIENT_ID'
+    client_secret = 'PAYPAL_CLIENT_SECRET'
+    environment = PayPal::SandboxEnvironment.new client_id, client_secret
+    @client = PayPal::PayPalHttpClient.new environment
+  end
+
 end
