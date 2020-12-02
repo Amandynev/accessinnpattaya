@@ -58,8 +58,8 @@ class BookingsController < ApplicationController
         end_date = params[:booking][:end_at] == "" ? Date.today : Date.parse(params[:booking][:end_at])
         registered_booking_range = start_date..end_date
         availability = false if booking_range.overlaps?(registered_booking_range)
-        rooms_ok << room if availability
       end
+      rooms_ok << room if availability && rooms_ok.exclude?(room)
       return rooms_ok if rooms_ok.size == params[:booking][:number].to_i
     end
     false
