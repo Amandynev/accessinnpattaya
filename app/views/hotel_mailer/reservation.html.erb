@@ -1,5 +1,6 @@
 <h1>A reservation has been made :</h1>
 
+
 <% @order.bookings.each do |booking| %>
   <%= booking.room.category.name %> : <%= booking.start_at %> - <%= booking.end_at %> - <%= humanized_money_with_symbol booking.price / 100 %>
 <% end %>
