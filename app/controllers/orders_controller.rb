@@ -43,11 +43,11 @@ class OrdersController < ApplicationController
     order_30_minutes_before.destroy_all unless order_30_minutes_before.empty?
     order = Order.create!(amount: amount, state: 'pending', user: current_user)
     bookings.each do |booking|
-      OrderBooking.create(order: order, booking: booking)
+    OrderBooking.create(order: order, booking: booking)
     end
     OrderJob.set(wait: 30.minutes).perform_later(order.id)
 
-    price = order.amount_cents
+    price = order.amount
     request = PayPalCheckoutSdk::Orders::OrdersCreateRequest::new
     request.request_body({
       :intent => 'CAPTURE',
@@ -80,6 +80,7 @@ class OrdersController < ApplicationController
   end
 
  def capture_order
+
   request = PayPalCheckoutSdk::Orders::OrdersCaptureRequest::new params[:order_id]
   begin
     response = @client.execute request
