@@ -1,15 +1,18 @@
-<h1>A reservation has been made :</h1>
+<h1>Reservation confirmed from <%= @order.user.name %> <%= @order.user.last_name %></h1>
 
-<%= @order.user.name %>
-<%= @order.user.last_name %>
-<%= @order.user.email %>
-<%= @order.user.phone %>
-<%= @order.user.adress %>
-<%= @order.user.city_code %>
-<%= @order.user.country %>
+<h2> <em> Guest infos </em> </h2>
+<p><%= @order.user.name %> <%= @order.user.last_name %></P>
+<p><%= @order.user.email %></p>
+<p><%= @order.user.phone %></p>
+<p><%= @order.user.adress %> <%= @order.user.city_code %></p>
+<p><%= @order.user.country %></p>
 
+<h2> <em> Booking infos </em> </h2>
 <% @order.bookings.each do |booking| %>
-  <%= booking.room.category.name %> : <%= booking.start_at %> - <%= booking.end_at %> - <%= humanized_money_with_symbol booking.price / 100 %>
+  <h4> Room type : </h4><%= booking.room.category.name %>
+   <h4> Check-in : </h4><%= booking.start_at %>
+   <h4> Check out : </h4><%= booking.end_at %>
+   <h4> Price already pay : </h4><%= humanized_money_with_symbol booking.price / 100 %>
 <% end %>
 
-<h2><%= @order.user.email %></h2>
+

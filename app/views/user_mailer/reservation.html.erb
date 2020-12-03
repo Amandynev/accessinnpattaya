@@ -1,11 +1,14 @@
-<h1> Your reservation :</h1>
+<p>Dear <%= @order.user.name %> <%= @order.user.last_name %>,</p>
 
-<%= @order.user.name %>
+<p>Thank you for your reservation at Access inn Pattaya. Your reservation is <strong>confirmed</strong>.</p>
 
+<h2> <em>Please see below details</em> </h2>
 <% @order.bookings.each do |booking| %>
-
-  <p>Please see below the confirmation of your reservation :</p>
-  <%= booking.room.category.name %> : <%= booking.start_at %> - <%= booking.end_at %> - <%= humanized_money_with_symbol booking.price / 100 %>
+  <h4>Room type : </h4><%= booking.room.category.name %>
+  <h4>Check-in : </h4><%= booking.start_at %>
+  <h4>Check-out : </h4><%= booking.end_at %>
+  <h4>Price paid : </h4><%= humanized_money_with_symbol booking.price / 100 %>
 <% end %>
 
-<h2> See you soon, Access Inn team</h2>
+<p>See you soon !</p>
+
