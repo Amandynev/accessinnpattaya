@@ -10,5 +10,4 @@ class Order < ApplicationRecord
   def paid?
     state == "paid"
   end
-
 end

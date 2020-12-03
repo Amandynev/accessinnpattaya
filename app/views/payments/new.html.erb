@@ -31,28 +31,27 @@ import paypal from 'paypal-checkout';
 
   <script>
     paypal.Buttons({
-    createOrder: async () => {
-      const response = await fetch('/create_order', {method: 'POST'});
-      const responseData = await response.json();
-    return responseData.token;
+      createOrder: async () => {
+        const response = await fetch('/create_order', {method: 'POST'});
+        const responseData = await response.json();
+        return responseData.token;
+      },
+      onApprove: async (data) => {
+        const response = await fetch('/capture_order', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({order_id: data.orderID})
+        });
+        const responseData = await response.json();
 
-    },
-    onApprove: async (data) => {
-      const response = await fetch('/capture_order', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({order_id: data.orderID})
-      });
-      const responseData = await response.json();
-
-      if (responseData.status === 'COMPLETED') {
-        alert('COMPLETED');
-        // REDIRECT TO SUCCESS PAGE
+        if (responseData.status === 'COMPLETED') {
+          window.location.replace(responseData.redirect_url)
+          // REDIRECT TO SUCCESS PAGE
+        }
       }
-    }
-  }).render('#paypal-button-container');
+    }).render('#paypal-button-container');
   </script>
 
 </div>

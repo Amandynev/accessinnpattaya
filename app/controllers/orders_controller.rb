@@ -7,6 +7,7 @@ class OrdersController < ApplicationController
   def index
   end
 
+  # STRIPE
   def create
     bookings = Booking.includes(:room).where("user_id = ? AND state = ?", current_user, "pending")
     amount = bookings.map(&:price).sum / 100
@@ -34,8 +35,8 @@ class OrdersController < ApplicationController
     redirect_to new_order_payment_path(order)
   end
 
+  # PAYPAL
   def create_order
-
     price = '10'
     request = PayPalCheckoutSdk::Orders::OrdersCreateRequest::new
     request.request_body({
@@ -51,15 +52,20 @@ class OrdersController < ApplicationController
     })
     begin
       response = @client.execute(request)
-      order = Order.new
+      order = current_user.orders.new
+
       order.price = price.to_i
       order.token = response.result.id
+
+      order.amount_cents = price.to_i
+      order.state = "pending"
+
       if order.save
-        return render :json => {:token => response.result.id}, :status => :ok
-        redirect_to order_url(order)
+        render json: { token: response.result.id }, status: :ok
+      else
+        # redirect_to order_url(order)
       end
     rescue PayPalHttp::HttpError => ioe
-      # HANDLE THE ERROR
     end
   end
 
@@ -68,10 +74,9 @@ class OrdersController < ApplicationController
   begin
     response = @client.execute request
     order = Order.find_by :token => params[:order_id]
-    order.paid = response.result.status == 'PAID'
-    redirect_to order_url(order)
+    order.state = "paid" if response.result.status == 'COMPLETED'
     if order.save
-      return render :json => {:status => response.result.status}, :status => :ok
+      return render json: {status: response.result.status, redirect_url: order_url(order)}, :status => :ok
     end
   rescue PayPalHttp::HttpError => ioe
     # HANDLE THE ERROR
