@@ -6,12 +6,12 @@
       <%= f.error_notification %>
 
       <div class="form-inputs">
-        <%= f.input :first_name, label: t("first-name"), required: true, input_html: { maxlength: 15, size: 40, value: nil } %>
-        <%= f.input :last_name, label: t("last-name"), required: true, input_html: { maxlength: 15, size: 40, value: nil } %>
-        <%= f.input :phone, label: t("phone-user"), required: true, input_html: { maxlength: 15, size: 40, value: nil }%>
-        <%= f.input :text_field, label: t("adress-user"), input_html: { maxlength: 15, size: 40, value: nil }%>
-        <%= f.input :text_field, label: t("citycode-user"), input_html: { maxlength: 15, size: 40, value: nil }%>
-        <%= f.input :text_field, label: t("country-user"), required: true, input_html: { maxlength: 15, size: 40, value: nil }%>
+        <%= f.input :name, label: t("first-name"), required: true, input_html: { maxlength: 15, size: 40} %>
+        <%= f.input :last_name, label: t("last-name"), required: true, input_html: { maxlength: 15, size: 40} %>
+        <%= f.input :phone, label: t("phone-user"), required: true, input_html: { maxlength: 15, size: 40}%>
+        <%= f.input :adress, label: t("adress-user"), required: true, input_html: { maxlength: 15, size: 40}%>
+        <%= f.input :city_code, label: t("citycode-user"), required: true, input_html: { maxlength: 15, size: 40}%>
+        <%= f.input :country, as: :string, label: t("country-user"), required: true, input_html: { maxlength: 15, size: 40}%>
         <%= f.input :email,
                     required: true,
                     autofocus: true ,
