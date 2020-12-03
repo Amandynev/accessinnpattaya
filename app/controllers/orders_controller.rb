@@ -37,14 +37,24 @@ class OrdersController < ApplicationController
 
   # PAYPAL
   def create_order
-    price = '10'
+    bookings = Booking.includes(:room).where("user_id = ? AND state = ?", current_user, "pending")
+    amount = bookings.map(&:price).sum / 100
+    order_30_minutes_before = Order.where("state = ? AND user_id = ?", "pending", current_user)
+    order_30_minutes_before.destroy_all unless order_30_minutes_before.empty?
+    order = Order.create!(amount: amount, state: 'pending', user: current_user)
+    bookings.each do |booking|
+      OrderBooking.create(order: order, booking: booking)
+    end
+    OrderJob.set(wait: 30.minutes).perform_later(order.id)
+
+    price = order.amount_cents
     request = PayPalCheckoutSdk::Orders::OrdersCreateRequest::new
     request.request_body({
       :intent => 'CAPTURE',
       :purchase_units => [
         {
           :amount => {
-            :currency_code => 'USD',
+            :currency_code => 'THB',
             :value => price
           }
         }
