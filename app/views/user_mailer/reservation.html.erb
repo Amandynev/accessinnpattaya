@@ -1,6 +1,10 @@
-<h1>Your reservation :</h1>
+<h1> Your reservation :</h1>
+
+<%= @order.user.name %>
 
 <% @order.bookings.each do |booking| %>
+
+  <p>Please see below the confirmation of your reservation :</p>
   <%= booking.room.category.name %> : <%= booking.start_at %> - <%= booking.end_at %> - <%= humanized_money_with_symbol booking.price / 100 %>
 <% end %>
 
