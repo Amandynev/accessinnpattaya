@@ -2,7 +2,7 @@ require 'paypal-checkout-sdk'
 class Order < ApplicationRecord
   belongs_to :user
   has_many :order_bookings, dependent: :destroy
-  has_many :bookings, through: :order_bookings
+  has_many :bookings, through: :order_bookings, dependent: :destroy
   monetize :amount_cents
   validates :amount_cents, presence: true
   validates :state, inclusion: { in: ["pending", "canceled", "paid"] }

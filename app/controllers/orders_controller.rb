@@ -18,7 +18,6 @@ class OrdersController < ApplicationController
       OrderBooking.create(order: order, booking: booking)
     end
     OrderJob.set(wait: 30.minutes).perform_later(order.id)
-
     session = Stripe::Checkout::Session.create(
       payment_method_types: ['card'],
       line_items: [{
@@ -62,7 +61,7 @@ class OrdersController < ApplicationController
     })
     begin
       response = @client.execute(request)
-      order = current_user.orders.new
+
 
       order.price = price.to_i
       order.token = response.result.id
@@ -85,9 +84,17 @@ class OrdersController < ApplicationController
   begin
     response = @client.execute request
     order = Order.find_by :token => params[:order_id]
-    order.state = "paid" if response.result.status == 'COMPLETED'
+    if response.result.status == 'COMPLETED'
+      order.state = "paid"
+      order.bookings.each do |booking|
+        booking.update(state: 'paid')
+      end
+    end
     if order.save
+      mail = UserMailer.with(order: order).reservation
+      mail.deliver_later
       return render json: {status: response.result.status, redirect_url: order_url(order)}, :status => :ok
+
     end
   rescue PayPalHttp::HttpError => ioe
     # HANDLE THE ERROR
