@@ -10,12 +10,12 @@ const calendarPat = () => {
       const endInput = document.querySelector('#range_end');
       const dateStart = new Date(startInput.value);
       if (!isNaN(dateStart.getTime())){
-        startMonthCalendar.innerText = dateStart.toString().split(" ")[1];
+        startMonthCalendar.firstChild.innerText = dateStart.toString().split(" ")[1];
         startDayCalendar.innerText = dateStart.toString().split(" ")[2];
       }
       const dateEnd = new Date(endInput.value);
       if (!isNaN(dateEnd.getTime())){
-        endMonthCalendar.innerText = dateEnd.toString().split(" ")[1];
+        endMonthCalendar.firstChild.innerText = dateEnd.toString().split(" ")[1];
         endDayCalendar.innerText = dateEnd.toString().split(" ")[2];
       }
     })
@@ -34,12 +34,12 @@ const calendarPatTwo = () => {
       const endInput = document.querySelector('#range_end');
       const dateStart = new Date(startInput.value);
       if (!isNaN(dateStart.getTime())){
-        startMonthCalendar.innerText = dateStart.toString().split(" ")[1];
+        startMonthCalendar.firstChild.innerText = dateStart.toString().split(" ")[1];
         startDayCalendar.innerText = dateStart.toString().split(" ")[2];
       }
       const dateEnd = new Date(endInput.value);
       if (!isNaN(dateEnd.getTime())){
-        endMonthCalendar.innerText = dateEnd.toString().split(" ")[1];
+        endMonthCalendar.firstChild.innerText = dateEnd.toString().split(" ")[1];
         endDayCalendar.innerText = dateEnd.toString().split(" ")[2];
       }
     })
