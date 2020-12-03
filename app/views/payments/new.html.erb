@@ -1,3 +1,5 @@
+import paypal from 'paypal-checkout';
+
 <br>
 <br>
 <br>
@@ -21,14 +23,36 @@
       <div><%= "#{humanized_money_with_symbol value[:price]*value[:nigths]}" %></div>
     </div>
   <% end %>
-  <script src="https://js.stripe.com/v3/"></script>
+
+  <script src="https://www.paypal.com/sdk/js?client-id=AQtILkzv5HqyAk6EwvpliGejA_j-MfAQu17TXzUTzz-jz18hps17AZJFc8AumKwuQo6We_jVy_Kiomj_"> // Required. Replace SB_CLIENT_ID with your sandbox client ID.
+    </script>
+
+  <div id="paypal-button-container"></div>
+
   <script>
-    const paymentButton = document.getElementById('pay');
-    paymentButton.addEventListener('click', () => {
-      const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
-      stripe.redirectToCheckout({
-        sessionId: '<%= @order.checkout_session_id %>'
+    paypal.Buttons({
+    createOrder: async () => {
+      const response = await fetch('/create_order', {method: 'POST'});
+      const responseData = await response.json();
+    return responseData.token;
+
+    },
+    onApprove: async (data) => {
+      const response = await fetch('/capture_order', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({order_id: data.orderID})
       });
-    });
+      const responseData = await response.json();
+
+      if (responseData.status === 'COMPLETED') {
+        alert('COMPLETED');
+        // REDIRECT TO SUCCESS PAGE
+      }
+    }
+  }).render('#paypal-button-container');
   </script>
+
 </div>

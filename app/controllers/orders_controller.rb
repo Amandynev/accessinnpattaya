@@ -1,7 +1,8 @@
+require 'paypal-checkout-sdk'
 
 class OrdersController < ApplicationController
-    skip_before_action :verify_authenticity_token
-    before_action :paypal_init, :except => [:index]
+  skip_before_action :verify_authenticity_token
+  before_action :paypal_init, :except => [:index]
 
   def index
   end
@@ -44,7 +45,7 @@ class OrdersController < ApplicationController
     end
     OrderJob.set(wait: 30.minutes).perform_later(order.id)
 
-    price = '100.00'
+    price = '10'
     request = PayPalCheckoutSdk::Orders::OrdersCreateRequest::new
     request.request_body({
       :intent => 'CAPTURE',
@@ -58,13 +59,13 @@ class OrdersController < ApplicationController
       ]
     })
     begin
-      response = @client.execute request
+      response = @client.execute(request)
       order = Order.new
       order.price = price.to_i
       order.token = response.result.id
       if order.save
         return render :json => {:token => response.result.id}, :status => :ok
-        redirect_to new_order_payment_path(order)
+        redirect_to order_url(order)
       end
     rescue PayPalHttp::HttpError => ioe
       # HANDLE THE ERROR
@@ -76,10 +77,10 @@ class OrdersController < ApplicationController
   begin
     response = @client.execute request
     order = Order.find_by :token => params[:order_id]
-    order.paid = response.result.status == 'COMPLETED'
+    order.paid = response.result.status == 'PAID'
+    redirect_to order_url(order)
     if order.save
       return render :json => {:status => response.result.status}, :status => :ok
-      redirect_to new_order_payment_path(order)
     end
   rescue PayPalHttp::HttpError => ioe
     # HANDLE THE ERROR
@@ -100,5 +101,4 @@ class OrdersController < ApplicationController
     environment = PayPal::SandboxEnvironment.new client_id, client_secret
     @client = PayPal::PayPalHttpClient.new environment
   end
-
 end
