@@ -15,9 +15,12 @@ Rails.application.routes.draw do
       resources :bookings, only: [:index, :create]
     end
     delete 'destroy_bookings/:category_id', to: 'bookings#destroy_bookings', as: "destroy_bookings"
-    resources :orders, only: [:index, :show, :create, :create_order, :capture_order] do
+    resources :orders, only: [:index, :show, :create] do
       resources :payments, only: :new
     end
+
+    post :create_order, to: 'orders#create_order'
+    post :capture_order, to: 'orders#capture_order'
 
     namespace :paypal do
       resources :checkouts, only: [:create]

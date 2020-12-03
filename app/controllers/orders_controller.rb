@@ -35,15 +35,6 @@ class OrdersController < ApplicationController
   end
 
   def create_order
-    bookings = Booking.includes(:room).where("user_id = ? AND state = ?", current_user, "pending")
-    amount = bookings.map(&:price).sum / 100
-    order_30_minutes_before = Order.where("state = ? AND user_id = ?", "pending", current_user)
-    order_30_minutes_before.destroy_all unless order_30_minutes_before.empty?
-    order = Order.create!(amount: amount, state: 'pending', user: current_user)
-    bookings.each do |booking|
-      OrderBooking.create(order: order, booking: booking)
-    end
-    OrderJob.set(wait: 30.minutes).perform_later(order.id)
 
     price = '10'
     request = PayPalCheckoutSdk::Orders::OrdersCreateRequest::new
@@ -96,8 +87,8 @@ class OrdersController < ApplicationController
   end
 
   def paypal_init
-    client_id = 'PAYPAL_CLIENT_ID'
-    client_secret = 'PAYPAL_CLIENT_SECRET'
+    client_id = ENV['PAYPAL_CLIENT_ID']
+    client_secret = ENV['PAYPAL_CLIENT_SECRET']
     environment = PayPal::SandboxEnvironment.new client_id, client_secret
     @client = PayPal::PayPalHttpClient.new environment
   end

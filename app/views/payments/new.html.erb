@@ -24,7 +24,7 @@ import paypal from 'paypal-checkout';
     </div>
   <% end %>
 
-  <script src="https://www.paypal.com/sdk/js?client-id=AQtILkzv5HqyAk6EwvpliGejA_j-MfAQu17TXzUTzz-jz18hps17AZJFc8AumKwuQo6We_jVy_Kiomj_"> // Required. Replace SB_CLIENT_ID with your sandbox client ID.
+  <script src="https://www.paypal.com/sdk/js?client-id=<%=ENV['PAYPAL_CLIENT_ID']%>"> // Required. Replace SB_CLIENT_ID with your sandbox client ID.
     </script>
 
   <div id="paypal-button-container"></div>
