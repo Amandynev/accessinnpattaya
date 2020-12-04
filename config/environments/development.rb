@@ -50,7 +50,6 @@ Rails.application.configure do
   #   authentication:       :plain,
   #   enable_starttls_auto: true
   # }
-
   # Bullet config
   config.after_initialize do
     Bullet.enable = true
