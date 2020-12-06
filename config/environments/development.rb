@@ -50,7 +50,6 @@ Rails.application.configure do
   #   authentication:       :plain,
   #   enable_starttls_auto: true
   # }
-
   # Bullet config
   config.after_initialize do
     Bullet.enable = true
@@ -73,7 +72,7 @@ Rails.application.configure do
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
-  config.hosts << "9bd91e817c7e.ngrok.io"
+  config.hosts << "2ee9ea6294bc.ngrok.io"
 
   # Raises error for missing translations.
   # config.action_view.raise_on_missing_translations = true

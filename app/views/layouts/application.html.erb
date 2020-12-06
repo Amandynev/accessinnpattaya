@@ -4,7 +4,7 @@
     <title>Accessinnpattaya</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
@@ -19,8 +19,6 @@
     <%= render 'shared/footer' %>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+    <script>AOS.init();</script>
   </body>
 </html>
