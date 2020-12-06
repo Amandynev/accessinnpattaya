@@ -90,8 +90,8 @@ class OrdersController < ApplicationController
         booking.update(state: 'paid')
       end
     end
-    if
-      order.save
+
+    if order.save
       mail = UserMailer.with(order: order).reservation
       mail.deliver_later
       mail_hotel = HotelMailer.with(order: order).reservation
