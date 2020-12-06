@@ -90,12 +90,14 @@ class OrdersController < ApplicationController
         booking.update(state: 'paid')
       end
     end
+    if
       order.save
       mail = UserMailer.with(order: order).reservation
       mail.deliver_later
       mail_hotel = HotelMailer.with(order: order).reservation
       mail_hotel.deliver_later
       return render json: {status: response.result.status, redirect_url: order_url(order)}, :status => :ok
+  end
   rescue PayPalHttp::HttpError => ioe
     # HANDLE THE ERROR
   end
