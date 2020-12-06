@@ -15,7 +15,7 @@
         </div>
 
         <div class="info-paiement">
-          <p><strong><%= t('page.confirmation.total') %></strong> <%= humanized_money_with_symbol @order.amount %></p>
+          <p><strong><%= t('page.confirmation.total') %></strong> <%= humanized_money_with_symbol order.amount_cents %></p>
         </div>
         <hr>
         <br>
