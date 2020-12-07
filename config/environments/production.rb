@@ -74,8 +74,8 @@ config.action_mailer.smtp_settings = {
 config.action_mailer.perform_deliveries = true
 config.action_mailer.raise_delivery_errors = false
 config.action_mailer.default :charset => "utf-8"
-# config.action_mailer.delivery_method = :postmark
-# config.action_mailer.postmark_settings   = { api_token: ENV['POSTMARK_API_TOKEN'] }
+config.action_mailer.delivery_method = :postmark
+config.action_mailer.postmark_settings   = { api_token: ENV['POSTMARK_API_TOKEN'] }
 # config.action_mailer.default_url_options = { host: "agile-tor-53348.herokuapp.com" }
 # config.action_mailer.smtp_settings = {
 #   address:              'smtp.gmail.com',
