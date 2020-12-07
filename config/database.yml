@@ -17,13 +17,9 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-
-  timeout: 5000
-  encoding: utf8
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  socket: /tmp/.s.PGSQL.5432
 
 development:
   <<: *default
@@ -34,6 +30,7 @@ development:
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
   # username: postgres
+
   # The password associated with the postgres role (username).
   # password: postgres
 
