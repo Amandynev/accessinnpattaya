@@ -8,7 +8,7 @@ module PayPalClient
     def environment
       client_id = ENV['PAYPAL_CLIENT_ID'] || 'PAYPAL-CLIENT-ID'
       client_secret = ENV['PAYPAL_CLIENT_SECRET'] || 'PAYPAL-CLIENT-SECRET'
-      PayPal::SandboxEnvironment.new(client_id, client_secret)
+      PayPal::LiveEnvironment.new(client_id, client_secret)
     end
 
     # Returns PayPal HTTP client instance with environment that has access
