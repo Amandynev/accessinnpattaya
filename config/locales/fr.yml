@@ -70,7 +70,7 @@ fr:
       please: "Faites le nous savoir ici"
       error: "Le paiement de votre réservation a été annulé, merci de confirmer votre réservation en finalisant votre paiement."
     allmybookings:
-      title: "Finalisation de la réservation"
+      title: "Paiement de la réservation"
       title-card: "Votre réservation"
       rooms: "Chambre"
       nights: "Nuits"
@@ -78,6 +78,7 @@ fr:
       price: "Prix"
       completed: "Paiement"
       no-booking-yet: "Vous n'avez aucune réservation pour le moment ..."
+      select: "Merci de sélectionner un moyen de paiement :"
   navbar:
     menu-1: "Accueil"
     menu-2: "Chambres"
