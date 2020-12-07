@@ -1,4 +1,6 @@
 import swal from 'sweetalert';
+import I18n from "i18n-js";
+
 
 const functionValidation = () => {
   const name = document.querySelector('.contact-form-name')
@@ -10,7 +12,7 @@ const functionValidation = () => {
       event.preventDefault();
       checkInputsName();
     });
-  
+
     email.addEventListener('blur', (event) => {
       event.preventDefault();
       checkInputsEmail();
@@ -31,7 +33,7 @@ const checkInputsName = () => {
 // 1 on récupere les valueurs des inputs
   const nameValue = name.value ;
   if(nameValue === ''){
-    setFailedFor(name, 'Name cannot be blank');
+    setFailedFor(name,I18n.t('js.form-name'));
   } else {
     setSuccessFor(name);
   };
