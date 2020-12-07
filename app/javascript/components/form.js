@@ -1,4 +1,6 @@
 import swal from 'sweetalert';
+import I18n from "i18n-js";
+
 
 const functionValidation = () => {
   const name = document.querySelector('.contact-form-name')
@@ -10,7 +12,7 @@ const functionValidation = () => {
       event.preventDefault();
       checkInputsName();
     });
-  
+
     email.addEventListener('blur', (event) => {
       event.preventDefault();
       checkInputsEmail();
@@ -31,7 +33,7 @@ const checkInputsName = () => {
 // 1 on récupere les valueurs des inputs
   const nameValue = name.value ;
   if(nameValue === ''){
-    setFailedFor(name, 'Name cannot be blank');
+    setFailedFor(name,I18n.t('js.form-name'));
   } else {
     setSuccessFor(name);
   };
@@ -42,9 +44,9 @@ const checkInputsEmail = () => {
 // 1 on récupere les valueurs des inputs
   const emailValue = email.value ;
   if(emailValue === '') {
-    setFailedFor(email, 'Email cannot be blank');
+    setFailedFor(email, I18n.t('js.form-email-blank'));
   } else if(!isEmail(emailValue)) {
-    setFailedFor(email, 'Email is not valid');
+    setFailedFor(email, I18n.t('js.form-email-valid'));
   } else {
     setSuccessFor(email);
   }
@@ -65,7 +67,7 @@ const checkInputsMessage = () => {
   const message = document.querySelector('.contact-form-message');
   const messageValue = message.value ;
   if(messageValue === ''){
-    setFailedFor(message, 'Message cannot be blank');
+    setFailedFor(message, I18n.t('js.form-message'));
   } else {
     setSuccessFor(message);
   };
