@@ -3,30 +3,38 @@
 <br>
 <br>
 <br>
+
+
 <div class="container-void-footer mx-5">
   <div class="summary-header">
     <h1><%= t('page.allmybookings.title') %></h1>
+    <p class="">_______</p>
     <!-- <button id="pay" class="button-access-book">Pay <%= humanized_money_with_symbol @order.amount %></button> -->
   </div>
   <div class="card-payment title-summary">
-    <div><%=t('page.allmybookings.rooms')%>
+    <div class="border-right"><%=t('page.allmybookings.rooms')%>
     <hr>
     </div>
-    <div><%= t('page.allmybookings.nights')%> * <%=t('page.allmybookings.price')%><hr></div>
+    <div class="border-right"><%= t('page.allmybookings.nights')%> <hr></div>
     <div><%= t('page.allmybookings.total') %><hr></div>
   </div>
-  <% @hash_bookings.each do |key, value| %>
-    <div class="card-payment">
-      <div><%= key %></div>
-      <div><%= " #{value[:nigths]} #{t('page.allmybookings.nights')} * #{humanized_money_with_symbol value[:price]}" %></div>
-      <div><%= "#{humanized_money_with_symbol value[:price]*value[:nigths]}" %></div>
-    </div>
-  <% end %>
+
+    <% @hash_bookings.each do |key, value| %>
+      <div class="card-payment">
+        <div class="border-right"><%= key %></div>
+        <div class="border-right"><%= " #{value[:nigths]} " %></div>
+        <div><%= "#{humanized_money_with_symbol value[:price]*value[:nigths]}" %></div>
+      </div>
+    <% end %>
+
+<h4 class="mt-5"><%= t('page.allmybookings.select')%></h4>
+  <div id="paypal-button-container" class="mt-3"></div>
+
   <script src="https://www.paypal.com/sdk/js?client-id=<%=ENV['PAYPAL_CLIENT_ID']%>&currency=THB"> // Required. Replace SB_CLIENT_ID with your sandbox client ID.
       </script>
   <br>
   <br>
-    <div id="paypal-button-container"></div>
+
   </div>
 </div>
 
