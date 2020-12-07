@@ -8,6 +8,7 @@
     "aos": "^3.0.0-beta.6",
     "bootstrap": "^4.5.2",
     "flatpickr": "^4.6.6",
+    "i18n-js": "^3.8.0",
     "jquery": "^3.5.1",
     "jquery-ujs": "^1.2.2",
     "mapbox-gl": "^1.12.0",
