@@ -31,7 +31,7 @@ class OrdersController < ApplicationController
   def create_order
     set_order_creation
 
-    price = '1'
+    price = @order.amount_cents
     request = PayPalCheckoutSdk::Orders::OrdersCreateRequest.new
     request.request_body({  intent: 'CAPTURE',
                             purchase_units: [
@@ -52,7 +52,7 @@ class OrdersController < ApplicationController
 
       if @order.save
         render json: { token: response.result.id }, status: :ok
-      else
+        else
         redirect_to order_url(order)
       end
     rescue PayPalHttp::HttpError
