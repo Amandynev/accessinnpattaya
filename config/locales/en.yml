@@ -102,7 +102,7 @@ en:
       please: "Please let us know here"
       error: "The payment of your reservation has been canceled, please proceed to the payment to confirm your reservation."
     allmybookings:
-      title: "Checkout"
+      title: "Payment"
       title-card: "Your reservation"
       rooms: "Rooms"
       nights: "Nights"
@@ -110,6 +110,7 @@ en:
       price: "Price"
       completed: "Completed your reservation"
       no-booking-yet: "You don't any have booking yet ..."
+      select: "Please select your payment methode below :"
   navbar:
     menu-1: "Home"
     menu-2: "Rooms"
