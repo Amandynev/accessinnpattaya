@@ -60,12 +60,14 @@ Rails.application.configure do
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "accessinnpattaya_production"
-config.action_mailer.default_url_options = { :host => 'accessinnpattaya.herokuapp.com' }
 config.action_mailer.delivery_method = :smtp
+config.action_mailer.postmark_settings   = { api_token: ENV['POSTMARK_API_TOKEN'] }
+config.action_mailer.default_url_options = { :host => 'www.accessinnpattaya.com' }
+# config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = {
   address:              'smtp.postmarkapp.com',
   port:                 587,
-  domain:               'yourdomain.com',
+  domain:               'accessinnpattaya.com',
   user_name:             ENV["POSTMARK_API_TOKEN"],
   password:              ENV["POSTMARK_API_TOKEN"],
   authentication:       :plain,
@@ -74,8 +76,8 @@ config.action_mailer.smtp_settings = {
 config.action_mailer.perform_deliveries = true
 config.action_mailer.raise_delivery_errors = false
 config.action_mailer.default :charset => "utf-8"
-config.action_mailer.delivery_method = :postmark
-config.action_mailer.postmark_settings   = { api_token: ENV['POSTMARK_API_TOKEN'] }
+# config.action_mailer.delivery_method = :postmark
+# config.action_mailer.postmark_settings   = { api_token: ENV['POSTMARK_API_TOKEN'] }
 # config.action_mailer.default_url_options = { host: "agile-tor-53348.herokuapp.com" }
 # config.action_mailer.smtp_settings = {
 #   address:              'smtp.gmail.com',
