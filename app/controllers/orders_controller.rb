@@ -114,7 +114,7 @@ class OrdersController < ApplicationController
   def paypal_init
     client_id = ENV['PAYPAL_CLIENT_ID']
     client_secret = ENV['PAYPAL_CLIENT_SECRET']
-    environment = PayPal::SandboxEnvironment.new client_id, client_secret
+    environment = PayPal::LiveEnvironment.new client_id, client_secret
     @client = PayPal::PayPalHttpClient.new environment
   end
 end
