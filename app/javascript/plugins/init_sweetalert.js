@@ -1,4 +1,5 @@
 import swal from 'sweetalert';
+import I18n from "i18n-js";
 
 const initSweetalertClick = (selector, options = {}, callback = () => {}) => {
   const swalButton = document.querySelector(selector);
@@ -53,7 +54,7 @@ const alertNewBooking = () => {
   const modal = document.getElementById('booking-success');
   if (modal) {
     initSweetalertDOMCall('#sweet-alert-booking', {
-    title: "Room Pre-Booked !",
+    title: "Room pre-booked",
     text: "The room have been pre-booked for 30 minutes, please proceed to the payment to completed your reservation.",
     icon: "success",
     buttons: { close: false, confirm: { text: 'PAY NOW' }}

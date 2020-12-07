@@ -44,9 +44,9 @@ const checkInputsEmail = () => {
 // 1 on récupere les valueurs des inputs
   const emailValue = email.value ;
   if(emailValue === '') {
-    setFailedFor(email, 'Email cannot be blank');
+    setFailedFor(email, I18n.t('js.form-email-blank'));
   } else if(!isEmail(emailValue)) {
-    setFailedFor(email, 'Email is not valid');
+    setFailedFor(email, I18n.t('js.form-email-valid'));
   } else {
     setSuccessFor(email);
   }
@@ -67,7 +67,7 @@ const checkInputsMessage = () => {
   const message = document.querySelector('.contact-form-message');
   const messageValue = message.value ;
   if(messageValue === ''){
-    setFailedFor(message, 'Message cannot be blank');
+    setFailedFor(message, I18n.t('js.form-message'));
   } else {
     setSuccessFor(message);
   };

@@ -1,3 +1,9 @@
 fr:
   js:
-    form-name: "Veuillez renseigner nom et prénom s'il vous plait!"
+    form-name: "Veuillez renseigner nom et prénom svp!"
+    form-email-blank: "Le champs email ne peut pas être vide."
+    form-email-valid: "Votre email n'est pas valide !"
+    form-message: "Veuillez saisir un message svp."
+    alert-booked: "Chambre pré-réservée"
+    alert-booked-text: "La chambres est pré-réservée, veuilez procéder au paiement pour une confirmation"
+    alert-paynow: "PAYER"
