@@ -38,12 +38,12 @@ import { functionValidation } from '../components/form';
 import { price } from '../plugins/price';
 import I18n from "i18n-js";
 
-
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   global.I18n = I18n;
+  console.log(global.I18n)
   initMapbox();
   calendarPat();
   calendarPatTwo();
@@ -58,5 +58,4 @@ document.addEventListener('turbolinks:load', () => {
   alertNewBooking();
   sweetAlertMessage();
   price();
-
 });

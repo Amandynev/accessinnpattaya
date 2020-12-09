@@ -7,3 +7,4 @@ fr:
     alert-booked: "Chambre pré-réservée"
     alert-booked-text: "La chambres est pré-réservée, veuilez procéder au paiement pour une confirmation"
     alert-paynow: "PAYER"
+    sure: "Êtes-vous sur ?" 

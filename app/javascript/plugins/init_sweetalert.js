@@ -75,7 +75,7 @@ const sweetAlertDanger = () => {
     deleteIcons.forEach((icon) => {
       const id = icon.dataset.id;
       initSweetalertClick(`#delete-icon-${id}`, {
-      title: "Are you sure ?",
+      title: I18n.t('js.sure'),
       text: "This action cannot be reversed.",
       icon: "warning"
       }, (value) => {
