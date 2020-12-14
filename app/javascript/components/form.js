@@ -1,4 +1,3 @@
-import swal from 'sweetalert';
 import I18n from "i18n-js";
 
 
@@ -24,6 +23,13 @@ const functionValidation = () => {
     message.addEventListener('blur', (event) => {
       event.preventDefault();
       checkInputsMessage();
+    });
+  }
+  const messageLogged = document.getElementById('page_message');
+  if (messageLogged){
+    messageLogged.addEventListener('blur', (event) => {
+      event.preventDefault();
+      checkInputsMessageLogged();
     });
   }
 };
@@ -70,6 +76,16 @@ const checkInputsMessage = () => {
     setFailedFor(message, I18n.t('js.form-message'));
   } else {
     setSuccessFor(message);
+  };
+}
+
+const checkInputsMessageLogged = () => {
+  const messageLogged = document.getElementById('page_message');
+  const messageLoggedValue = messageLogged.value ;
+  if(messageLoggedValue === ''){
+    setFailedFor(messageLogged, I18n.t('js.form-message'));
+  } else {
+    setSuccessFor(messageLogged);
   };
 }
 

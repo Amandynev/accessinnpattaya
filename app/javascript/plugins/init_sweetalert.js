@@ -1,5 +1,5 @@
 import swal from 'sweetalert';
-import I18n from "i18n-js";
+import I18n from 'i18n-js/index.js.erb';
 
 const initSweetalertClick = (selector, options = {}, callback = () => {}) => {
   const swalButton = document.querySelector(selector);
@@ -31,8 +31,8 @@ const sweetAlertNOK = () => {
   const modal = document.getElementById('booking-canceled');
   if (modal){
     initSweetalertDOM('#sweet-alert-booking', {
-    title: "Booking canceled",
-    text: "Sorry, there is no availabilities for the choosen dates.",
+    title: I18n.t('js.canceled'),
+    text: I18n.t('js.canceled-text'),
     icon: "error"
     });
   }
@@ -42,8 +42,8 @@ const sweetAlertMessage = () => {
   const message = document.getElementById('message-sent');
   if (message){
     initSweetalertDOM('#page_message', {
-    title: "Message Sent",
-    text: "We will get back to you shortly",
+    title: I18n.t('js.sent'),
+    text: I18n.t('js.sent-text'),
     icon: "success"
     });
   }
@@ -54,8 +54,8 @@ const alertNewBooking = () => {
   const modal = document.getElementById('booking-success');
   if (modal) {
     initSweetalertDOMCall('#sweet-alert-booking', {
-    title: "Room pre-booked",
-    text: "The room have been pre-booked for 30 minutes, please proceed to the payment to completed your reservation.",
+    title: I18n.t('js.booked'),
+    text: I18n.t('js.booked-text'),
     icon: "success",
     buttons: { close: false, confirm: { text: 'PAY NOW' }}
     }, (value) => {
@@ -75,8 +75,8 @@ const sweetAlertDanger = () => {
     deleteIcons.forEach((icon) => {
       const id = icon.dataset.id;
       initSweetalertClick(`#delete-icon-${id}`, {
-      title: "Are you sure ?",
-      text: "This action cannot be reversed.",
+      title: I18n.t('js.sure'),
+      text: I18n.t('js.delete'),
       icon: "warning"
       }, (value) => {
         if (value) {

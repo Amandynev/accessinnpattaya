@@ -29,17 +29,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>AOS.init();</script>
     <script type="text/javascript">
-      const waitForElement = () => {
-        if(typeof I18n !== "undefined"){
-          I18n.default_locale = "<%= I18n.default_locale %>";
-          I18n.locale = "<%= I18n.locale %>";
-          I18n.translations = <%== I18n::JS.filtered_translations.to_json %>;
-        }
-        else{
-          setTimeout(waitForElement, 10);
-        }
-      };
-      waitForElement();
+      var LOCALE = "<%= I18n.locale %>";
     </script>
   </body>
 </html>
