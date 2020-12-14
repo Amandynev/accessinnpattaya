@@ -57,7 +57,7 @@ const alertNewBooking = () => {
     title: I18n.t('js.booked'),
     text: I18n.t('js.booked-text'),
     icon: "success",
-    buttons: { close: false, confirm: { text: 'PAY NOW' }}
+    buttons: { close: false, confirm: { text: I18n.t('js.booked-paynow') }}
     }, (value) => {
       if (value) {
         const link = document.querySelector('#all_my_bookings');
