@@ -8,6 +8,9 @@ require("@rails/activestorage").start()
 require("channels")
 
 //= require_tree .
+//= require i18n
+//= require i18n.js
+//= require i18n/translations
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -36,20 +39,12 @@ import { flatpickrDisplay } from  "../plugins/flatpickr";
 import { sweetAlertNOK, alertNewBooking, sweetAlertDanger, sweetAlertMessage} from '../plugins/init_sweetalert';
 import { functionValidation } from '../components/form';
 import { price } from '../plugins/price';
-import I18n from "i18n-js";
-
-// Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
-  global.I18n = I18n;
-  console.log(global.I18n)
   initMapbox();
   calendarPat();
   calendarPatTwo();
   flatpickrDisplay();
-  // Call your functions here, e.g:
-  // initSelect2();
   loadDynamicBannerText();
   AOS.init();
   sweetAlertDanger();
