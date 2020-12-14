@@ -10,17 +10,19 @@
           <%= simple_form_for @contact, url: pages_path, remote: true do |f| %>
             <div class="form-contact">
               <div class="form-control-access">
-                <%= f.input :message %>
+                <%= f.label t('page.contact.message') %>
+                <div class="display-icone d-flex">
+                    <%= f.text_field  :message, class: "contact-form-message" %>
+                    <i class="fas fa-check-circle "></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <div class="text-error-message">
+                  <small>Please tell us more</small>
+                </div>
                 <%= f.input :name, as: :hidden, input_html: { value: current_user.name } %>
                 <%= f.input :email, as: :hidden, input_html: { value: current_user.email } %>
                 <%= f.input :phone, as: :hidden, input_html: { value: current_user.phone } %>
 
-                <i class="fas fa-check-circle "></i>
-                <i class="fas fa-exclamation-circle"></i>
-
-                <div class="text-error-message">
-                  <small>Please tell us more</small>
-                </div>
               </div>
 
               <div class="text-center">
