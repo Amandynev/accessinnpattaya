@@ -44,6 +44,9 @@ fr:
       room-service: "Services en chambre"
       laundry: "Blanchisserie"
       parking: "Parking(payant)"
+      room-event: "ÉVENEMENTS"
+      room-resto: "RESTAURANTS"
+      room-bar: "BAR"
     contact:
       name: "Nom et prénom"
       phone: "Téléphone"

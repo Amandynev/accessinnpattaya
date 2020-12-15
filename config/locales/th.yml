@@ -44,6 +44,9 @@ th:
       room-service: "รูมเซอร์วิส"
       laundry: "บริการซักรีด"
       parking: "ที่จอดรถ"
+      room-event: "อีเว้นท์"
+      room-resto: "ร้านอาหาร"
+      room-bar: "บาร์"
     contact:
       name: "นามสกุลและชื่อจริง"
       phone: "หมายเลขโทรศัพท์"

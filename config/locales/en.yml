@@ -75,6 +75,9 @@ en:
       room-service: "Room-service"
       laundry: "Laundry services"
       parking: "Parking"
+      room-event: "EVENTS"
+      room-resto: "RESTAURANTS"
+      room-bar: "BAR"
     contact:
       name: "Last name and First name"
       phone: "Phone number"

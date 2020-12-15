@@ -289,7 +289,7 @@
             <div class="container-card-facilities">
                 <%= link_to restaurant_path, class:"link-without-style" do %>
                   <div class="card-category-facilities px-1" data-aos="flip-up"data-aos-duration="1000" style="background-image: url(<%= asset_path 'restaurant/restaurant2.jpg' %>)">
-                    <p class="card-title-square-show">RESTAURANT</p>
+                    <p class="card-title-square-show"><%= t('page.rooms.room-resto') %></p>
                   </div>
                 <%end%>
             </div>
@@ -297,7 +297,7 @@
             <div class="container-card-facilities">
                 <%= link_to restaurant_path, class:"link-without-style" do %>
                   <div class="card-category-facilities px-1" data-aos="flip-up"data-aos-duration="1000" style="background-image: url(<%= asset_path 'restaurant/pooltable.jpg' %>)">
-                    <p class="card-title-square-show">BAR</p>
+                    <p class="card-title-square-show"><%= t('page.rooms.room-bar') %></p>
                   </div>
                 <%end%>
             </div>
@@ -305,7 +305,7 @@
             <div class="container-card-facilities">
                 <%= link_to event_path, class:"link-without-style" do %>
                   <div class="card-category-facilities px-1" data-aos="flip-up"data-aos-duration="1000" style="background-image: url(<%= asset_path 'event/birthdaywhite.jpg' %>)">
-                    <p class="card-title-square-show"><%= t('page.home.restaurant.title')%></p>
+                    <p class="card-title-square-show"><%= t('page.rooms.room-event')%></p>
                   </div>
                 <%end%>
             </div>
