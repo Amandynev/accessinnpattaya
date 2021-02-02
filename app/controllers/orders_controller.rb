@@ -31,7 +31,7 @@ class OrdersController < ApplicationController
   def create_order
     set_order_creation
 
-    price = @order.amount_cents
+    price = @order.amount_cents / 100
     request = PayPalCheckoutSdk::Orders::OrdersCreateRequest.new
     request.request_body({  intent: 'CAPTURE',
                             purchase_units: [
@@ -44,10 +44,8 @@ class OrdersController < ApplicationController
                             ] })
     begin
       response = @client.execute(request)
-      @order.price = price.to_i
-      @order.token = response.result.id
 
-      @order.amount_cents = price.to_i
+      @order.token = response.result.id
       @order.state = "pending"
 
       if @order.save
