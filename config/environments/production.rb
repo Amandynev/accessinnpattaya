@@ -61,13 +61,13 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "accessinnpattaya_production"
 config.action_mailer.delivery_method = :smtp
-# config.action_mailer.postmark_settings   = { api_token: ENV['POSTMARK_API_TOKEN'] }
+config.action_mailer.postmark_settings   = { api_token: ENV['POSTMARK_API_TOKEN'] }
 config.action_mailer.default_url_options = { host: 'accessinnpattaya.herokuapp.com' }
-# config.action_mailer.delivery_method = :smtp
+config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = {
   address:              'smtp.postmarkapp.com',
   port:                 587,
-  domain:               'yourdomaine.com',
+  domain:               'accessinnpattaya.herokuapp.com',
   user_name:             ENV["POSTMARK_API_TOKEN"],
   password:              ENV["POSTMARK_API_TOKEN"],
   authentication:       :plain,
